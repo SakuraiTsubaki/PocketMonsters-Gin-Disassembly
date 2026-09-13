@@ -14,7 +14,7 @@ The long-term goal is a fully source-based, reproducible build that can reconstr
 
 ## Initial source set
 
-Japanese, Korean, USA/Europe, German, French, Italian, and Spanish Silver releases, including the Japanese Rev A revision.
+Japanese, Korean, USA/Europe, German, French, Italian, and Spanish Silver releases, including Japanese Rev A.
 
 Exact checksums and release metadata are tracked under `config/versions/`.
 
@@ -36,35 +36,41 @@ A completed build must not depend on `baserom.gb`, `baserom.gbc`, or any other l
 
 ROM binaries are intentionally excluded. Source code, reconstructed data, scripts, documentation, extracted/reconstructed assets, build tooling, manifests, symbols, patches, logs, and verification metadata belong in this repository.
 
-## Current status
+## Current status — Bank 00 first
 
-The initial eight-release structural survey is complete and Bank 00 source reconstruction is underway.
+Bank 00 (`0x0000-0x3FFF`) is being completed in full before Bank 01 work begins.
 
-- JP Rev 0 / Rev A are 1 MiB (64 ROM banks).
-- KR and the English/German/French/Italian/Spanish releases are 2 MiB (128 ROM banks).
 - All eight source images pass header and global checksum verification.
-- Same-index banks `0C`, `2A`, `30`, `37`, `3B`, `3C`, and `3D` are byte-identical across all eight releases.
-- JP Rev 0 and Rev A differ in 19,150 bytes across 16 banks, but are byte-identical through the mapped Bank 00 HOME prefix from `0150` to `0AD9`.
-- HOME component boundaries are mapped through `serial.asm` and `joypad.asm`, with `decompress.asm` start identified for every release family.
-- Korean-specific semantic differences are confirmed in the RST timing helpers, LCD interrupt guard, initialization path, and serial timing.
-- Reconstructed source currently exists for `home/header.asm`, `home/delay.asm`, `home/time_palettes.asm`, `home/fade.asm`, and `home/lcd.asm`.
-- `analysis/home_source_status.csv` tracks what is boundary-verified, source-reconstructed, and still pending byte-for-byte assembly verification.
+- JP Rev 0 / Rev A are 1 MiB (64 ROM banks); KR and the English/German/French/Italian/Spanish releases are 2 MiB (128 banks).
+- The complete Bank 00 HOME layout is mapped into **53 contiguous source components**, from `header.asm` through `audio.asm`.
+- Component start addresses are mapped for **all eight releases**.
+- Of the 52 non-header HOME components, **31 are opcode-structure-identical across all eight releases** when relocation/immediate operands are ignored.
+- Reconstructed source currently exists for **21 / 53 Bank 00 components**.
+- JP Rev 0 and Rev A Bank 00 differences are confined to `header`, `sprite_anims`, and late `audio` data/code runs.
+- Verified Korean semantic branches include RST timing helpers, LCD scanline guarding, boot/HRAM/BG-map initialization, serial timing, SRAM safeguards/state tracking, and far-called tilemap-copy helpers.
+- Verified Japanese semantic branches include VBlank cutscene interrupt handling, one RTC carry instruction, and two joypad/automatic-input omissions.
 
-See:
+Currently reconstructed under `home/`:
 
-- `docs/initial_rom_survey.md`
+`header`, `vblank`, `delay`, `time_palettes`, `fade`, `lcd`, `time`, `init`, `serial`, `joypad`, `decompress`, `sram`, `call_regs`, `clear_sprites`, `copy`, `copy_tilemap`, `copy_name`, `array`, `math`, `queue_script`, and `compare`.
+
+## Bank 00 analysis
+
+- `docs/bank00_full_layout.md`
 - `docs/bank00_initial_map.md`
 - `docs/bank00_home_phase1.md`
-- `analysis/header_matrix.csv`
-- `analysis/bank00_pairwise_diffs.csv`
-- `analysis/shared_bank_groups.csv`
-- `analysis/jp_revision_bank_diffs.csv`
-- `analysis/home_prefix_ranges.csv`
-- `analysis/home_prefix_diff_vs_us.csv`
+- `analysis/bank00_us_component_ranges.csv`
+- `analysis/bank00_component_starts_matrix.csv`
+- `analysis/bank00_opcode_equivalence.csv`
+- `analysis/jp_bank00_revision_diff_runs.csv`
 - `analysis/home_source_status.csv`
-- `tools/analyze_roms.py`
+- `analysis/bank00_pairwise_diffs.csv`
+- `tools/map_bank00_components.py`
 - `tools/analyze_home_prefix.py`
+- `tools/analyze_roms.py`
 
 ## Next milestone
 
-Classify the remaining JP-specific HOME deltas, reconstruct `vblank.asm`, `time.asm`, `init.asm`, `serial.asm`, `joypad.asm`, and `decompress.asm`, add the minimum constants/symbol/build scaffold required to assemble Bank 00, then begin byte-for-byte verification against each preserved release.
+Continue filling the remaining Bank 00 components, prioritizing opcode-identical shared source (`map_objects`, `sine`, `movement`, `printer`, `game_time`, `farcall`, `predef`, `window`, `flag`, `sprite_updates`, `region`, `item`, `random`, `pokedex_flags`, `scrolling_menu`, `stone_queue`, `trainers`, `pokemon`, `sprite_anims`) while separately reconstructing the regional branches in `palettes`, `gfx`, `text`, `video`, `menu`, `map`, `string`, `print_text`, `tilemap`, `names`, `print_bcd`, `battle`, and `audio`.
+
+After all Bank 00 source is present, add the minimum constants/macros/symbol/build scaffold, assemble each release variant, and perform byte-for-byte Bank 00 verification before moving to Bank 01.
