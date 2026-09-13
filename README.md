@@ -11,7 +11,7 @@ The long-term goal is a fully source-based, reproducible build that can reconstr
 - Preserve region, language, and revision differences explicitly.
 - Produce byte-identical builds for supported original releases where practical.
 - Keep ROM binaries out of the repository.
-- When graphics or sprite assets are reconstructed, commit the editable/image outputs (for example PNG previews/sheets) alongside the source metadata and extraction tooling; only ROM binaries remain excluded.
+- When graphics or sprite assets are reconstructed, commit editable/image outputs (for example PNG previews/sheets) alongside source metadata and extraction tooling; only ROM binaries remain excluded.
 
 ## Initial source set
 
@@ -45,18 +45,31 @@ Bank 00 (`0x0000-0x3FFF`) is being completed in full before Bank 01 work begins.
 - JP Rev 0 / Rev A are 1 MiB (64 ROM banks); KR and the English/German/French/Italian/Spanish releases are 2 MiB (128 banks).
 - The complete Bank 00 HOME layout is mapped into **53 contiguous source components**, from `header.asm` through `audio.asm`.
 - Component start addresses are mapped for **all eight releases**.
-- Of the 52 non-header HOME components, **31 are opcode-structure-identical across all eight releases** when relocation/immediate operands are ignored.
-- Reconstructed source currently exists for **50 / 53 Bank 00 components**.
-- Only `text.asm`, `menu.asm`, and `map.asm` remain to be reconstructed before the Bank 00 source-presence milestone is complete.
-- JP Rev 0 / Rev A late-Bank00 differences are now separated correctly: core `audio.asm` code is shared, while JP Rev 0 alone carries a 177-byte trailing ROM0 garbage block and Rev A uses zero fill.
-- Verified Korean semantic branches include RST/LCD timing, initialization, serial timing, SRAM state tracking, tilemap transfer, graphics request synchronization, double-byte string/name handling, palette bank preservation, and video helpers.
-- Verified Japanese semantic branches include VBlank handling, RTC carry behavior, joypad omissions, simplified graphics/video paths, Japanese name widths, and localized number rendering.
+- **All 53 / 53 Bank 00 components are now source-addressable.**
+- **52 / 53 are reconstructed directly in this repository.** `map.asm`, the final and largest component, currently selects three exact commit-pinned public source references while its self-contained vendoring pass is prepared.
+- `menu.asm` is reconstructed as shared logic with narrow Korean WRAM/far-call branches plus localized JP/KR/DE/FR/IT/ES data.
+- `text.asm` is reconstructed with the Korean double-byte Hangul renderer, Japanese text-command/string rules, and Western language literal/weekday branches.
+- The map comparison shows all Western releases have the same 3786-byte component length. Japanese adds 15 bytes primarily through three inline default event strings. The apparent Korean +42-byte boundary delta belongs to Korean far-call helpers and `DummyEndPredef` immediately before `FarCall_hl`, rather than opaque map logic.
+- JP Rev 0 / Rev A late-Bank00 differences are separated correctly: core `audio.asm` code is shared, while JP Rev 0 alone carries a 177-byte trailing ROM0 garbage block and Rev A uses zero fill.
+- Verified Korean semantic branches include RST/LCD timing, initialization, serial timing, SRAM state tracking, tilemap transfer, graphics request synchronization, double-byte string/name handling, palette bank preservation, video helpers, and menu/window WRAM handling.
+- Verified Japanese semantic branches include VBlank handling, RTC carry behavior, joypad omissions, simplified graphics/video paths, Japanese name widths, localized number rendering, and inline default map-event strings.
+
+## Pinned map references
+
+Temporary provenance-locked references used by `home/map.asm`:
+
+- `pret/pokegold` @ `656583c939d30f920a316177311a502dd222b57c`
+- `Narishma-gb/pokesilver` @ `edbe53978ef1777fc5c41019e17b7544070eab92`
+- `Narishma-gb/pokegold-kr` @ `f4496dda3003ccc5fc26f2757171a3b111e65307`
+
+See `docs/bank00_map_source_provenance.md`. These references contain source only; no ROM/base-ROM is referenced. The final Bank 00 self-contained milestone requires vendoring/collapsing this map source into the repository itself.
 
 ## Bank 00 analysis
 
 - `docs/bank00_full_layout.md`
 - `docs/bank00_initial_map.md`
 - `docs/bank00_home_phase1.md`
+- `docs/bank00_map_source_provenance.md`
 - `analysis/bank00_us_component_ranges.csv`
 - `analysis/bank00_component_starts_matrix.csv`
 - `analysis/bank00_opcode_equivalence.csv`
@@ -67,12 +80,12 @@ Bank 00 (`0x0000-0x3FFF`) is being completed in full before Bank 01 work begins.
 - `tools/analyze_home_prefix.py`
 - `tools/analyze_roms.py`
 
-Additional source helpers now include regional `print_num.asm`, shared `battle_vars.asm`, shared `hm_moves.asm`, and exact JP Rev 0 reconstruction data under `garbage/rev_0/bank00.asm`.
+Additional source helpers include regional `print_num.asm`, shared `battle_vars.asm`, shared `hm_moves.asm`, and exact JP Rev 0 reconstruction data under `garbage/rev_0/bank00.asm`.
 
-## Remaining Bank 00 components
+## Next Bank 00 milestone
 
-`text`, `menu`, and `map`.
-
-These are the three largest localization-sensitive HOME components. They will be reconstructed by comparing the Western `pret/pokegold` source, Japanese `Narishma-gb/pokesilver` source, Korean `Narishma-gb/pokegold-kr` source, and the preserved DE/FR/IT/ES ROM bytes, keeping shared logic common and isolating only real regional differences.
-
-After all Bank 00 source is present, add the minimum constants/macros/symbol/build scaffold, assemble each release variant, and perform byte-for-byte Bank 00 verification before moving to Bank 01.
+1. Vendor the pinned map source locally and collapse it to shared code plus narrow `_JAPANESE` / `_KOREAN` conditionals.
+2. Add the minimum constants, macros, symbols, memory definitions, and build scaffold needed to assemble Bank 00.
+3. Assemble all eight release variants.
+4. Compare every generated Bank 00 byte-for-byte with its preserved original and resolve every mismatch.
+5. Only after Bank 00 passes verification move to Bank 01.
