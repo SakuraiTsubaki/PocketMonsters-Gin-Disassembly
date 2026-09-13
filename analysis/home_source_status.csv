@@ -1,12 +1,54 @@
 component,boundary_status,source_status,release_difference_status,next_verification
 header,verified,source_added,"KR RST timing helpers verified; other vector structure shared",assemble each release and compare 0000-014F
-vblank,verified,not_added,"public EN/KR sources match; ROM operand/layout differences remain",classify JP and all relocation operands then add source
+vblank,verified,not_added,"JP Rev 0/A omit the Cutscene hLCDCPointer write block and add explicit IF/IE preservation after sound update; KR/western opcode structure otherwise shared",encode Japanese branch and compare full component bytes
 delay,verified,source_added,"shared logic; ROM differences are address operands",assemble and compare component bytes
 time_palettes,verified,source_added,"shared opcode structure; observed differences are address operands",assemble and compare component bytes
 fade,verified,source_added,"shared opcode structure; observed JP/KR differences are address operands",assemble and compare component bytes
 lcd,verified,source_added,"KR has verified VBlank scanline guard",assemble with and without _KOREAN and compare
-time,verified,not_added,"public EN/KR sources match; JP length differs by one byte",classify JP-specific layout/semantic delta
-init,verified,not_added,"KR has verified boot/HRAM/BG-map initialization differences",encode shared source with narrow release conditionals
-serial,verified,not_added,"KR timing constants and second long-delay loop verified",encode Korean timing conditionals and compare
-joypad,verified,not_added,"public EN/KR sources match; JP component is 22 bytes shorter",classify JP delta before adding shared source
-decompress,start_verified,not_added,"public EN/KR sources match",locate full end boundary and classify JP/EU operands
+time,verified,source_added,"JP Rev 0/A omit FixDays.quit CCF; KR and western releases retain it",assemble _JAPANESE and non-Japanese variants and compare full component bytes
+init,verified,not_added,"KR has verified CGB/AGB boot-state, HRAM-clear, and BG-map initialization differences",encode shared source with narrow Korean conditionals
+serial,verified,not_added,"KR uses 96/30 timing constants and a second 255-count long-delay loop; other mapped releases share opcode structure",encode Korean timing conditionals and compare
+joypad,verified,not_added,"JP Rev 0/A omit AUTO_INPUT duration-FF handling and PromptButton automatic-input farcall; KR/western share opcode structure",encode Japanese omissions and compare
+decompress,verified,not_added,"opcode-identical across all eight releases; only relocation operands differ",add shared source and compare linked bytes
+palettes,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+gfx,verified,not_added,"KR adds request-completion wait loops around 1bpp/2bpp graphics requests",encode Korean synchronization branch
+text,verified,not_added,"KR has double-byte text path and localized command/string handling",reconstruct Korean and non-Korean text branches
+video,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+map_objects,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+sine,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+movement,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+menu,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+printer,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+game_time,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+map,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+farcall,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+predef,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+window,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+flag,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+sprite_updates,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+string,verified,not_added,"KR component is structurally different from western/JP layout",reconstruct regional branch
+region,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+item,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+random,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+sram,verified,not_added,"KR adds SRAM bank validation and state tracking",encode Korean branch
+call_regs,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+clear_sprites,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+copy,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+copy_tilemap,verified,not_added,"KR uses far-called tilemap copy helpers; US/JP/western use direct copies",encode Korean branch
+copy_name,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+array,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+math,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+print_text,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+queue_script,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+compare,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+tilemap,verified,not_added,"KR tilemap implementation differs; full starts mapped",reconstruct Korean and non-Korean branches
+pokedex_flags,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+names,verified,not_added,"localized name-table handling shifts component layout",classify regional data/code deltas
+scrolling_menu,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+stone_queue,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+trainers,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+pokemon,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+print_bcd,verified,not_added,"localized numeric/currency text handling differs by release",classify regional implementation deltas
+battle,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
+sprite_anims,verified,not_added,"JP Rev A differs by one Bank 00 byte from JP Rev 0",locate exact semantic/data cause
+audio,verified,not_added,"JP Rev 0/A differ in 174 late-Bank00 bytes; other regional starts mapped",classify revision and regional audio deltas
