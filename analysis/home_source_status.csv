@@ -1,0 +1,12 @@
+component,boundary_status,source_status,release_difference_status,next_verification
+header,verified,source_added,"KR RST timing helpers verified; other vector structure shared",assemble each release and compare 0000-014F
+vblank,verified,not_added,"public EN/KR sources match; ROM operand/layout differences remain",classify JP and all relocation operands then add source
+delay,verified,source_added,"shared logic; ROM differences are address operands",assemble and compare component bytes
+time_palettes,verified,source_added,"shared opcode structure; observed differences are address operands",assemble and compare component bytes
+fade,verified,source_added,"shared opcode structure; observed JP/KR differences are address operands",assemble and compare component bytes
+lcd,verified,source_added,"KR has verified VBlank scanline guard",assemble with and without _KOREAN and compare
+ time,verified,not_added,"public EN/KR sources match; JP length differs by one byte",classify JP-specific layout/semantic delta
+init,verified,not_added,"KR has verified boot/HRAM/BG-map initialization differences",encode shared source with narrow release conditionals
+serial,verified,not_added,"KR timing constants and second long-delay loop verified",encode Korean timing conditionals and compare
+joypad,verified,not_added,"public EN/KR sources match; JP component is 22 bytes shorter",classify JP delta before adding shared source
+decompress,start_verified,not_added,"public EN/KR sources match",locate full end boundary and classify JP/EU operands
