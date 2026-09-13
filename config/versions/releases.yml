@@ -1,0 +1,68 @@
+schema: 1
+project: PocketMonsters-Gin-Disassembly
+source_policy: read-only verification originals; ROM binaries are never committed
+releases:
+  - id: JP-REV0
+    file: "Pocket Monsters Gin (Japan).gbc"
+    language: Japanese
+    region: Japan
+    revision: Rev 0
+    size: 1048576
+    sha1: fa8c51059c1642faa570db56ef089f54d1d2011f
+    sha256: 0a532063a3ff5750a464582aa7bbee2b6d42e1a92a136d9f4590e373487b615c
+  - id: JP-REVA
+    file: "Pocket Monsters Gin (Japan) (Rev A).gbc"
+    language: Japanese
+    region: Japan
+    revision: Rev A
+    size: 1048576
+    sha1: a11d5ddc26eb826086593f82370b15d16404d33e
+    sha256: 99e5267fbf5a7748d4f3b75ba1990cb5d91348339468607a04bfbc6081c62d71
+  - id: KR-REV0
+    file: "Pocket Monsters Eun (Korea).gbc"
+    language: Korean
+    region: Korea
+    revision: Rev 0
+    size: 2097152
+    sha1: cb22d7e03a74dc3a563fde6be8626626b2b392e7
+    sha256: ebbac63c0c4309c82dbb6723e7163369784f962b4fd3e2f486075307c3008a22
+  - id: US-EU-REV0
+    file: "Pokemon - Silver Version (USA, Europe).gbc"
+    language: English
+    region: USA/Europe
+    revision: Rev 0
+    size: 2097152
+    sha1: 49b163f7e57702bc939d642a18f591de55d92dae
+    sha256: 72b190859a59623cbef6c49d601f8de52c1d2331b4f08a8d2acc17274fc19a8c
+  - id: DE-REV0
+    file: "Pokemon - Silberne Edition (Germany).gbc"
+    language: German
+    region: Germany
+    revision: Rev 0
+    size: 2097152
+    sha1: 8ecc58d621faaedf2a934bd2583d527220df7bb9
+    sha256: c3d1fd0dec1d5fa9aa7f85275e79c52aa9175d191c63cbed7b406c306d946348
+  - id: FR-REV0
+    file: "Pokemon - Version Argent (France).gbc"
+    language: French
+    region: France
+    revision: Rev 0
+    size: 2097152
+    sha1: a4a7e8079b7a53e4d9ef43382bbb1090b9d45d1a
+    sha256: e120c4ddb0dc3e25b95c9c71b3ffd59ff57ce689cf4d79d04913ba59140c18c2
+  - id: IT-REV0
+    file: "Pokemon - Versione Argento (Italy).gbc"
+    language: Italian
+    region: Italy
+    revision: Rev 0
+    size: 2097152
+    sha1: c9eca9d0a837beb9137bb7d779e469c54e9f8d77
+    sha256: 04c442246d1ae0ed6bf5e072bb7e3d06376e584b953d6b14047b39e45fbb0cb4
+  - id: ES-REV0
+    file: "Pokemon - Edicion Plata (Spain).gbc"
+    language: Spanish
+    region: Spain
+    revision: Rev 0
+    size: 2097152
+    sha1: 05bd978ab2cb104b0aff3f696896e30885203a18
+    sha256: 6797010c052e8f9373ea2b9e855ec078b34fda12e5ccf742eb19bb5e8f6947c2
