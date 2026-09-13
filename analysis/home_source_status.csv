@@ -1,54 +1,54 @@
 component,boundary_status,source_status,release_difference_status,next_verification
 header,verified,source_added,"KR RST timing helpers verified; other vector structure shared",assemble each release and compare 0000-014F
-vblank,verified,not_added,"JP Rev 0/A omit the Cutscene hLCDCPointer write block and add explicit IF/IE preservation after sound update; KR/western opcode structure otherwise shared",encode Japanese branch and compare full component bytes
+vblank,verified,source_added,"JP Rev 0/A omit the Cutscene hLCDCPointer write block and add explicit IF/IE preservation after sound update; KR/western opcode structure otherwise shared",assemble Japanese and non-Japanese branches and compare full component bytes
 delay,verified,source_added,"shared logic; ROM differences are address operands",assemble and compare component bytes
 time_palettes,verified,source_added,"shared opcode structure; observed differences are address operands",assemble and compare component bytes
 fade,verified,source_added,"shared opcode structure; observed JP/KR differences are address operands",assemble and compare component bytes
 lcd,verified,source_added,"KR has verified VBlank scanline guard",assemble with and without _KOREAN and compare
 time,verified,source_added,"JP Rev 0/A omit FixDays.quit CCF; KR and western releases retain it",assemble _JAPANESE and non-Japanese variants and compare full component bytes
-init,verified,not_added,"KR has verified CGB/AGB boot-state, HRAM-clear, and BG-map initialization differences",encode shared source with narrow Korean conditionals
-serial,verified,not_added,"KR uses 96/30 timing constants and a second 255-count long-delay loop; other mapped releases share opcode structure",encode Korean timing conditionals and compare
-joypad,verified,not_added,"JP Rev 0/A omit AUTO_INPUT duration-FF handling and PromptButton automatic-input farcall; KR/western share opcode structure",encode Japanese omissions and compare
-decompress,verified,not_added,"opcode-identical across all eight releases; only relocation operands differ",add shared source and compare linked bytes
-palettes,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-gfx,verified,not_added,"KR adds request-completion wait loops around 1bpp/2bpp graphics requests",encode Korean synchronization branch
-text,verified,not_added,"KR has double-byte text path and localized command/string handling",reconstruct Korean and non-Korean text branches
-video,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-map_objects,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-sine,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-movement,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-menu,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-printer,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-game_time,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-map,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-farcall,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-predef,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-window,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-flag,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-sprite_updates,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-string,verified,not_added,"KR component is structurally different from western/JP layout",reconstruct regional branch
-region,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-item,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-random,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-sram,verified,not_added,"KR adds SRAM bank validation and state tracking",encode Korean branch
-call_regs,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-clear_sprites,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-copy,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-copy_tilemap,verified,not_added,"KR uses far-called tilemap copy helpers; US/JP/western use direct copies",encode Korean branch
-copy_name,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-array,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-math,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-print_text,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-queue_script,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-compare,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-tilemap,verified,not_added,"KR tilemap implementation differs; full starts mapped",reconstruct Korean and non-Korean branches
-pokedex_flags,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-names,verified,not_added,"localized name-table handling shifts component layout",classify regional data/code deltas
-scrolling_menu,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-stone_queue,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-trainers,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-pokemon,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-print_bcd,verified,not_added,"localized numeric/currency text handling differs by release",classify regional implementation deltas
-battle,verified,not_added,"full multi-region component starts mapped",classify opcode/semantic deltas
-sprite_anims,verified,not_added,"JP Rev A differs by one Bank 00 byte from JP Rev 0",locate exact semantic/data cause
-audio,verified,not_added,"JP Rev 0/A differ in 174 late-Bank00 bytes; other regional starts mapped",classify revision and regional audio deltas
+init,verified,source_added,"KR has verified CGB/AGB boot-state, HRAM-clear, and BG-map initialization differences",assemble Korean and non-Korean branches and compare
+serial,verified,source_added,"KR uses 96/30 timing constants and a second 255-count long-delay loop; other mapped releases share opcode structure",assemble Korean and non-Korean branches and compare
+joypad,verified,source_added,"JP Rev 0/A omit AUTO_INPUT duration-FF handling and PromptButton automatic-input farcall; KR/western share opcode structure",assemble Japanese and non-Japanese branches and compare
+decompress,verified,source_added,"opcode-identical across all eight releases; only relocation operands differ",assemble and compare linked bytes
+palettes,verified,not_added,"KR opcode structure differs; JP/western share US opcode structure",classify Korean palette delta
+gfx,verified,not_added,"KR adds request-completion wait loops; JP also differs from US/western",reconstruct Japanese and Korean graphics branches
+text,verified,not_added,"all localization families differ; KR has double-byte text path and localized command/string handling",reconstruct per-family text logic without duplicating shared code
+video,verified,not_added,"JP and KR differ; western releases share US opcode structure",classify JP/KR video deltas
+map_objects,verified,not_added,"opcode-identical across all eight releases",add shared source and compare linked bytes
+sine,verified,not_added,"opcode-identical across all eight releases",add shared source
+movement,verified,not_added,"opcode-identical across all eight releases",add shared source
+menu,verified,not_added,"all localization families contain structural deltas",classify menu deltas
+printer,verified,not_added,"opcode-identical across all eight releases",add shared source
+game_time,verified,not_added,"opcode-identical across all eight releases",add shared source
+map,verified,not_added,"regional opcode deltas present across the large map HOME component",classify by subroutine before source merge
+farcall,verified,not_added,"opcode-identical across all eight releases",add shared source
+predef,verified,not_added,"opcode-identical across all eight releases",add shared source
+window,verified,not_added,"opcode-identical across all eight releases",add shared source
+flag,verified,not_added,"opcode-identical across all eight releases",add shared source
+sprite_updates,verified,not_added,"opcode-identical across all eight releases",add shared source
+string,verified,not_added,"KR component is structurally different; JP/western share opcode structure",reconstruct Korean branch
+region,verified,not_added,"opcode-identical across all eight releases",add shared source
+item,verified,not_added,"opcode-identical across all eight releases",add shared source
+random,verified,not_added,"opcode-identical across all eight releases",add shared source
+sram,verified,source_added,"KR adds SRAM bank validation and active-bank state tracking",assemble Korean and non-Korean branches and compare
+call_regs,verified,source_added,"opcode-identical across all eight releases",assemble and compare
+clear_sprites,verified,source_added,"opcode-identical across all eight releases",assemble and compare
+copy,verified,source_added,"opcode-identical across all eight releases",assemble and compare
+copy_tilemap,verified,source_added,"KR uses far-called tilemap copy helpers; US/JP/western use direct copies",assemble Korean and non-Korean branches and compare
+copy_name,verified,source_added,"opcode-identical across all eight releases",assemble and compare
+array,verified,source_added,"opcode-identical across all eight releases",assemble and compare
+math,verified,source_added,"opcode-identical across all eight releases",assemble and compare
+print_text,verified,not_added,"regional structural deltas present",classify localization-specific numeric/text routines
+queue_script,verified,source_added,"opcode-identical across all eight releases",assemble and compare
+compare,verified,source_added,"opcode-identical across all eight releases",assemble and compare
+tilemap,verified,not_added,"KR implementation differs; JP/western opcode structure is shared",reconstruct Korean branch
+pokedex_flags,verified,not_added,"opcode-identical across all eight releases",add shared source
+names,verified,not_added,"localized name-table handling differs by release",classify regional name logic/data boundaries
+scrolling_menu,verified,not_added,"opcode-identical across all eight releases",add shared source
+stone_queue,verified,not_added,"opcode-identical across all eight releases",add shared source
+trainers,verified,not_added,"opcode-identical across all eight releases",add shared source
+pokemon,verified,not_added,"opcode-identical across all eight releases",add shared source
+print_bcd,verified,not_added,"JP/KR/FR/ES differ from US; DE/IT share US opcode structure",reconstruct localized numeric/currency branches
+battle,verified,not_added,"regional structural deltas remain in JP/KR/FR/ES; DE/IT are closest to US",classify subroutine-level differences
+sprite_anims,verified,not_added,"opcode-identical across all eight releases; JP Rev A has one byte operand/data delta",locate exact JP revision byte meaning then add source
+audio,verified,not_added,"regional and JP revision deltas present; JP Rev 0/A differ in 174 late-Bank00 bytes",classify audio HOME routines and JP revision delta
