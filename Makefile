@@ -10,7 +10,7 @@ RGBASM ?= $(RGBDS)rgbasm
 
 BUILD_DIR := build/bank00
 BANK00_PREINCLUDE := config/bank00/preinclude.asm
-RGBASM_COMMON := -Weverything -Wtruncation=1 -Q8
+RGBASM_COMMON := -Weverything -Werror -Wtruncation=1 -Q8
 
 WEST_REF := reference/pokegold
 JP_REF := reference/pokesilver
