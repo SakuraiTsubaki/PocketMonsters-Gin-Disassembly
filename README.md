@@ -45,8 +45,8 @@ Bank 00 (`0x0000-0x3FFF`) is being completed in full before Bank 01 work begins.
 - JP Rev 0 / Rev A are 1 MiB (64 ROM banks); KR and the English/German/French/Italian/Spanish releases are 2 MiB (128 banks).
 - The complete Bank 00 HOME layout is mapped into **53 contiguous source components**, from `header.asm` through `audio.asm`.
 - Component start addresses are mapped for **all eight releases**.
-- **All 53 / 53 Bank 00 components are now source-addressable.**
-- **52 / 53 are reconstructed directly in this repository.** `map.asm`, the final and largest component, currently selects three exact commit-pinned public source references while its self-contained vendoring pass is prepared.
+- **All 53 / 53 Bank 00 components now have local source in this repository.**
+- The large map component is vendored as exact, provenance-tagged snapshots under `home/map_variants/`; `home/map.asm` selects the Western, Japanese, or Korean local source at build time. Building Bank 00 therefore no longer requires the reference submodules to be initialized.
 - `menu.asm` is reconstructed as shared logic with narrow Korean WRAM/far-call branches plus localized JP/KR/DE/FR/IT/ES data.
 - `text.asm` is reconstructed with the Korean double-byte Hangul renderer, Japanese text-command/string rules, and Western language literal/weekday branches.
 - The map comparison shows all Western releases have the same 3786-byte component length. Japanese adds 15 bytes primarily through three inline default event strings. The apparent Korean +42-byte boundary delta belongs to Korean far-call helpers and `DummyEndPredef` immediately before `FarCall_hl`, rather than opaque map logic.
@@ -54,15 +54,15 @@ Bank 00 (`0x0000-0x3FFF`) is being completed in full before Bank 01 work begins.
 - Verified Korean semantic branches include RST/LCD timing, initialization, serial timing, SRAM state tracking, tilemap transfer, graphics request synchronization, double-byte string/name handling, palette bank preservation, video helpers, and menu/window WRAM handling.
 - Verified Japanese semantic branches include VBlank handling, RTC carry behavior, joypad omissions, simplified graphics/video paths, Japanese name widths, localized number rendering, and inline default map-event strings.
 
-## Pinned map references
+## Map provenance
 
-Temporary provenance-locked references used by `home/map.asm`:
+The locally vendored snapshots are generated from these exact public-source revisions:
 
-- `pret/pokegold` @ `656583c939d30f920a316177311a502dd222b57c`
-- `Narishma-gb/pokesilver` @ `edbe53978ef1777fc5c41019e17b7544070eab92`
-- `Narishma-gb/pokegold-kr` @ `f4496dda3003ccc5fc26f2757171a3b111e65307`
+- `home/map_variants/western.asm`: `pret/pokegold` @ `656583c939d30f920a316177311a502dd222b57c`
+- `home/map_variants/japanese.asm`: `Narishma-gb/pokesilver` @ `edbe53978ef1777fc5c41019e17b7544070eab92`
+- `home/map_variants/korean.asm`: `Narishma-gb/pokegold-kr` @ `f4496dda3003ccc5fc26f2757171a3b111e65307`
 
-See `docs/bank00_map_source_provenance.md`. These references contain source only; no ROM/base-ROM is referenced. The final Bank 00 self-contained milestone requires vendoring/collapsing this map source into the repository itself.
+The reference gitlinks and vendoring tool remain for provenance/reproducibility; the actual Bank 00 map source is now present locally. See `docs/bank00_map_source_provenance.md`.
 
 ## Bank 00 analysis
 
@@ -79,12 +79,13 @@ See `docs/bank00_map_source_provenance.md`. These references contain source only
 - `tools/map_bank00_components.py`
 - `tools/analyze_home_prefix.py`
 - `tools/analyze_roms.py`
+- `tools/vendor_map_source.py`
 
 Additional source helpers include regional `print_num.asm`, shared `battle_vars.asm`, shared `hm_moves.asm`, and exact JP Rev 0 reconstruction data under `garbage/rev_0/bank00.asm`.
 
 ## Next Bank 00 milestone
 
-1. Vendor the pinned map source locally and collapse it to shared code plus narrow `_JAPANESE` / `_KOREAN` conditionals.
+1. Collapse the three locally vendored map snapshots to shared code plus narrow `_JAPANESE` / `_KOREAN` conditionals after byte verification establishes the exact minimal delta.
 2. Add the minimum constants, macros, symbols, memory definitions, and build scaffold needed to assemble Bank 00.
 3. Assemble all eight release variants.
 4. Compare every generated Bank 00 byte-for-byte with its preserved original and resolve every mismatch.
