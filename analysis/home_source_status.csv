@@ -11,16 +11,16 @@ serial,verified,source_added,"KR uses 96/30 timing constants and a second 255-co
 joypad,verified,source_added,"JP Rev 0/A omit AUTO_INPUT duration-FF handling and PromptButton automatic-input farcall; KR/western share opcode structure",assemble Japanese and non-Japanese branches and compare
 decompress,verified,source_added,"opcode-identical across all eight releases; only relocation operands differ",assemble and compare linked bytes
 palettes,verified,source_added,"KR ReloadPalettes preserves BG bank bit for bank-1 tiles; JP/western share common logic",assemble regional branch and compare
- gfx,verified,source_added,"KR waits for 1bpp/2bpp request completion; JP omits DuplicateGet2bpp",assemble JP/KR/western branches and compare
-text,verified,not_added,"all localization families differ; KR has double-byte text path and localized command/string handling",reconstruct per-family text logic without duplicating shared code
+gfx,verified,source_added,"KR waits for 1bpp/2bpp request completion; JP omits DuplicateGet2bpp",assemble JP/KR/western branches and compare
+text,verified,source_added,"KR adds double-byte Hangul rendering and several far-called helpers; JP uses Japanese command/string rules; western language literals and weekdays are localized in one source",assemble each language branch and compare component bytes
 video,verified,source_added,"JP uses simplified BG-map updater; KR far-calls _UpdateBGMap and adds Delay4; request service routines are shared",assemble JP/KR/western branches and compare
 map_objects,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
 sine,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 movement,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
-menu,verified,not_added,"all localization families contain structural deltas",classify menu deltas and merge regional data/code
+menu,verified,source_added,"shared menu logic with KR WRAM/farcall branches, JP glyph/text data, and localized Western Yes/No strings",assemble every regional branch and compare component bytes
 printer,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 game_time,verified,source_added,"opcode-identical across all eight releases",assemble and compare
-map,verified,not_added,"regional opcode deltas present across the large map HOME component",classify by subroutine before source merge
+map,verified,source_pinned_reference,"western map logic is common; JP retail delta is chiefly three inline event-text stubs; apparent KR +42-byte boundary delta belongs to Korean farcall helpers immediately before FarCall_hl",vendor pinned map sources locally, collapse to narrow JP/KR conditionals, then assemble and compare
 farcall,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 predef,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 window,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
