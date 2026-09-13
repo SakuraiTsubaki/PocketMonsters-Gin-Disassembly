@@ -1,157 +1,184 @@
-Reset::
-	call InitSound
-	xor a
-	ldh [hMapAnims], a
-	call ClearPalettes
-	ei
-
-	ld hl, wJoypadDisable
-	set JOYPAD_DISABLE_SGB_TRANSFER_F, [hl]
-
-	ld c, 32
-	call DelayFrames
-	jr Init
+; System initialization and hardware setup.
+; Shared from pret/pokegold with verified Japanese/Korean region branches.
 
 _Start::
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+	nop
+
 	cp BOOTUP_A_CGB
 	jr z, .cgb
-	xor a
+	cp BOOTUP_A_DMG
+	jr z, .dmg
+	cp BOOTUP_A_MGB
+	jr z, .mgb
 IF DEF(_KOREAN)
-	ldh [hCGB], a
+	cp BOOTUP_A_AGB
+	jr z, .agb
 ENDC
-	jr .load
 
-.cgb:
+.dmg
+	ld a, FALSE
+	jr .init
+
+.cgb
 	ld a, TRUE
+	jr .init
+
+.mgb
+	ld a, 2
+	jr .init
 IF DEF(_KOREAN)
-	ldh [hCGB], a
-	bit B_BOOTUP_B_AGB, b
-	jr nz, .load
-	xor a
+
+.agb
+	ld a, 3
 ENDC
 
-.load:
-IF DEF(_KOREAN)
-	; Korean retail preserves a separate AGB boot flag.
-	ldh [hAGB], a
-ELSE
+.init
 	ldh [hCGB], a
-ENDC
 
-Init::
-	di
-
+; Clear WRAM0.
 	xor a
-	ldh [rIF], a
-	ldh [rIE], a
-	ldh [rRP], a
-	ldh [rSCX], a
-	ldh [rSCY], a
-	ldh [rSB], a
-	ldh [rSC], a
-	ldh [rWX], a
-	ldh [rWY], a
-	ldh [rBGP], a
-	ldh [rOBP0], a
-	ldh [rOBP1], a
-	ldh [rTMA], a
-	ldh [rTAC], a
-	ld [wBetaTitleSequenceOpeningType], a
-
-	ld a, %100
-	ldh [rTAC], a
-
-.wait:
-	ldh a, [rLY]
-	cp LY_VBLANK + 1
-	jr nz, .wait
-
-	xor a
-	ldh [rLCDC], a
-
 	ld hl, STARTOF(WRAM0)
-	ld bc, SIZEOF(WRAM0) + SIZEOF(WRAMX)
-.ByteFill:
-	ld [hl], 0
-	inc hl
-	dec bc
-	ld a, b
-	or c
-	jr nz, .ByteFill
+	ld bc, SIZEOF(WRAM0)
+	call ByteFill
 
-	ld sp, wStackTop
-	call ClearVRAM
-
+; Clear HRAM.
 IF DEF(_KOREAN)
-	; Korean moves HRAM clearing out of HOME.
-	farcall ClearHRAM
-ELSE
-	; Preserve hCGB while clearing HRAM.
-	ldh a, [hCGB]
-	push af
-	xor a
 	ld hl, STARTOF(HRAM)
 	ld bc, SIZEOF(HRAM)
 	call ByteFill
-	pop af
-	ldh [hCGB], a
-ENDC
-
-	call ClearSprites
-
-	ld a, BANK(WriteOAMDMACodeToHRAM)
-	rst Bankswitch
-	call WriteOAMDMACodeToHRAM
-
-	xor a
-	ldh [hMapAnims], a
-	ldh [hSCX], a
-	ldh [hSCY], a
-	ldh [rJOYP], a
-
-	ld a, STAT_MODE_0
-	ldh [rSTAT], a
-
-	ld a, SCREEN_HEIGHT_PX
-	ldh [hWY], a
-	ldh [rWY], a
-
-	ld a, WX_OFS
-	ldh [hWX], a
-	ldh [rWX], a
-
-	ld a, CONNECTION_NOT_ESTABLISHED
-	ldh [hSerialConnectionStatus], a
-
-IF DEF(_KOREAN)
-	; Korean moves the two BG-map clears to a far-called helper.
-	farcall BlankAllBGMaps
 ELSE
-	ld h, HIGH(vBGMap0)
-	call BlankBGMap
-	ld h, HIGH(vBGMap1)
-	call BlankBGMap
+	ld [hMapAnims], a
+	ld [hSCX], a
+	ld [hSCY], a
+	ld [hWY], a
+	ld [hWX], a
+	ld [hJoyDown], a
+	ld [hJoyPressed], a
+	ld [hJoyLast], a
+	ld [hInMenu], a
+	ld [hVBlank], a
+	ld [hROMBank], a
+	ld [hBGMapMode], a
+	ld [hBGMapThird], a
+	ld [hBGMapAddress], a
+	ld [hOAMUpdate], a
+	ld [hSPBuffer], a
+	ld [hSPBuffer + 1], a
+	ld [hBGMapUpdate], a
+	ld [hBGMapTileCount], a
+	ld [hMapObjectIndexBuffer], a
+	ld [hObjectStructIndexBuffer], a
+	ld [hConnectionStripLength], a
+	ld [hConnectedMapWidth], a
+	ld [hEnemyMonSpeed], a
+	ld [hMultiplicand], a
+	ld [hMultiplicand + 1], a
+	ld [hMultiplicand + 2], a
+	ld [hMultiplier], a
+	ld [hProduct], a
+	ld [hProduct + 1], a
+	ld [hProduct + 2], a
+	ld [hProduct + 3], a
+	ld [hDividend], a
+	ld [hDividend + 1], a
+	ld [hDividend + 2], a
+	ld [hDividend + 3], a
+	ld [hDivisor], a
+	ld [hQuotient], a
+	ld [hQuotient + 1], a
+	ld [hQuotient + 2], a
+	ld [hQuotient + 3], a
+	ld [hPrintNumBuffer], a
+	ld [hPrintNumBuffer + 1], a
+	ld [hPrintNumBuffer + 2], a
+	ld [hPrintNumBuffer + 3], a
+	ld [hPrintNumBuffer + 4], a
+	ld [hPrintNumBuffer + 5], a
+	ld [hPrintNumBuffer + 6], a
+	ld [hPrintNumBuffer + 7], a
+	ld [hPrintNumBuffer + 8], a
+	ld [hPrintNumBuffer + 9], a
+	ld [hPrintNumBuffer + 10], a
+	ld [hPrintNumBuffer + 11], a
+	ld [hMGStatusFlags], a
+	ld [hUsedSpriteIndex], a
+	ld [hUsedSpriteTile], a
+	ld [hCurSpriteXCoord], a
+	ld [hCurSpriteYCoord], a
+	ld [hCurSpriteXPixel], a
+	ld [hCurSpriteYPixel], a
+	ld [hCurSpriteTile], a
+	ld [hCurSpriteOAMFlags], a
+	ld [hMoneyTemp], a
+	ld [hMoneyTemp + 1], a
+	ld [hMoneyTemp + 2], a
+	ld [hCoinsTemp], a
+	ld [hCoinsTemp + 1], a
+	ld [hRGB], a
+	ld [hRGB + 1], a
+	ld [hRGB + 2], a
+	ld [hRGB + 3], a
+	ld [hObjectStructIndex], a
+	ld [hTextBoxFlags], a
+	ld [hRequestContents], a
+	ld [hRequestContents + 1], a
+	ld [hRequested2bppSource], a
+	ld [hRequested2bppSource + 1], a
+	ld [hRequested2bppSize], a
+	ld [hRequested2bppDest], a
+	ld [hRequested2bppDest + 1], a
+	ld [hRequested1bppSource], a
+	ld [hRequested1bppSource + 1], a
+	ld [hRequested1bppSize], a
+	ld [hRequested1bppDest], a
+	ld [hRequested1bppDest + 1], a
+	ld [hLCDCPointer], a
+	ld [hLCDCPointer + 1], a
+	ld [hLYOverrideStart], a
+	ld [hLYOverrideEnd], a
 ENDC
 
-	callfar InitCGBPals
+; Disable LCD.
+	ldh [rLCDC], a
 
-	ld a, HIGH(vBGMap1)
-	ldh [hBGMapAddress + 1], a
+; Clear VRAM.
+	call ClearVRAM
+
+; Clear OAM.
+	ld hl, STARTOF(OAM)
+	ld bc, SIZEOF(OAM)
 	xor a
-	ldh [hBGMapAddress], a
+	call ByteFill
 
-	farcall StartClock
+; Initialize stack.
+	ld hl, wStackTop
+	ld sp, hl
 
-	ld a, RAMG_SRAM_ENABLE
-	ld [rRAMG], a
-	ld a, RAMG_SRAM_DISABLE
-	ld [rRTCLATCH], a
-	ld [rRAMG], a
+; Set palettes.
+	ld a, %11100100
+	ldh [rBGP], a
+	ldh [rOBP0], a
+	ldh [rOBP1], a
 
+; Set LCDC.
 	ld a, LCDC_DEFAULT
 	ldh [rLCDC], a
 
-	ld a, IE_DEFAULT
+; Initialize interrupt flags.
+	xor a
+	ldh [rIF], a
+	ld a, 1 << VBLANK
 	ldh [rIE], a
 	ei
 
@@ -171,7 +198,11 @@ ClearVRAM::
 
 IF !DEF(_KOREAN)
 BlankBGMap::
+IF DEF(_JAPANESE)
+	ld a, '　'
+ELSE
 	ld a, ' '
+ENDC
 	jr FillBGMap
 
 FillBGMap_l:: ; unreferenced
