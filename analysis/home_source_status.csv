@@ -15,14 +15,14 @@ gfx,verified,not_added,"KR adds request-completion wait loops; JP also differs f
 text,verified,not_added,"all localization families differ; KR has double-byte text path and localized command/string handling",reconstruct per-family text logic without duplicating shared code
 video,verified,not_added,"JP and KR differ; western releases share US opcode structure",classify JP/KR video deltas
 map_objects,verified,not_added,"opcode-identical across all eight releases",add shared source and compare linked bytes
-sine,verified,not_added,"opcode-identical across all eight releases",add shared source
+sine,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 movement,verified,not_added,"opcode-identical across all eight releases",add shared source
 menu,verified,not_added,"all localization families contain structural deltas",classify menu deltas
-printer,verified,not_added,"opcode-identical across all eight releases",add shared source
-game_time,verified,not_added,"opcode-identical across all eight releases",add shared source
+printer,verified,source_added,"opcode-identical across all eight releases",assemble and compare
+game_time,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 map,verified,not_added,"regional opcode deltas present across the large map HOME component",classify by subroutine before source merge
-farcall,verified,not_added,"opcode-identical across all eight releases",add shared source
-predef,verified,not_added,"opcode-identical across all eight releases",add shared source
+farcall,verified,source_added,"opcode-identical across all eight releases",assemble and compare
+predef,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 window,verified,not_added,"opcode-identical across all eight releases",add shared source
 flag,verified,not_added,"opcode-identical across all eight releases",add shared source
 sprite_updates,verified,not_added,"opcode-identical across all eight releases",add shared source
