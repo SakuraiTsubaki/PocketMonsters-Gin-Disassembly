@@ -1,0 +1,32 @@
+# ROM images
+*.gb
+*.gbc
+*.gba
+*.nds
+baserom*
+
+# RGBDS build outputs
+*.o
+*.map
+*.sym
+*.noi
+*.sav
+*.rtc
+
+# Generated intermediates
+*.2bpp
+*.1bpp
+*.lz
+
+# Tool/build caches
+__pycache__/
+*.pyc
+.cache/
+build/
+dist/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
