@@ -45,14 +45,14 @@ Bank 00 (`0x0000-0x3FFF`) is being completed in full before Bank 01 work begins.
 - The complete Bank 00 HOME layout is mapped into **53 contiguous source components**, from `header.asm` through `audio.asm`.
 - Component start addresses are mapped for **all eight releases**.
 - Of the 52 non-header HOME components, **31 are opcode-structure-identical across all eight releases** when relocation/immediate operands are ignored.
-- Reconstructed source currently exists for **21 / 53 Bank 00 components**.
+- Reconstructed source currently exists for **26 / 53 Bank 00 components**.
 - JP Rev 0 and Rev A Bank 00 differences are confined to `header`, `sprite_anims`, and late `audio` data/code runs.
 - Verified Korean semantic branches include RST timing helpers, LCD scanline guarding, boot/HRAM/BG-map initialization, serial timing, SRAM safeguards/state tracking, and far-called tilemap-copy helpers.
 - Verified Japanese semantic branches include VBlank cutscene interrupt handling, one RTC carry instruction, and two joypad/automatic-input omissions.
 
 Currently reconstructed under `home/`:
 
-`header`, `vblank`, `delay`, `time_palettes`, `fade`, `lcd`, `time`, `init`, `serial`, `joypad`, `decompress`, `sram`, `call_regs`, `clear_sprites`, `copy`, `copy_tilemap`, `copy_name`, `array`, `math`, `queue_script`, and `compare`.
+`header`, `vblank`, `delay`, `time_palettes`, `fade`, `lcd`, `time`, `init`, `serial`, `joypad`, `decompress`, `sine`, `printer`, `game_time`, `farcall`, `predef`, `sram`, `call_regs`, `clear_sprites`, `copy`, `copy_tilemap`, `copy_name`, `array`, `math`, `queue_script`, and `compare`.
 
 ## Bank 00 analysis
 
@@ -71,6 +71,6 @@ Currently reconstructed under `home/`:
 
 ## Next milestone
 
-Continue filling the remaining Bank 00 components, prioritizing opcode-identical shared source (`map_objects`, `sine`, `movement`, `printer`, `game_time`, `farcall`, `predef`, `window`, `flag`, `sprite_updates`, `region`, `item`, `random`, `pokedex_flags`, `scrolling_menu`, `stone_queue`, `trainers`, `pokemon`, `sprite_anims`) while separately reconstructing the regional branches in `palettes`, `gfx`, `text`, `video`, `menu`, `map`, `string`, `print_text`, `tilemap`, `names`, `print_bcd`, `battle`, and `audio`.
+Continue filling the remaining Bank 00 components, prioritizing opcode-identical shared source (`map_objects`, `movement`, `window`, `flag`, `sprite_updates`, `region`, `item`, `random`, `pokedex_flags`, `scrolling_menu`, `stone_queue`, `trainers`, `pokemon`, `sprite_anims`) while separately reconstructing the regional branches in `palettes`, `gfx`, `text`, `video`, `menu`, `map`, `string`, `print_text`, `tilemap`, `names`, `print_bcd`, `battle`, and `audio`.
 
 After all Bank 00 source is present, add the minimum constants/macros/symbol/build scaffold, assemble each release variant, and perform byte-for-byte Bank 00 verification before moving to Bank 01.
