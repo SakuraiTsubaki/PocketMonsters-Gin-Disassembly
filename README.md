@@ -47,6 +47,9 @@ Bank 00 (`0x0000-0x3FFF`) is being completed in full before Bank 01 work begins.
 - Component start addresses are mapped for **all eight releases**.
 - **All 53 / 53 Bank 00 components now have local source in this repository.**
 - The large map component is vendored as exact, provenance-tagged snapshots under `home/map_variants/`; `home/map.asm` selects the Western, Japanese, or Korean local source at build time. Building Bank 00 therefore no longer requires the reference submodules to be initialized.
+- Bank 00 map binary verification is now reproducible with `tools/analyze_bank00_component_binary.py`. Exact slice hashes and all 28 pairwise comparisons are recorded under `analysis/` without committing ROM bytes.
+- The JP Rev 0 and Rev A map components are confirmed **byte-identical**: both are 3801 bytes with SHA-1 `047969f4b6cdddb768918c139bf73e65c6e8ddc9`. No map-level Japanese revision split is needed.
+- All Western map components are 3786 bytes; Korean is 3828 bytes. These boundary facts are now explicitly regression-tracked before source deduplication.
 - `menu.asm` is reconstructed as shared logic with narrow Korean WRAM/far-call branches plus localized JP/KR/DE/FR/IT/ES data.
 - `text.asm` is reconstructed with the Korean double-byte Hangul renderer, Japanese text-command/string rules, and Western language literal/weekday branches.
 - The map comparison shows all Western releases have the same 3786-byte component length. Japanese adds 15 bytes primarily through three inline default event strings. The apparent Korean +42-byte boundary delta belongs to Korean far-call helpers and `DummyEndPredef` immediately before `FarCall_hl`, rather than opaque map logic.
@@ -70,22 +73,28 @@ The reference gitlinks and vendoring tool remain for provenance/reproducibility;
 - `docs/bank00_initial_map.md`
 - `docs/bank00_home_phase1.md`
 - `docs/bank00_map_source_provenance.md`
+- `docs/bank00_map_binary_verification.md`
 - `analysis/bank00_us_component_ranges.csv`
 - `analysis/bank00_component_starts_matrix.csv`
 - `analysis/bank00_opcode_equivalence.csv`
 - `analysis/jp_bank00_revision_diff_runs.csv`
 - `analysis/home_source_status.csv`
 - `analysis/bank00_pairwise_diffs.csv`
+- `analysis/bank00_map_binary_summary.csv`
+- `analysis/bank00_map_binary_pairwise.csv`
 - `tools/map_bank00_components.py`
 - `tools/analyze_home_prefix.py`
 - `tools/analyze_roms.py`
 - `tools/vendor_map_source.py`
+- `tools/analyze_bank00_component_binary.py`
 
 Additional source helpers include regional `print_num.asm`, shared `battle_vars.asm`, shared `hm_moves.asm`, and exact JP Rev 0 reconstruction data under `garbage/rev_0/bank00.asm`.
 
 ## Next Bank 00 milestone
 
-1. Collapse the three locally vendored map snapshots to shared code plus narrow `_JAPANESE` / `_KOREAN` conditionals after byte verification establishes the exact minimal delta.
+The binary verification baseline for the map component is complete; the source-collapse and assembly gate remains:
+
+1. Collapse the three locally vendored map snapshots to shared code plus narrow `_JAPANESE` / `_KOREAN` conditionals, using the new byte-level reports as regression evidence.
 2. Add the minimum constants, macros, symbols, memory definitions, and build scaffold needed to assemble Bank 00.
 3. Assemble all eight release variants.
 4. Compare every generated Bank 00 byte-for-byte with its preserved original and resolve every mismatch.
