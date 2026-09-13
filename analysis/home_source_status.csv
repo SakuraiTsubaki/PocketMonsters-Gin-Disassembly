@@ -20,7 +20,7 @@ movement,verified,source_added,"opcode-identical across all eight releases",asse
 menu,verified,source_added,"shared menu logic with KR WRAM/farcall branches, JP glyph/text data, and localized Western Yes/No strings",assemble every regional branch and compare component bytes
 printer,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 game_time,verified,source_added,"opcode-identical across all eight releases",assemble and compare
-map,verified,source_pinned_reference,"western map logic is common; JP retail delta is chiefly three inline event-text stubs; apparent KR +42-byte boundary delta belongs to Korean farcall helpers immediately before FarCall_hl",vendor pinned map sources locally, collapse to narrow JP/KR conditionals, then assemble and compare
+map,verified,source_vendored,"three exact commit-pinned map source snapshots now live under home/map_variants; western map logic is common, JP retail delta is chiefly three inline event-text stubs, and apparent KR +42-byte boundary delta belongs to Korean farcall helpers immediately before FarCall_hl",collapse vendored variants to narrow JP/KR conditionals during assembly verification
 farcall,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 predef,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 window,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
