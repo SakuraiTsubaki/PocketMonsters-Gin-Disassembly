@@ -14,22 +14,22 @@ palettes,verified,not_added,"KR opcode structure differs; JP/western share US op
 gfx,verified,not_added,"KR adds request-completion wait loops; JP also differs from US/western",reconstruct Japanese and Korean graphics branches
 text,verified,not_added,"all localization families differ; KR has double-byte text path and localized command/string handling",reconstruct per-family text logic without duplicating shared code
 video,verified,not_added,"JP and KR differ; western releases share US opcode structure",classify JP/KR video deltas
-map_objects,verified,not_added,"opcode-identical across all eight releases",add shared source and compare linked bytes
+map_objects,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
 sine,verified,source_added,"opcode-identical across all eight releases",assemble and compare
-movement,verified,not_added,"opcode-identical across all eight releases",add shared source
+movement,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
 menu,verified,not_added,"all localization families contain structural deltas",classify menu deltas
 printer,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 game_time,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 map,verified,not_added,"regional opcode deltas present across the large map HOME component",classify by subroutine before source merge
 farcall,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 predef,verified,source_added,"opcode-identical across all eight releases",assemble and compare
-window,verified,not_added,"opcode-identical across all eight releases",add shared source
-flag,verified,not_added,"opcode-identical across all eight releases",add shared source
-sprite_updates,verified,not_added,"opcode-identical across all eight releases",add shared source
+window,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
+flag,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
+sprite_updates,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
 string,verified,not_added,"KR component is structurally different; JP/western share opcode structure",reconstruct Korean branch
-region,verified,not_added,"opcode-identical across all eight releases",add shared source
-item,verified,not_added,"opcode-identical across all eight releases",add shared source
-random,verified,not_added,"opcode-identical across all eight releases",add shared source
+region,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
+item,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
+random,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
 sram,verified,source_added,"KR adds SRAM bank validation and active-bank state tracking",assemble Korean and non-Korean branches and compare
 call_regs,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 clear_sprites,verified,source_added,"opcode-identical across all eight releases",assemble and compare
@@ -42,13 +42,13 @@ print_text,verified,not_added,"regional structural deltas present",classify loca
 queue_script,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 compare,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 tilemap,verified,not_added,"KR implementation differs; JP/western opcode structure is shared",reconstruct Korean branch
-pokedex_flags,verified,not_added,"opcode-identical across all eight releases",add shared source
+pokedex_flags,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
 names,verified,not_added,"localized name-table handling differs by release",classify regional name logic/data boundaries
-scrolling_menu,verified,not_added,"opcode-identical across all eight releases",add shared source
-stone_queue,verified,not_added,"opcode-identical across all eight releases",add shared source
-trainers,verified,not_added,"opcode-identical across all eight releases",add shared source
-pokemon,verified,not_added,"opcode-identical across all eight releases",add shared source
+scrolling_menu,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
+stone_queue,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
+trainers,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
+pokemon,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
 print_bcd,verified,not_added,"JP/KR/FR/ES differ from US; DE/IT share US opcode structure",reconstruct localized numeric/currency branches
 battle,verified,not_added,"regional structural deltas remain in JP/KR/FR/ES; DE/IT are closest to US",classify subroutine-level differences
-sprite_anims,verified,not_added,"opcode-identical across all eight releases; JP Rev A has one byte operand/data delta",locate exact JP revision byte meaning then add source
+sprite_anims,verified,source_added,"opcode-identical across all eight releases; JP Rev A has one byte operand/data delta",locate exact JP revision byte meaning and verify linked bytes
 audio,verified,not_added,"regional and JP revision deltas present; JP Rev 0/A differ in 174 late-Bank00 bytes",classify audio HOME routines and JP revision delta
