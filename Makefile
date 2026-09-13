@@ -9,6 +9,7 @@ RGBDS ?=
 RGBASM ?= $(RGBDS)rgbasm
 
 BUILD_DIR := build/bank00
+BANK00_PREINCLUDE := config/bank00/preinclude.asm
 RGBASM_COMMON := -Weverything -Wtruncation=1 -Q8
 
 WEST_REF := reference/pokegold
@@ -37,16 +38,17 @@ bank00-check-refs:
 	@test -f $(WEST_REF)/includes.asm || { echo "missing $(WEST_REF); run: git submodule update --init --recursive"; exit 1; }
 	@test -f $(JP_REF)/includes.asm || { echo "missing $(JP_REF); run: git submodule update --init --recursive"; exit 1; }
 	@test -f $(KR_REF)/includes.asm || { echo "missing $(KR_REF); run: git submodule update --init --recursive"; exit 1; }
+	@test -f $(BANK00_PREINCLUDE) || { echo "missing $(BANK00_PREINCLUDE)"; exit 1; }
 
 $(BUILD_DIR):
 	mkdir -p $@
 
 # $(1) release id
-# $(2) reference source root
+# $(2) reference source root used for nested include lookup
 # $(3) regional/revision defines
 define BANK00_RULE
-$(BUILD_DIR)/$(1).o: home.asm | $(BUILD_DIR)
-	$(RGBASM) $(RGBASM_COMMON) -I $(2)/ -P $(2)/includes.asm -D _SILVER $(3) -o $$@ $$<
+$(BUILD_DIR)/$(1).o: home.asm $(BANK00_PREINCLUDE) | $(BUILD_DIR)
+	$(RGBASM) $(RGBASM_COMMON) -I $(2)/ -P $(BANK00_PREINCLUDE) -D _SILVER $(3) -o $$@ $$<
 
 bank00-$(1): bank00-check-refs $(BUILD_DIR)/$(1).o
 endef
