@@ -46,16 +46,19 @@ Bank 00 (`0x0000-0x3FFF`) is being completed in full before Bank 01 work begins.
 - The complete Bank 00 HOME layout is mapped into **53 contiguous source components**, from `header.asm` through `audio.asm`.
 - Component start addresses are mapped for **all eight releases**.
 - **All 53 / 53 Bank 00 components now have local source in this repository.**
-- The large map component is vendored as exact, provenance-tagged snapshots under `home/map_variants/`; `home/map.asm` selects the Western, Japanese, or Korean local source at build time. Building Bank 00 therefore no longer requires the reference submodules to be initialized.
-- Bank 00 map binary verification is now reproducible with `tools/analyze_bank00_component_binary.py`. Exact slice hashes and all 28 pairwise comparisons are recorded under `analysis/` without committing ROM bytes.
-- The JP Rev 0 and Rev A map components are confirmed **byte-identical**: both are 3801 bytes with SHA-1 `047969f4b6cdddb768918c139bf73e65c6e8ddc9`. No map-level Japanese revision split is needed.
-- All Western map components are 3786 bytes; Korean is 3828 bytes. These boundary facts are now explicitly regression-tracked before source deduplication.
+- The large map component has exact, provenance-tagged snapshots under `home/map_variants/`. The map source itself is local; the reference submodules are not required to obtain its code.
+- Korean map logic is now deduplicated: `home/map.asm` compiles the Western structural baseline and appends only the exact `_KOREAN` `DummyEndPredef` tail. The Korean vendored snapshot remains solely as provenance/regression reference.
+- Japanese map comparison is reduced to three retail inline event-text stubs plus a `_DEBUG`-only validation block. JP Rev 0 and Rev A have no map-level source split.
+- Bank 00 map binary verification is reproducible with `tools/analyze_bank00_component_binary.py`. Exact slice hashes and all 28 pairwise comparisons are recorded under `analysis/` without committing ROM bytes.
+- The JP Rev 0 and Rev A map components are confirmed **byte-identical**: both are 3801 bytes with SHA-1 `047969f4b6cdddb768918c139bf73e65c6e8ddc9`.
+- All Western map components are 3786 bytes; Korean is 3828 bytes. These boundary facts are explicitly regression-tracked before final source collapse/link verification.
 - `menu.asm` is reconstructed as shared logic with narrow Korean WRAM/far-call branches plus localized JP/KR/DE/FR/IT/ES data.
 - `text.asm` is reconstructed with the Korean double-byte Hangul renderer, Japanese text-command/string rules, and Western language literal/weekday branches.
-- The map comparison shows all Western releases have the same 3786-byte component length. Japanese adds 15 bytes primarily through three inline default event strings. The apparent Korean +42-byte boundary delta belongs to Korean far-call helpers and `DummyEndPredef` immediately before `FarCall_hl`, rather than opaque map logic.
 - JP Rev 0 / Rev A late-Bank00 differences are separated correctly: core `audio.asm` code is shared, while JP Rev 0 alone carries a 177-byte trailing ROM0 garbage block and Rev A uses zero fill.
 - Verified Korean semantic branches include RST/LCD timing, initialization, serial timing, SRAM state tracking, tilemap transfer, graphics request synchronization, double-byte string/name handling, palette bank preservation, video helpers, and menu/window WRAM handling.
 - Verified Japanese semantic branches include VBlank handling, RTC carry behavior, joypad omissions, simplified graphics/video paths, Japanese name widths, localized number rendering, and inline default map-event strings.
+- A Bank 00 bootstrap `Makefile` now defines all eight regional/revision assembly targets. During this bootstrap stage it uses the pinned reference submodules only for their regional constants/macros/charmaps; no ROM image is read.
+- `.github/workflows/bank00-assemble.yml` runs a clean RGBDS assembly of all eight HOME variants and uploads the generated object files on success. This CI gate is being used to expose and eliminate remaining assembly dependencies before linking.
 
 ## Map provenance
 
@@ -65,7 +68,7 @@ The locally vendored snapshots are generated from these exact public-source revi
 - `home/map_variants/japanese.asm`: `Narishma-gb/pokesilver` @ `edbe53978ef1777fc5c41019e17b7544070eab92`
 - `home/map_variants/korean.asm`: `Narishma-gb/pokegold-kr` @ `f4496dda3003ccc5fc26f2757171a3b111e65307`
 
-The reference gitlinks and vendoring tool remain for provenance/reproducibility; the actual Bank 00 map source is now present locally. See `docs/bank00_map_source_provenance.md`.
+The reference gitlinks and vendoring tools remain for provenance/reproducibility. See `docs/bank00_map_source_provenance.md`, `docs/bank00_map_binary_verification.md`, and `docs/bank00_map_source_delta.md`.
 
 ## Bank 00 analysis
 
@@ -74,6 +77,7 @@ The reference gitlinks and vendoring tool remain for provenance/reproducibility;
 - `docs/bank00_home_phase1.md`
 - `docs/bank00_map_source_provenance.md`
 - `docs/bank00_map_binary_verification.md`
+- `docs/bank00_map_source_delta.md`
 - `analysis/bank00_us_component_ranges.csv`
 - `analysis/bank00_component_starts_matrix.csv`
 - `analysis/bank00_opcode_equivalence.csv`
@@ -87,15 +91,17 @@ The reference gitlinks and vendoring tool remain for provenance/reproducibility;
 - `tools/analyze_roms.py`
 - `tools/vendor_map_source.py`
 - `tools/analyze_bank00_component_binary.py`
+- `Makefile`
+- `.github/workflows/bank00-assemble.yml`
 
 Additional source helpers include regional `print_num.asm`, shared `battle_vars.asm`, shared `hm_moves.asm`, and exact JP Rev 0 reconstruction data under `garbage/rev_0/bank00.asm`.
 
 ## Next Bank 00 milestone
 
-The binary verification baseline for the map component is complete; the source-collapse and assembly gate remains:
+The source inventory and map binary baseline are complete, Korean map duplication is removed, and the assembly harness is now in place. Remaining Bank 00 gates are:
 
-1. Collapse the three locally vendored map snapshots to shared code plus narrow `_JAPANESE` / `_KOREAN` conditionals, using the new byte-level reports as regression evidence.
-2. Add the minimum constants, macros, symbols, memory definitions, and build scaffold needed to assemble Bank 00.
-3. Assemble all eight release variants.
-4. Compare every generated Bank 00 byte-for-byte with its preserved original and resolve every mismatch.
-5. Only after Bank 00 passes verification move to Bank 01.
+1. Move the three Japanese inline map-event text stubs into narrow `_JAPANESE` branches so all retail map logic uses one common source.
+2. Make the eight-target Bank 00 assembly CI pass, vendoring/reconstructing any remaining constants, macros, symbols, or memory definitions required by HOME.
+3. Link Bank 00 for all eight releases and compare every generated byte with the preserved originals.
+4. Resolve every mismatch and record the verified hashes/ranges.
+5. Only after the complete Bank 00 gate passes move to Bank 01.
