@@ -1,0 +1,9 @@
+[submodule "reference/pokegold"]
+	path = reference/pokegold
+	url = https://github.com/pret/pokegold.git
+[submodule "reference/pokesilver"]
+	path = reference/pokesilver
+	url = https://github.com/Narishma-gb/pokesilver.git
+[submodule "reference/pokegold-kr"]
+	path = reference/pokegold-kr
+	url = https://github.com/Narishma-gb/pokegold-kr.git
