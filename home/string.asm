@@ -30,7 +30,11 @@ IF DEF(_KOREAN)
 	dec c
 	jr nz, .loop
 ELSE
+IF DEF(_JAPANESE)
+	cp '　'
+ELSE
 	cp ' '
+ENDC
 	jr nz, .notblank
 	dec c
 	jr nz, .loop
