@@ -47,7 +47,7 @@ Bank 00 (`0x0000-0x3FFF`) is being completed in full before Bank 01 work begins.
 - Component start addresses are mapped for **all eight releases**.
 - **All 53 / 53 Bank 00 components now have local source in this repository.**
 - The large map component has exact, provenance-tagged snapshots under `home/map_variants/`. The map source itself is local; the reference submodules are not required to obtain its code.
-- Korean map logic is now deduplicated: `home/map.asm` compiles the Western structural baseline and appends only the exact `_KOREAN` `DummyEndPredef` tail. The Korean vendored snapshot remains solely as provenance/regression reference.
+- Korean/Western map logic is now deduplicated correctly: the shorter Korean snapshot is the common structural body. Western builds append the 17-byte `DummyEndPredef` tail; Korean omits it. Region-specific constants/macros are still selected by the build environment.
 - Japanese map comparison is reduced to three retail inline event-text stubs plus a `_DEBUG`-only validation block. JP Rev 0 and Rev A have no map-level source split.
 - Bank 00 map binary verification is reproducible with `tools/analyze_bank00_component_binary.py`. Exact slice hashes and all 28 pairwise comparisons are recorded under `analysis/` without committing ROM bytes.
 - The JP Rev 0 and Rev A map components are confirmed **byte-identical**: both are 3801 bytes with SHA-1 `047969f4b6cdddb768918c139bf73e65c6e8ddc9`.
@@ -98,7 +98,7 @@ Additional source helpers include regional `print_num.asm`, shared `battle_vars.
 
 ## Next Bank 00 milestone
 
-The source inventory and map binary baseline are complete, Korean map duplication is removed, and the assembly harness is now in place. Remaining Bank 00 gates are:
+The source inventory and map binary baseline are complete, Korean/Western map duplication is reduced to one common body plus a single Western tail, and the assembly harness is now in place. Remaining Bank 00 gates are:
 
 1. Move the three Japanese inline map-event text stubs into narrow `_JAPANESE` branches so all retail map logic uses one common source.
 2. Make the eight-target Bank 00 assembly CI pass, vendoring/reconstructing any remaining constants, macros, symbols, or memory definitions required by HOME.
