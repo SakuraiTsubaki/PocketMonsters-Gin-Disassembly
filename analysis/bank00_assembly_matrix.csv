@@ -1,0 +1,9 @@
+release,reference_include_root,defines,status,rgbasm_warnings,object_size_bytes,verified_ci_run
+US-EU-REV0,reference/pokegold,"_SILVER",clean,0,968626,34760033830
+JP-REV0,reference/pokesilver,"_SILVER _JAPANESE _REV0",clean,0,969216,34760033830
+JP-REVA,reference/pokesilver,"_SILVER _JAPANESE",clean,0,969039,34760033830
+KR-REV0,reference/pokegold-kr,"_SILVER _KOREAN",clean,0,985780,34760033830
+DE-REV0,reference/pokegold,"_SILVER _GERMAN",clean,0,968277,34760033830
+FR-REV0,reference/pokegold,"_SILVER _FRENCH",clean,0,967478,34760033830
+IT-REV0,reference/pokegold,"_SILVER _ITALIAN",clean,0,968272,34760033830
+ES-REV0,reference/pokegold,"_SILVER _SPANISH",clean,0,967475,34760033830
