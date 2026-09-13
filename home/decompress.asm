@@ -59,7 +59,7 @@ DEF LZ_LONG_HI   EQU %00000011
 	inc bc
 	jr .command
 
-.short
+.short:
 	push af
 	ld a, [hli]
 	and LZ_LEN
@@ -67,7 +67,7 @@ DEF LZ_LONG_HI   EQU %00000011
 	ld b, 0
 	inc c
 
-.command
+.command:
 	inc b
 	inc c
 	pop af
@@ -81,35 +81,35 @@ DEF LZ_LONG_HI   EQU %00000011
 	cp LZ_ZERO
 	jr z, .Zero
 
-.lloop
+.lloop:
 	dec c
 	jr nz, .lnext
 	dec b
 	jp z, .Main
-.lnext
+.lnext:
 	ld a, [hli]
 	ld [de], a
 	inc de
 	jr .lloop
 
-.Iter
+.Iter:
 	ld a, [hli]
-.iloop
+.iloop:
 	dec c
 	jr nz, .inext
 	dec b
 	jp z, .Main
-.inext
+.inext:
 	ld [de], a
 	inc de
 	jr .iloop
 
-.Alt
+.Alt:
 	dec c
 	jr nz, .anext1
 	dec b
 	jp z, .adone1
-.anext1
+.anext1:
 	ld a, [hli]
 	ld [de], a
 	inc de
@@ -118,30 +118,30 @@ DEF LZ_LONG_HI   EQU %00000011
 	jr nz, .anext2
 	dec b
 	jp z, .adone2
-.anext2
+.anext2:
 	ld a, [hld]
 	ld [de], a
 	inc de
 	jr .Alt
-.adone1
+.adone1:
 	inc hl
-.adone2
+.adone2:
 	inc hl
 	jr .Main
 
-.Zero
+.Zero:
 	xor a
-.zloop
+.zloop:
 	dec c
 	jr nz, .znext
 	dec b
 	jp z, .Main
-.znext
+.znext:
 	ld [de], a
 	inc de
 	jr .zloop
 
-.rewrite
+.rewrite:
 	push hl
 	push af
 	ld a, [hli]
@@ -157,7 +157,7 @@ DEF LZ_LONG_HI   EQU %00000011
 	ld h, a
 	jr .ok
 
-.positive
+.positive:
 	ld l, [hl]
 	ld h, a
 	ld a, [wLZAddress]
@@ -167,7 +167,7 @@ DEF LZ_LONG_HI   EQU %00000011
 	adc h
 	ld h, a
 
-.ok
+.ok:
 	pop af
 	cp LZ_REPEAT
 	jr z, .Repeat
@@ -176,27 +176,27 @@ DEF LZ_LONG_HI   EQU %00000011
 	cp LZ_REVERSE
 	jr z, .Reverse
 
-.Repeat
+.Repeat:
 	dec c
 	jr nz, .rnext
 	dec b
 	jr z, .donerw
-.rnext
+.rnext:
 	ld a, [hli]
 	ld [de], a
 	inc de
 	jr .Repeat
 
-.Flip
+.Flip:
 	dec c
 	jr nz, .fnext
 	dec b
 	jp z, .donerw
-.fnext
+.fnext:
 	ld a, [hli]
 	push bc
 	lb bc, 0, 8
-.floop
+.floop:
 	rra
 	rl b
 	dec c
@@ -207,22 +207,22 @@ DEF LZ_LONG_HI   EQU %00000011
 	inc de
 	jr .Flip
 
-.Reverse
+.Reverse:
 	dec c
 	jr nz, .rvnext
 	dec b
 	jp z, .donerw
-.rvnext
+.rvnext:
 	ld a, [hld]
 	ld [de], a
 	inc de
 	jr .Reverse
 
-.donerw
+.donerw:
 	pop hl
 	bit 7, [hl]
 	jr nz, .next
 	inc hl
-.next
+.next:
 	inc hl
 	jp .Main
