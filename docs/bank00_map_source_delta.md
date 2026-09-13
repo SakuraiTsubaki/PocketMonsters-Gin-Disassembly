@@ -8,13 +8,13 @@ The comparison is intentionally separate from raw ROM-byte alignment. Earlier Ba
 
 | source | pinned provenance | role |
 | --- | --- | --- |
-| `home/map_variants/western.asm` | `pret/pokegold` @ `656583c939d30f920a316177311a502dd222b57c` | shared structural baseline |
+| `home/map_variants/western.asm` | `pret/pokegold` @ `656583c939d30f920a316177311a502dd222b57c` | Western source reference |
 | `home/map_variants/japanese.asm` | `Narishma-gb/pokesilver` @ `edbe53978ef1777fc5c41019e17b7544070eab92` | Japanese source reference |
-| `home/map_variants/korean.asm` | `Narishma-gb/pokegold-kr` @ `f4496dda3003ccc5fc26f2757171a3b111e65307` | Korean source reference |
+| `home/map_variants/korean.asm` | `Narishma-gb/pokegold-kr` @ `f4496dda3003ccc5fc26f2757171a3b111e65307` | shorter common structural body |
 
 ## Korean versus Western
 
-Ignoring the provenance comment, the Korean snapshot has only one source-text addition relative to the Western baseline:
+Ignoring the provenance comment, the Korean and Western snapshots have the same map logic. The only source-text difference is that **Western has** the following trailing block and Korean does not:
 
 ```asm
 DummyEndPredef::
@@ -25,9 +25,11 @@ endr
 	ret
 ```
 
-No separate Korean body of map logic is required. `home/map.asm` therefore compiles the Western baseline for Korean and appends this exact `_KOREAN` block. The historical Korean snapshot remains in `home/map_variants/` as provenance and a regression reference, but it is no longer the compiled source path.
+This direction was confirmed by the first clean RGBDS CI run: compiling the Western snapshot for Korean and then appending the block produced a duplicate `DummyEndPredef` definition. The corrected shared path therefore uses the shorter Korean snapshot as the common body and adds `DummyEndPredef` only for non-Korean Western builds.
 
-The ROM-level Korean map component is still larger than the Western component. That additional binary delta must not be misread as 42 bytes of different map logic: regional definitions, macro expansion, relocated operands, and the component-boundary placement around the far-call/predef helpers all contribute. Final truth remains byte-identical assembly against the preserved Korean ROM.
+Using the Korean snapshot as the structural body does **not** make Western builds use Korean constants or macro expansion. `home/map.asm` is assembled under the selected release environment, so Western builds still use Western constants/macros/charmaps while Korean builds use the Korean set.
+
+The ROM-level Korean map component is still larger than the Western component overall. That binary delta must not be read as a same-sized source-tail difference: Korean regional definitions, macro expansion, relocated operands, and the component boundary around the far-call/predef helpers all contribute. Final truth remains byte-identical assembly against the preserved Korean ROM.
 
 ## Japanese versus Western
 
@@ -69,11 +71,11 @@ The Japanese Rev 0 and Rev A map components are byte-identical, so the final sha
 
 ## Current collapse state
 
-- Western releases: compile `home/map_variants/western.asm`.
-- Korean: compile the same Western baseline plus the exact `_KOREAN` `DummyEndPredef` tail.
+- Western releases: compile the shared Korean structural body, then append `DummyEndPredef`.
+- Korean: compile the same shared structural body without that tail.
 - Japanese: still compiles the Japanese vendored snapshot while the three inline text stubs are moved into narrow `_JAPANESE` conditionals in the common source.
 
-This is deliberately incremental: every collapse step keeps the original snapshots available until assembly verification proves the common source reproduces the preserved retail bytes.
+The Western and Korean historical snapshots remain under `home/map_variants/` as provenance/regression references even when they are not both used as active compile paths.
 
 ## Completion gate
 
