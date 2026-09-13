@@ -1,10 +1,11 @@
 ; Self-contained Bank 00 map source selector.
 ;
-; Western is the shared structural baseline. Source comparison proved that the
-; Korean snapshot differs from it only by the trailing DummyEndPredef block;
-; the rest of the Korean byte delta is produced by Korean build definitions and
-; macro expansion, not by a separate map logic body. Keep the vendored Korean
-; snapshot as provenance/reference, but do not compile a duplicate copy.
+; Korean and Western retail map logic are source-identical except that the
+; Western source has a trailing DummyEndPredef block and the Korean source does
+; not. Use the shorter Korean snapshot as the common structural body, then add
+; DummyEndPredef only for non-Korean Western builds. Regional macros/constants
+; still come from the selected build environment, so this does not impose
+; Korean macro expansion on Western releases.
 ;
 ; Japanese still has a small retail source delta (three inline default event
 ; strings) plus a _DEBUG-only validation block, so it remains on its vendored
@@ -13,9 +14,9 @@
 IF DEF(_JAPANESE)
 	INCLUDE "home/map_variants/japanese.asm"
 ELSE
-	INCLUDE "home/map_variants/western.asm"
+	INCLUDE "home/map_variants/korean.asm"
 
-IF DEF(_KOREAN)
+IF !DEF(_KOREAN)
 DummyEndPredef::
 ; Unused function at the end of PredefPointers.
 rept 16
