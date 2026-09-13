@@ -46,14 +46,11 @@ Bank 00 (`0x0000-0x3FFF`) is being completed in full before Bank 01 work begins.
 - The complete Bank 00 HOME layout is mapped into **53 contiguous source components**, from `header.asm` through `audio.asm`.
 - Component start addresses are mapped for **all eight releases**.
 - Of the 52 non-header HOME components, **31 are opcode-structure-identical across all eight releases** when relocation/immediate operands are ignored.
-- Reconstructed source currently exists for **40 / 53 Bank 00 components**.
-- JP Rev 0 and Rev A Bank 00 differences are confined to `header`, `sprite_anims`, and late `audio` data/code runs.
-- Verified Korean semantic branches include RST timing helpers, LCD scanline guarding, boot/HRAM/BG-map initialization, serial timing, SRAM safeguards/state tracking, and far-called tilemap-copy helpers.
-- Verified Japanese semantic branches include VBlank cutscene interrupt handling, one RTC carry instruction, and two joypad/automatic-input omissions.
-
-Currently reconstructed under `home/`:
-
-`header`, `vblank`, `delay`, `time_palettes`, `fade`, `lcd`, `time`, `init`, `serial`, `joypad`, `decompress`, `map_objects`, `sine`, `movement`, `printer`, `game_time`, `farcall`, `predef`, `window`, `flag`, `sprite_updates`, `region`, `item`, `random`, `sram`, `call_regs`, `clear_sprites`, `copy`, `copy_tilemap`, `copy_name`, `array`, `math`, `queue_script`, `compare`, `pokedex_flags`, `scrolling_menu`, `stone_queue`, `trainers`, `pokemon`, and `sprite_anims`.
+- Reconstructed source currently exists for **50 / 53 Bank 00 components**.
+- Only `text.asm`, `menu.asm`, and `map.asm` remain to be reconstructed before the Bank 00 source-presence milestone is complete.
+- JP Rev 0 / Rev A late-Bank00 differences are now separated correctly: core `audio.asm` code is shared, while JP Rev 0 alone carries a 177-byte trailing ROM0 garbage block and Rev A uses zero fill.
+- Verified Korean semantic branches include RST/LCD timing, initialization, serial timing, SRAM state tracking, tilemap transfer, graphics request synchronization, double-byte string/name handling, palette bank preservation, and video helpers.
+- Verified Japanese semantic branches include VBlank handling, RTC carry behavior, joypad omissions, simplified graphics/video paths, Japanese name widths, and localized number rendering.
 
 ## Bank 00 analysis
 
@@ -70,10 +67,12 @@ Currently reconstructed under `home/`:
 - `tools/analyze_home_prefix.py`
 - `tools/analyze_roms.py`
 
+Additional source helpers now include regional `print_num.asm`, shared `battle_vars.asm`, shared `hm_moves.asm`, and exact JP Rev 0 reconstruction data under `garbage/rev_0/bank00.asm`.
+
 ## Remaining Bank 00 components
 
-`palettes`, `gfx`, `text`, `video`, `menu`, `map`, `string`, `print_text`, `tilemap`, `names`, `print_bcd`, `battle`, and `audio`.
+`text`, `menu`, and `map`.
 
-These remaining components contain genuine regional/localization/revision differences and must be reconstructed with narrow conditionals or region-specific data rather than copied as separate opaque Bank 00 blobs.
+These are the three largest localization-sensitive HOME components. They will be reconstructed by comparing the Western `pret/pokegold` source, Japanese `Narishma-gb/pokesilver` source, Korean `Narishma-gb/pokegold-kr` source, and the preserved DE/FR/IT/ES ROM bytes, keeping shared logic common and isolating only real regional differences.
 
 After all Bank 00 source is present, add the minimum constants/macros/symbol/build scaffold, assemble each release variant, and perform byte-for-byte Bank 00 verification before moving to Bank 01.
