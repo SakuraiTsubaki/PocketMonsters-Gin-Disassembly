@@ -10,14 +10,14 @@ init,verified,source_added,"KR has verified CGB/AGB boot-state, HRAM-clear, and 
 serial,verified,source_added,"KR uses 96/30 timing constants and a second 255-count long-delay loop; other mapped releases share opcode structure",assemble Korean and non-Korean branches and compare
 joypad,verified,source_added,"JP Rev 0/A omit AUTO_INPUT duration-FF handling and PromptButton automatic-input farcall; KR/western share opcode structure",assemble Japanese and non-Japanese branches and compare
 decompress,verified,source_added,"opcode-identical across all eight releases; only relocation operands differ",assemble and compare linked bytes
-palettes,verified,not_added,"KR opcode structure differs; JP/western share US opcode structure",classify Korean palette delta
-gfx,verified,not_added,"KR adds request-completion wait loops; JP also differs from US/western",reconstruct Japanese and Korean graphics branches
+palettes,verified,source_added,"KR ReloadPalettes preserves BG bank bit for bank-1 tiles; JP/western share common logic",assemble regional branch and compare
+ gfx,verified,source_added,"KR waits for 1bpp/2bpp request completion; JP omits DuplicateGet2bpp",assemble JP/KR/western branches and compare
 text,verified,not_added,"all localization families differ; KR has double-byte text path and localized command/string handling",reconstruct per-family text logic without duplicating shared code
-video,verified,not_added,"JP and KR differ; western releases share US opcode structure",classify JP/KR video deltas
+video,verified,source_added,"JP uses simplified BG-map updater; KR far-calls _UpdateBGMap and adds Delay4; request service routines are shared",assemble JP/KR/western branches and compare
 map_objects,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
 sine,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 movement,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
-menu,verified,not_added,"all localization families contain structural deltas",classify menu deltas
+menu,verified,not_added,"all localization families contain structural deltas",classify menu deltas and merge regional data/code
 printer,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 game_time,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 map,verified,not_added,"regional opcode deltas present across the large map HOME component",classify by subroutine before source merge
@@ -26,7 +26,7 @@ predef,verified,source_added,"opcode-identical across all eight releases",assemb
 window,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
 flag,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
 sprite_updates,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
-string,verified,not_added,"KR component is structurally different; JP/western share opcode structure",reconstruct Korean branch
+string,verified,source_added,"KR adds two-byte character handling when testing blank strings; JP/western use single-byte path",assemble Korean and non-Korean branches and compare
 region,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
 item,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
 random,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
@@ -38,17 +38,17 @@ copy_tilemap,verified,source_added,"KR uses far-called tilemap copy helpers; US/
 copy_name,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 array,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 math,verified,source_added,"opcode-identical across all eight releases",assemble and compare
-print_text,verified,not_added,"regional structural deltas present",classify localization-specific numeric/text routines
+print_text,verified,source_added,"outer text-delay/copy wrapper is shared; PrintNum groups are JP, KR/FR/ES, and US/DE/IT; PrintHex is omitted in DE/FR/IT/ES",assemble each language branch and compare
 queue_script,verified,source_added,"opcode-identical across all eight releases",assemble and compare
 compare,verified,source_added,"opcode-identical across all eight releases",assemble and compare
-tilemap,verified,not_added,"KR implementation differs; JP/western opcode structure is shared",reconstruct Korean branch
+tilemap,verified,source_added,"KR uses Delay4 and far-called _CopyTilemapAtOnce; JP/western retain inline tilemap copy",assemble Korean and non-Korean branches and compare
 pokedex_flags,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
-names,verified,not_added,"localized name-table handling differs by release",classify regional name logic/data boundaries
+names,verified,source_added,"JP name slot width differs; KR has double-byte name scan; TM/HM prefixes are region data",assemble all language branches and compare
 scrolling_menu,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
 stone_queue,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
 trainers,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
 pokemon,verified,source_added,"opcode-identical across all eight releases",assemble and compare linked bytes
-print_bcd,verified,not_added,"JP/KR/FR/ES differ from US; DE/IT share US opcode structure",reconstruct localized numeric/currency branches
-battle,verified,not_added,"regional structural deltas remain in JP/KR/FR/ES; DE/IT are closest to US",classify subroutine-level differences
-sprite_anims,verified,source_added,"opcode-identical across all eight releases; JP Rev A has one byte operand/data delta",locate exact JP revision byte meaning and verify linked bytes
-audio,verified,not_added,"regional and JP revision deltas present; JP Rev 0/A differ in 174 late-Bank00 bytes",classify audio HOME routines and JP revision delta
+print_bcd,verified,source_added,"groups are JP, KR/FR/ES suffix-currency behavior, and US/DE/IT leading/floating-currency behavior",assemble all language branches and compare
+battle,verified,source_added,"JP omits FarCopyRadioText; KR uses Delay4 in RefreshBattleHuds; battle_vars is shared",assemble all regional branches and compare
+sprite_anims,verified,source_added,"opcode-identical across all eight releases; JP Rev A has one linked byte delta",locate exact linked-byte cause during assembly verification
+audio,verified,source_added,"core audio interface code is 671 bytes in every release; JP Rev0 alone has 177 bytes of trailing ROM0 garbage while RevA uses zero fill",assemble all releases and verify JP Rev0 garbage placement
