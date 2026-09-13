@@ -1,0 +1,62 @@
+name: Bank 00 assembly
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "Makefile"
+      - "home.asm"
+      - "home/**"
+      - "garbage/**"
+      - ".gitmodules"
+      - ".github/workflows/bank00-assemble.yml"
+  pull_request:
+    paths:
+      - "Makefile"
+      - "home.asm"
+      - "home/**"
+      - "garbage/**"
+      - ".gitmodules"
+      - ".github/workflows/bank00-assemble.yml"
+  workflow_dispatch:
+
+env:
+  RGBDS_VERSION: v1.0.3
+
+jobs:
+  assemble-home:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project and pinned references
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Checkout RGBDS
+        uses: actions/checkout@v4
+        with:
+          repository: gbdev/rgbds
+          ref: ${{ env.RGBDS_VERSION }}
+          path: .ci/rgbds
+
+      - name: Install RGBDS
+        working-directory: .ci/rgbds
+        run: |
+          sudo apt-get update
+          sudo apt-get install -yq bison libpng-dev pkg-config
+          sudo make -j"$(nproc)" install
+
+      - name: Assemble all Bank 00 HOME variants
+        run: make bank00
+
+      - name: List generated objects
+        if: always()
+        run: find build/bank00 -maxdepth 1 -type f -printf '%f %s bytes\n' 2>/dev/null | sort || true
+
+      - name: Upload Bank 00 objects
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bank00-home-objects
+          path: build/bank00/*.o
+          if-no-files-found: error
