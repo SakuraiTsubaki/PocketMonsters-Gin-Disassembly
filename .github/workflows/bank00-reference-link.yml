@@ -7,6 +7,8 @@ on:
       - "home.asm"
       - "home/**"
       - "garbage/**"
+      - "tools/compare_bank00.py"
+      - "analysis/bank00_us_component_ranges.csv"
       - ".gitmodules"
       - ".github/workflows/bank00-reference-link.yml"
   pull_request:
@@ -14,6 +16,8 @@ on:
       - "home.asm"
       - "home/**"
       - "garbage/**"
+      - "tools/compare_bank00.py"
+      - "analysis/bank00_us_component_ranges.csv"
       - ".gitmodules"
       - ".github/workflows/bank00-reference-link.yml"
   workflow_dispatch:
@@ -44,6 +48,17 @@ jobs:
           sudo apt-get install -yq bison libpng-dev pkg-config
           sudo make -j"$(nproc)" install
 
+      - name: Build and verify pristine USA/Europe Silver baseline
+        shell: bash
+        run: |
+          set -euo pipefail
+          make -C reference/pokegold -j2 pokesilver.gbc
+          cd reference/pokegold
+          grep -E '[[:space:]]pokesilver\.gbc$' roms.sha1 | sha1sum -c -
+          cd ../..
+          cp reference/pokegold/pokesilver.gbc .ci/pokesilver-us-vanilla.gbc
+          make -C reference/pokegold tidy
+
       - name: Overlay reconstructed Bank 00 source
         shell: bash
         run: |
@@ -63,6 +78,16 @@ jobs:
 
       - name: Link USA/Europe Silver with reconstructed Bank 00
         run: make -C reference/pokegold -j2 pokesilver.gbc
+
+      - name: Compare USA/Europe Bank 00 with pristine source build
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/compare_bank00.py \
+            .ci/pokesilver-us-vanilla.gbc \
+            reference/pokegold/pokesilver.gbc \
+            --ranges analysis/bank00_us_component_ranges.csv \
+            --report .ci/us_bank00_diff.txt
 
       - name: Verify USA/Europe Silver SHA-1
         shell: bash
