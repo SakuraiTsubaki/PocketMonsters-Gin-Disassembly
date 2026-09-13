@@ -1,0 +1,102 @@
+name: Bank 00 reference link
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "home.asm"
+      - "home/**"
+      - "garbage/**"
+      - ".gitmodules"
+      - ".github/workflows/bank00-reference-link.yml"
+  pull_request:
+    paths:
+      - "home.asm"
+      - "home/**"
+      - "garbage/**"
+      - ".gitmodules"
+      - ".github/workflows/bank00-reference-link.yml"
+  workflow_dispatch:
+
+env:
+  RGBDS_VERSION: v1.0.3
+
+jobs:
+  link-reference-roms:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project and pinned references
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Checkout RGBDS
+        uses: actions/checkout@v4
+        with:
+          repository: gbdev/rgbds
+          ref: ${{ env.RGBDS_VERSION }}
+          path: .ci/rgbds
+
+      - name: Install RGBDS
+        working-directory: .ci/rgbds
+        run: |
+          sudo apt-get update
+          sudo apt-get install -yq bison libpng-dev pkg-config
+          sudo make -j"$(nproc)" install
+
+      - name: Overlay reconstructed Bank 00 source
+        shell: bash
+        run: |
+          set -euo pipefail
+          for ref in reference/pokegold reference/pokesilver reference/pokegold-kr; do
+            cp home.asm "$ref/home.asm"
+            rsync -a home/ "$ref/home/"
+            rsync -a garbage/ "$ref/garbage/"
+          done
+
+          # The Japanese and Korean reference repositories encode their region by
+          # repository choice rather than by these project-local feature defines.
+          # Add the defines only to the temporary CI worktrees so our unified HOME
+          # source selects the correct retail branches.
+          sed -i 's/RGBASMFLAGS += -Q8 -P includes.asm/RGBASMFLAGS += -Q8 -P includes.asm -D _JAPANESE/' reference/pokesilver/Makefile
+          sed -i 's/RGBASMFLAGS += -Q8 -P includes.asm/RGBASMFLAGS += -Q8 -P includes.asm -D _KOREAN/' reference/pokegold-kr/Makefile
+
+      - name: Link USA/Europe Silver with reconstructed Bank 00
+        run: make -C reference/pokegold -j2 pokesilver.gbc
+
+      - name: Verify USA/Europe Silver SHA-1
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd reference/pokegold
+          grep -E '[[:space:]]pokesilver\.gbc$' roms.sha1 | sha1sum -c -
+
+      - name: Link Japanese Silver Rev 0 and Rev A with reconstructed Bank 00
+        run: make -C reference/pokesilver -j2 pokesilver.gbc pokesilver11.gbc
+
+      - name: Verify Japanese Silver SHA-1s
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd reference/pokesilver
+          grep -E '[[:space:]]pokesilver(11)?\.gbc$' roms.sha1 | sha1sum -c -
+
+      - name: Link Korean Silver with reconstructed Bank 00
+        run: make -C reference/pokegold-kr -j2 pokesilver.gbc
+
+      - name: Verify Korean Silver SHA-1
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd reference/pokegold-kr
+          grep -E '[[:space:]]pokesilver\.gbc$' roms.sha1 | sha1sum -c -
+
+      - name: Report verified ROM hashes without uploading ROM binaries
+        if: success()
+        shell: bash
+        run: |
+          sha1sum \
+            reference/pokegold/pokesilver.gbc \
+            reference/pokesilver/pokesilver.gbc \
+            reference/pokesilver/pokesilver11.gbc \
+            reference/pokegold-kr/pokesilver.gbc
