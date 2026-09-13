@@ -11,6 +11,7 @@ The long-term goal is a fully source-based, reproducible build that can reconstr
 - Preserve region, language, and revision differences explicitly.
 - Produce byte-identical builds for supported original releases where practical.
 - Keep ROM binaries out of the repository.
+- When graphics or sprite assets are reconstructed, commit the editable/image outputs (for example PNG previews/sheets) alongside the source metadata and extraction tooling; only ROM binaries remain excluded.
 
 ## Initial source set
 
@@ -34,7 +35,7 @@ A completed build must not depend on `baserom.gb`, `baserom.gbc`, or any other l
 
 ## Repository policy
 
-ROM binaries are intentionally excluded. Source code, reconstructed data, scripts, documentation, extracted/reconstructed assets, build tooling, manifests, symbols, patches, logs, and verification metadata belong in this repository.
+ROM binaries are intentionally excluded. Source code, reconstructed data, scripts, documentation, extracted/reconstructed assets, build tooling, manifests, symbols, patches, logs, verification metadata, and reconstructed graphics/images belong in this repository.
 
 ## Current status — Bank 00 first
 
@@ -45,14 +46,14 @@ Bank 00 (`0x0000-0x3FFF`) is being completed in full before Bank 01 work begins.
 - The complete Bank 00 HOME layout is mapped into **53 contiguous source components**, from `header.asm` through `audio.asm`.
 - Component start addresses are mapped for **all eight releases**.
 - Of the 52 non-header HOME components, **31 are opcode-structure-identical across all eight releases** when relocation/immediate operands are ignored.
-- Reconstructed source currently exists for **26 / 53 Bank 00 components**.
+- Reconstructed source currently exists for **40 / 53 Bank 00 components**.
 - JP Rev 0 and Rev A Bank 00 differences are confined to `header`, `sprite_anims`, and late `audio` data/code runs.
 - Verified Korean semantic branches include RST timing helpers, LCD scanline guarding, boot/HRAM/BG-map initialization, serial timing, SRAM safeguards/state tracking, and far-called tilemap-copy helpers.
 - Verified Japanese semantic branches include VBlank cutscene interrupt handling, one RTC carry instruction, and two joypad/automatic-input omissions.
 
 Currently reconstructed under `home/`:
 
-`header`, `vblank`, `delay`, `time_palettes`, `fade`, `lcd`, `time`, `init`, `serial`, `joypad`, `decompress`, `sine`, `printer`, `game_time`, `farcall`, `predef`, `sram`, `call_regs`, `clear_sprites`, `copy`, `copy_tilemap`, `copy_name`, `array`, `math`, `queue_script`, and `compare`.
+`header`, `vblank`, `delay`, `time_palettes`, `fade`, `lcd`, `time`, `init`, `serial`, `joypad`, `decompress`, `map_objects`, `sine`, `movement`, `printer`, `game_time`, `farcall`, `predef`, `window`, `flag`, `sprite_updates`, `region`, `item`, `random`, `sram`, `call_regs`, `clear_sprites`, `copy`, `copy_tilemap`, `copy_name`, `array`, `math`, `queue_script`, `compare`, `pokedex_flags`, `scrolling_menu`, `stone_queue`, `trainers`, `pokemon`, and `sprite_anims`.
 
 ## Bank 00 analysis
 
@@ -69,8 +70,10 @@ Currently reconstructed under `home/`:
 - `tools/analyze_home_prefix.py`
 - `tools/analyze_roms.py`
 
-## Next milestone
+## Remaining Bank 00 components
 
-Continue filling the remaining Bank 00 components, prioritizing opcode-identical shared source (`map_objects`, `movement`, `window`, `flag`, `sprite_updates`, `region`, `item`, `random`, `pokedex_flags`, `scrolling_menu`, `stone_queue`, `trainers`, `pokemon`, `sprite_anims`) while separately reconstructing the regional branches in `palettes`, `gfx`, `text`, `video`, `menu`, `map`, `string`, `print_text`, `tilemap`, `names`, `print_bcd`, `battle`, and `audio`.
+`palettes`, `gfx`, `text`, `video`, `menu`, `map`, `string`, `print_text`, `tilemap`, `names`, `print_bcd`, `battle`, and `audio`.
+
+These remaining components contain genuine regional/localization/revision differences and must be reconstructed with narrow conditionals or region-specific data rather than copied as separate opaque Bank 00 blobs.
 
 After all Bank 00 source is present, add the minimum constants/macros/symbol/build scaffold, assemble each release variant, and perform byte-for-byte Bank 00 verification before moving to Bank 01.
