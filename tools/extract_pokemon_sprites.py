@@ -48,7 +48,7 @@ RELEASE_FILES = {
     "US-EU-REV0": "Pokemon - Silver Version (USA, Europe).gbc",
     "DE-REV0": "Pokemon - Silberne Edition (Germany).gbc",
     "FR-REV0": "Pokemon - Version Argent (France).gbc",
-    "IT-REV0": "Pokemon - Versione Argento (Italy).wbc",
+    "IT-REV0": "Pokemon - Versione Argento (Italy).gbc",
     "ES-REV0": "Pokemon - Edicion Plata (Spain).wbc",
 }
 
