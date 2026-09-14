@@ -1,0 +1,64 @@
+{
+  "schema": 1,
+  "batch": "003-003",
+  "dedup_policy": "one canonical asset when exact compressed bytes, decoded 2bpp, pixels, and palette are identical across releases",
+  "releases": ["JP-REV0","JP-REVA","KR-REV0","US-EU-REV0","DE-REV0","FR-REV0","IT-REV0","ES-REV0"],
+  "species": [{
+    "id": 3,
+    "slug": "venusaur",
+    "sprites": {
+      "front": {
+        "canonical": {
+          "lz_path": "gfx/pokemon/003_venusaur/front.2bpp.lz",
+          "normal_png_path": "gfx/pokemon/003_venusaur/front.png",
+          "shiny_png_path": "gfx/pokemon/003_venusaur/front_shiny.png",
+          "compressed_sha256": "2ad490e86ce56321d33d7731c8925026c1f3ca0f154362b548a21f1832e42973",
+          "decompressed_2bpp_sha256": "f430c3f04beb62fd9c0cab59acd03b0fb8de8b02e1998c55a61bcd0d22db0acd",
+          "pixel_index_sha256": "f00b9f4d8f6ef594f7faae23209ea9c3fc771c822a908bdf4b0b8ecfdefe5019",
+          "palette_entry_sha256": "7ca62ddd4aadfc11df9a9fa2873d636f0961d7447c459588fdcf00bb43fc4621",
+          "compressed_size": 619,
+          "decompressed_size": 784,
+          "width": 56,
+          "height": 56,
+          "palette_entry_hex": "ec4f3f4d322fdf0e"
+        },
+        "release_locations": [
+          {"release":"JP-REV0","defined_bank":"0x12","actual_bank":"0x12","address":"0x66E0","file_offset":"0x04A6E0","compressed_sha256":"2ad490e86ce56321d33d7731c8925026c1f3ca0f154362b548a21f1832e42973"},
+          {"release":"JP-REVA","defined_bank":"0x12","actual_bank":"0x12","address":"0x66E0","file_offset":"0x04A6E0","compressed_sha256":"2ad490e86ce56321d33d7731c8925026c1f3ca0f154362b548a21f1832e42973"},
+          {"release":"KR-REV0","defined_bank":"0x12","actual_bank":"0x12","address":"0x66E0","file_offset":"0x04A6E0","compressed_sha256":"2ad490e86ce56321d33d7731c8925026c1f3ca0f154362b548a21f1832e42973"},
+          {"release":"US-EU-REV0","defined_bank":"0x12","actual_bank":"0x12","address":"0x66E0","file_offset":"0x04A6E0","compressed_sha256":"2ad490e86ce56321d33d7731c8925026c1f3ca0f154362b548a21f1832e42973"},
+          {"release":"DE-REV0","defined_bank":"0x12","actual_bank":"0x12","address":"0x66E0","file_offset":"0x04A6E0","compressed_sha256":"2ad490e86ce56321d33d7731c8925026c1f3ca0f154362b548a21f1832e42973"},
+          {"release":"FR-REV0","defined_bank":"0x12","actual_bank":"0x12","address":"0x66E0","file_offset":"0x04A6E0","compressed_sha256":"2ad490e86ce56321d33d7731c8925026c1f3ca0f154362b548a21f1832e42973"},
+          {"release":"IT-REV0","defined_bank":"0x12","actual_bank":"0x12","address":"0x66E0","file_offset":"0x04A6E0","compressed_sha256":"2ad490e86ce56321d33d7731c8925026c1f3ca0f154362b548a21f1832e42973"},
+          {"release":"ES-REV0","defined_bank":"0x12","actual_bank":"0x12","address":"0x66E0","file_offset":"0x04A6E0","compressed_sha256":"2ad490e86ce56321d33d7731c8925026c1f3ca0f154362b548a21f1832e42973"}
+        ]
+      },
+      "back": {
+        "canonical": {
+          "lz_path": "gfx/pokemon/003_venusaur/back.2bpp.lz",
+          "normal_png_path": "gfx/pokemon/003_venusaur/back.png",
+          "shiny_png_path": "gfx/pokemon/003_venusaur/back_shiny.png",
+          "compressed_sha256": "fb2767cca4a4198fa42b3296f4083a6f20de2cb9702832f9f9d849dad3c80675",
+          "decompressed_2bpp_sha256": "b18d8735a3a7babc7798767ade9e5f5f4406a529ec7920e5ce33e9d8763e39fc",
+          "pixel_index_sha256": "239009f8069c8d40a46639ec7a312b7cf6a18d4176fd873f06e184cab4fd62ea",
+          "palette_entry_sha256": "7ca62ddd4aadfc11df9a9fa2873d636f0961d7447c459588fdcf00bb43fc4621",
+          "compressed_size": 418,
+          "decompressed_size": 576,
+          "width": 48,
+          "height": 48,
+          "palette_entry_hex": "ec4f3f4d322fdf0e"
+        },
+        "release_locations": [
+          {"release":"JP-REV0","defined_bank":"0x17","actual_bank":"0x17","address":"0x4831","file_offset":"0x05C831","compressed_sha256":"fb2767cca4a4198fa42b3296f4083a6f20de2cb9702832f9f9d849dad3c80675"},
+          {"release":"JP-REVA","defined_bank":"0x17","actual_bank":"0x17","address":"0x4831","file_offset":"0x05C831","compressed_sha256":"fb2767cca4a4198fa42b3296f4083a6f20de2cb9702832f9f9d849dad3c80675"},
+          {"release":"KR-REV0","defined_bank":"0x17","actual_bank":"0x17","address":"0x4831","file_offset":"0x05C831","compressed_sha256":"fb2767cca4a4198fa42b3296f4083a6f20de2cb9702832f9f9d849dad3c80675"},
+          {"release":"US-EU-REV0","defined_bank":"0x17","actual_bank":"0x17","address":"0x4831","file_offset":"0x05C831","compressed_sha256":"fb2767cca4a4198fa42b3296f4083a6f20de2cb9702832f9f9d849dad3c80675"},
+          {"release":"DE-REV0","defined_bank":"0x17","actual_bank":"0x17","address":"0x4831","file_offset":"0x05C831","compressed_sha256":"fb2767cca4a4198fa42b3296f4083a6f20de2cb9702832f9f9d849dad3c80675"},
+          {"release":"FR-REV0","defined_bank":"0x17","actual_bank":"0x17","address":"0x4831","file_offset":"0x05C831","compressed_sha256":"fb2767cca4a4198fa42b3296f4083a6f20de2cb9702832f9f9d849dad3c80675"},
+          {"release":"IT-REV0","defined_bank":"0x17","actual_bank":"0x17","address":"0x4831","file_offset":"0x05C831","compressed_sha256":"fb2767cca4a4198fa42b3296f4083a6f20de2cb9702832f9f9d849dad3c80675"},
+          {"release":"ES-REV0","defined_bank":"0x17","actual_bank":"0x17","address":"0x4831","file_offset":"0x05C831","compressed_sha256":"fb2767cca4a4198fa42b3296f4083a6f20de2cb9702832f9f9d849dad3c80675"}
+        ]
+      }
+    }
+  }]
+}
