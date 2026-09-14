@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 """Extract and cross-version-deduplicate Pokémon battle sprites from Pokémon Silver ROMs.
 
-The source ROMs are read-only inputs used only for verification/extraction. ROM binaries are
-never copied into the repository. The extractor understands Gen II LZ3, Pokémon pic pointers,
-GBC Pokémon palettes, and RGBGFX --columns tile ordering.
-
-This tool intentionally writes one canonical asset when all supplied releases decode to the
-same sprite. Per-release pointer locations and hashes remain in the manifest.
+ROMs are read-only inputs and are never copied into the repository. This extractor handles
+Gen II LZ3, Pokémon pic pointers, GBC Pokémon palettes, and RGBGFX --columns tile ordering.
+It writes one canonical asset only when compressed bytes, decoded 2bpp, pixels, and palette
+are identical across every supplied release; per-release locations and hashes stay in manifests.
 """
 from __future__ import annotations
 
@@ -36,6 +34,11 @@ SPECIES = {
     8: "wartortle",
     9: "blastoise",
     10: "caterpie",
+    11: "metapod",
+    12: "butterfree",
+    13: "weedle",
+    14: "kakuna",
+    15: "beedrill",
 }
 
 RELEASE_FILES = {
@@ -45,8 +48,8 @@ RELEASE_FILES = {
     "US-EU-REV0": "Pokemon - Silver Version (USA, Europe).gbc",
     "DE-REV0": "Pokemon - Silberne Edition (Germany).gbc",
     "FR-REV0": "Pokemon - Version Argent (France).gbc",
-    "IT-REV0": "Pokemon - Versione Argento (Italy).gbc",
-    "ES-REV0": "Pokemon - Edicion Plata (Spain).gbc",
+    "IT-REV0": "Pokemon - Versione Argento (Italy).wbc",
+    "ES-REV0": "Pokemon - Edicion Plata (Spain).wbc",
 }
 
 
@@ -73,6 +76,7 @@ def decompress_lz3(rom: bytes, start: int) -> tuple[bytes, bytes]:
             pos += 1
         else:
             length = (command_byte & 0x1F) + 1
+
         if command == 0:
             out.extend(rom[pos : pos + length])
             pos += length
@@ -113,33 +117,30 @@ def fix_pic_bank(bank: int) -> int:
 def banked_to_file_offset(bank: int, address: int) -> int:
     if not 0x4000 <= address <= 0x7FFF:
         raise ValueError(f"invalid switchable ROM address: {address:#06x}")
-    return bank * 0x4000 + (address - 0x4000)
+    return bank * 0x4000 + address - 0x4000
 
 
 def palette_table_offset(rom: bytes) -> int:
     hits = []
-    start = 0
+    pos = 0
     while True:
-        hit = rom.find(BULBASAUR_NORMAL_MIDDLE, start)
+        hit = rom.find(BULBASAUR_NORMAL_MIDDLE, pos)
         if hit < 0:
             break
         hits.append(hit)
-        start = hit + 1
+        pos = hit + 1
     if len(hits) != 1:
         raise ValueError(f"expected one Pokémon palette signature, found {len(hits)}")
     return hits[0]
 
 
 def gbc15_to_rgb888(value: int) -> tuple[int, int, int]:
-    r5 = value & 0x1F
-    g5 = (value >> 5) & 0x1F
-    b5 = (value >> 10) & 0x1F
     expand = lambda c: (c << 3) | (c >> 2)
-    return expand(r5), expand(g5), expand(b5)
+    return expand(value & 0x1F), expand((value >> 5) & 0x1F), expand((value >> 10) & 0x1F)
 
 
 def middle_palette_to_rgb(raw4: bytes) -> list[tuple[int, int, int]]:
-    c1 = gbc15_to_rgb888(int.from_bytes(raw4[0:2], "little"))
+    c1 = gbc15_to_rgb888(int.from_bytes(raw4[:2], "little"))
     c2 = gbc15_to_rgb888(int.from_bytes(raw4[2:4], "little"))
     return [(255, 255, 255), c1, c2, (0, 0, 0)]
 
@@ -152,8 +153,7 @@ def render_column_major_2bpp(raw: bytes, tiles_wide: int) -> tuple[int, int, byt
     width, height = tiles_wide * 8, tiles_high * 8
     pixels = bytearray(width * height)
     for tile_index in range(tile_count):
-        tile_x = tile_index // tiles_high
-        tile_y = tile_index % tiles_high
+        tile_x, tile_y = divmod(tile_index, tiles_high)
         tile = raw[tile_index * 16 : (tile_index + 1) * 16]
         for y in range(8):
             lo, hi = tile[y * 2], tile[y * 2 + 1]
@@ -165,7 +165,8 @@ def render_column_major_2bpp(raw: bytes, tiles_wide: int) -> tuple[int, int, byt
 
 
 def png_chunk(kind: bytes, payload: bytes) -> bytes:
-    return struct.pack(">I", len(payload)) + kind + payload + struct.pack(">I", zlib.crc32(kind + payload) & 0xFFFFFFFF)
+    crc = zlib.crc32(kind + payload) & 0xFFFFFFFF
+    return struct.pack(">I", len(payload)) + kind + payload + struct.pack(">I", crc)
 
 
 def indexed_png(width: int, height: int, pixels: bytes, palette: list[tuple[int, int, int]]) -> bytes:
@@ -173,7 +174,13 @@ def indexed_png(width: int, height: int, pixels: bytes, palette: list[tuple[int,
     ihdr = struct.pack(">IIBBBBB", width, height, 8, 3, 0, 0, 0)
     plte = b"".join(bytes(rgb) for rgb in palette)
     scanlines = b"".join(b"\x00" + pixels[y * width : (y + 1) * width] for y in range(height))
-    return signature + png_chunk(b"IHDR", ihdr) + png_chunk(b"PLTE", plte) + png_chunk(b"IDAT", zlib.compress(scanlines, 9)) + png_chunk(b"IEND", b"")
+    return (
+        signature
+        + png_chunk(b"IHDR", ihdr)
+        + png_chunk(b"PLTE", plte)
+        + png_chunk(b"IDAT", zlib.compress(scanlines, 9))
+        + png_chunk(b"IEND", b"")
+    )
 
 
 @dataclass
@@ -202,6 +209,7 @@ def extract_one(rom: bytes, release: str, species: int, side: str) -> PicResult:
     address = int.from_bytes(entry[index + 1 : index + 3], "little")
     file_offset = banked_to_file_offset(actual_bank, address)
     decompressed, compressed = decompress_lz3(rom, file_offset)
+
     tile_count = len(decompressed) // 16
     if side == "front":
         edge = math.isqrt(tile_count)
@@ -211,12 +219,27 @@ def extract_one(rom: bytes, release: str, species: int, side: str) -> PicResult:
         edge = 6
         if tile_count != 36:
             raise ValueError(f"species {species} back has unexpected tile count {tile_count}")
+
     width, height, pixels = render_column_major_2bpp(decompressed, edge)
     paloff = palette_table_offset(rom) + (species - 1) * 8
     palette_entry = rom[paloff : paloff + 8]
     normal = middle_palette_to_rgb(palette_entry[:4])
-    shiny = middle_palette_to_rgb(palette_entry[4:8])
-    return PicResult(release, defined_bank, actual_bank, address, file_offset, compressed, decompressed, width, height, pixels, indexed_png(width, height, pixels, normal), indexed_png(width, height, pixels, shiny), palette_entry)
+    shiny = middle_palette_to_rgb(palette_entry[4:])
+    return PicResult(
+        release,
+        defined_bank,
+        actual_bank,
+        address,
+        file_offset,
+        compressed,
+        decompressed,
+        width,
+        height,
+        pixels,
+        indexed_png(width, height, pixels, normal),
+        indexed_png(width, height, pixels, shiny),
+        palette_entry,
+    )
 
 
 def parse_range(text: str) -> list[int]:
@@ -230,45 +253,108 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("rom_dir", type=Path)
     parser.add_argument("output_dir", type=Path)
-    parser.add_argument("--species", default="1-10")
+    parser.add_argument("--species", default="1-15")
     args = parser.parse_args()
+
     ids = parse_range(args.species)
     unsupported = [i for i in ids if i not in SPECIES]
     if unsupported:
         raise SystemExit(f"species names not staged yet: {unsupported}")
+
     roms = {}
     for release, filename in RELEASE_FILES.items():
         path = args.rom_dir / filename
         if not path.exists():
             raise SystemExit(f"missing ROM for {release}: {path}")
         roms[release] = path.read_bytes()
+
     out = args.output_dir
-    manifest = {"schema": 1, "batch": f"{min(ids):03d}-{max(ids):03d}", "dedup_policy": "one canonical asset when exact compressed bytes, decoded 2bpp, pixels, and palette are identical across releases", "releases": list(RELEASE_FILES), "species": []}
+    manifest = {
+        "schema": 1,
+        "batch": f"{min(ids):03d}-{max(ids):03d}",
+        "dedup_policy": "one canonical asset when exact compressed bytes, decoded 2bpp, pixels, and palette are identical across releases",
+        "releases": list(RELEASE_FILES),
+        "species": [],
+    }
     csv_rows = []
+
     for species in ids:
         slug = SPECIES[species]
         species_dir = out / "gfx" / "pokemon" / f"{species:03d}_{slug}"
         species_dir.mkdir(parents=True, exist_ok=True)
         species_item = {"id": species, "slug": slug, "sprites": {}}
+
         for side in ("front", "back"):
             results = [extract_one(roms[r], r, species, side) for r in RELEASE_FILES]
-            groups = ({sha256(r.compressed) for r in results}, {sha256(r.decompressed) for r in results}, {sha256(r.pixels) for r in results}, {sha256(r.palette_entry) for r in results})
+            groups = (
+                {sha256(r.compressed) for r in results},
+                {sha256(r.decompressed) for r in results},
+                {sha256(r.pixels) for r in results},
+                {sha256(r.palette_entry) for r in results},
+            )
             if any(len(group) != 1 for group in groups):
                 raise SystemExit(f"{species:03d} {side}: release variants exist; use variant paths")
+
             canonical = results[0]
             (species_dir / f"{side}.2bpp.lz").write_bytes(canonical.compressed)
             (species_dir / f"{side}.png").write_bytes(canonical.normal_png)
             (species_dir / f"{side}_shiny.png").write_bytes(canonical.shiny_png)
-            sprite_item = {"canonical": {"lz_path": f"gfx/pokemon/{species:03d}_{slug}/{side}.2bpp.lz", "normal_png_path": f"gfx/pokemon/{species:03d}_{slug}/{side}.png", "shiny_png_path": f"gfx/pokemon/{species:03d}_{slug}/{side}_shiny.png", "compressed_sha256": sha256(canonical.compressed), "decompressed_2bpp_sha256": sha256(canonical.decompressed), "pixel_index_sha256": sha256(canonical.pixels), "palette_entry_sha256": sha256(canonical.palette_entry), "compressed_size": len(canonical.compressed), "decompressed_size": len(canonical.decompressed), "width": canonical.width, "height": canonical.height, "palette_entry_hex": canonical.palette_entry.hex()}, "release_locations": []}
+
+            sprite_item = {
+                "canonical": {
+                    "lz_path": f"gfx/pokemon/{species:03d}_{slug}/{side}.2bpp.lz",
+                    "normal_png_path": f"gfx/pokemon/{species:03d}_{slug}/{side}.png",
+                    "shiny_png_path": f"gfx/pokemon/{species:03d}_{slug}/{side}_shiny.png",
+                    "compressed_sha256": sha256(canonical.compressed),
+                    "decompressed_2bpp_sha256": sha256(canonical.decompressed),
+                    "pixel_index_sha256": sha256(canonical.pixels),
+                    "palette_entry_sha256": sha256(canonical.palette_entry),
+                    "compressed_size": len(canonical.compressed),
+                    "decompressed_size": len(canonical.decompressed),
+                    "width": canonical.width,
+                    "height": canonical.height,
+                    "palette_entry_hex": canonical.palette_entry.hex(),
+                },
+                "release_locations": [],
+            }
+
             for r in results:
-                sprite_item["release_locations"].append({"release": r.release, "defined_bank": f"0x{r.defined_bank:02X}", "actual_bank": f"0x{r.actual_bank:02X}", "address": f"0x{r.address:04X}", "file_offset": f"0x{r.file_offset:06X}", "compressed_sha256": sha256(r.compressed)})
-                csv_rows.append({"species": species, "slug": slug, "side": side, "release": r.release, "defined_bank": f"0x{r.defined_bank:02X}", "actual_bank": f"0x{r.actual_bank:02X}", "address": f"0x{r.address:04X}", "file_offset": f"0x{r.file_offset:06X}", "compressed_size": len(r.compressed), "decompressed_size": len(r.decompressed), "compressed_sha256": sha256(r.compressed), "decompressed_2bpp_sha256": sha256(r.decompressed)})
+                sprite_item["release_locations"].append(
+                    {
+                        "release": r.release,
+                        "defined_bank": f"0x{r.defined_bank:02X}",
+                        "actual_bank": f"0x{r.actual_bank:02X}",
+                        "address": f"0x{r.address:04X}",
+                        "file_offset": f"0x{r.file_offset:06X}",
+                        "compressed_sha256": sha256(r.compressed),
+                    }
+                )
+                csv_rows.append(
+                    {
+                        "species": species,
+                        "slug": slug,
+                        "side": side,
+                        "release": r.release,
+                        "defined_bank": f"0x{r.defined_bank:02X}",
+                        "actual_bank": f"0x{r.actual_bank:02X}",
+                        "address": f"0x{r.address:04X}",
+                        "file_offset": f"0x{r.file_offset:06X}",
+                        "compressed_size": len(r.compressed),
+                        "decompressed_size": len(r.decompressed),
+                        "compressed_sha256": sha256(r.compressed),
+                        "decompressed_2bpp_sha256": sha256(r.decompressed),
+                    }
+                )
+
             species_item["sprites"][side] = sprite_item
         manifest["species"].append(species_item)
+
     analysis_dir = out / "analysis" / "sprites"
     analysis_dir.mkdir(parents=True, exist_ok=True)
     batch = f"{min(ids):03d}_{max(ids):03d}"
-    (analysis_dir / f"batch_{batch}.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (analysis_dir / f"batch_{batch}.json").write_text(
+        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
     with (analysis_dir / f"batch_{batch}.csv").open("w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=list(csv_rows[0]))
         writer.writeheader()
