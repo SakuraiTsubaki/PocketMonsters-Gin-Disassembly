@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "species": 6,
+  "slug": "charizard",
+  "dedup_policy": "canonical one-copy only when compressed bytes, decoded 2bpp, pixels, and palette entry are identical across all 8 releases",
+  "sprites": {
+    "front": {
+      "canonical": {
+        "compressed_sha256": "669f24b851b21723b2ac9e15ff29ce609e0f14734b553f5ee9d703e53514b599",
+        "decompressed_2bpp_sha256": "a82acea367f7d06f16eb38e5e6e79e5f05d22668690bc7424dd792c0bafe34e5",
+        "pixel_index_sha256": "3d5112ffb8949533ac70158de9fa2ee0c047011332e44d84be684bf1328f4df9",
+        "palette_entry_sha256": "16cf2cc7f7413bef2c687c778f63f4b1104f7bb8cfd39de358f7c0aa3e7d86c6",
+        "compressed_size": 569,
+        "decompressed_size": 784,
+        "width": 56,
+        "height": 56,
+        "palette_entry_hex": "df01673df455a83a"
+      },
+      "release_locations": [
+        {"release":"JP-REV0","defined_bank":"0x13","actual_bank":"0x1F","address":"0x5062","file_offset":"0x07D062","compressed_sha256":"669f24b851b21723b2ac9e15ff29ce609e0f14734b553f5ee9d703e53514b599"},
+        {"release":"JP-REVA","defined_bank":"0x13","actual_bank":"0x1F","address":"0x5062","file_offset":"0x07D062","compressed_sha256":"669f24b851b21723b2ac9e15ff29ce609e0f14734b553f5ee9d703e53514b599"},
+        {"release":"KR-REV0","defined_bank":"0x13","actual_bank":"0x1F","address":"0x5062","file_offset":"0x07D062","compressed_sha256":"669f24b851b21723b2ac9e15ff29ce609e0f14734b553f5ee9d703e53514b599"},
+        {"release":"US-EU-REV0","defined_bank":"0x13","actual_bank":"0x1F","address":"0x5062","file_offset":"0x07D062","compressed_sha256":"669f24b851b21723b2ac9e15ff29ce609e0f14734b553f5ee9d703e53514b599"},
+        {"release":"DE-REV0","defined_bank":"0x13","actual_bank":"0x1F","address":"0x5062","file_offset":"0x07D062","compressed_sha256":"669f24b851b21723b2ac9e15ff29ce609e0f14734b553f5ee9d703e53514b599"},
+        {"release":"FR-REV0","defined_bank":"0x13","actual_bank":"0x1F","address":"0x5062","file_offset":"0x07D062","compressed_sha256":"669f24b851b21723b2ac9e15ff29ce609e0f14734b553f5ee9d703e53514b599"},
+        {"release":"IT-REV0","defined_bank":"0x13","actual_bank":"0x1F","address":"0x5062","file_offset":"0x07D062","compressed_sha256":"669f24b851b21723b2ac9e15ff29ce609e0f14734b553f5ee9d703e53514b599"},
+        {"release":"ES-REV0","defined_bank":"0x13","actual_bank":"0x1F","address":"0x5062","file_offset":"0x07D062","compressed_sha256":"669f24b851b21723b2ac9e15ff29ce609e0f14734b553f5ee9d703e53514b599"}
+      ]
+    },
+    "back": {
+      "canonical": {
+        "compressed_sha256": "873917ed3869a77b30a663e2708add796893c7192261205ab29c84877af6a51c",
+        "decompressed_2bpp_sha256": "d52d7def820587d214a9a402be1d89ed7d8c71ed884c45923822bd7ef8a46263",
+        "pixel_index_sha256": "f6dd292098e8579ab83b17decdab2baca5a91acad1ec03bde81724e873e8fb28",
+        "palette_entry_sha256": "16cf2cc7f7413bef2c687c778f63f4b1104f7bb8cfd39de358f7c0aa3e7d86c6",
+        "compressed_size": 360,
+        "decompressed_size": 576,
+        "width": 48,
+        "height": 48,
+        "palette_entry_hex": "df01673df455a83a"
+      },
+      "release_locations": [
+        {"release":"JP-REV0","defined_bank":"0x1A","actual_bank":"0x1A","address":"0x443A","file_offset":"0x06843A","compressed_sha256":"873917ed3869a77b30a663e2708add796893c7192261205ab29c84877af6a51c"},
+        {"release":"JP-REVA","defined_bank":"0x1A","actual_bank":"0x1A","address":"0x443A","file_offset":"0x06843A","compressed_sha256":"873917ed3869a77b30a663e2708add796893c7192261205ab29c84877af6a51c"},
+        {"release":"KR-REV0","defined_bank":"0x1A","actual_bank":"0x1A","address":"0x443A","file_offset":"0x06843A","compressed_sha256":"873917ed3869a77b30a663e2708add796893c7192261205ab29c84877af6a51c"},
+        {"release":"US-EU-REV0","defined_bank":"0x1A","actual_bank":"0x1A","address":"0x42D2","file_offset":"0x0682D2","compressed_sha256":"873917ed3869a77b30a663e2708add796893c7192261205ab29c84877af6a51c"},
+        {"release":"DE-REV0","defined_bank":"0x1A","actual_bank":"0x1A","address":"0x42D2","file_offset":"0x0682D2","compressed_sha256":"873917ed3869a77b30a663e2708add796893c7192261205ab29c84877af6a51c"},
+        {"release":"FR-REV0","defined_bank":"0x1A","actual_bank":"0x1A","address":"0x42D2","file_offset":"0x0682D2","compressed_sha256":"873917ed3869a77b30a663e2708add796893c7192261205ab29c84877af6a51c"},
+        {"release":"IT-REV0","defined_bank":"0x1A","actual_bank":"0x1A","address":"0x42D2","file_offset":"0x0682D2","compressed_sha256":"873917ed3869a77b30a663e2708add796893c7192261205ab29c84877af6a51c"},
+        {"release":"ES-REV0","defined_bank":"0x1A","actual_bank":"0x1A","address":"0x42D2","file_offset":"0x0682D2","compressed_sha256":"873917ed3869a77b30a663e2708add796893c7192261205ab29c84877af6a51c"}
+      ]
+    }
+  }
+}
