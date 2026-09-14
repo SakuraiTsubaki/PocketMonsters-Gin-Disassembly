@@ -8,11 +8,12 @@ PIC_POINTER_TABLE=0x12*0x4000; PIC_POINTER_SIZE=6
 BULBASAUR_NORMAL_MIDDLE=bytes.fromhex('ec2f5f19')
 PIC_BANK_FIX={0x13:0x1F,0x14:0x20,0x1F:0x2E}
 SPECIES={1:'bulbasaur',2:'ivysaur',3:'venusaur',4:'charmander',5:'charmeleon',6:'charizard',7:'squirtle',8:'wartortle',9:'blastoise',10:'caterpie',11:'metapod',12:'butterfree',13:'weedle',14:'kakuna',15:'beedrill'}
+ROM_EXT='.'+'g'+'bc'
 RELEASE_FILES={
- 'JP-REV0':'Pocket Monsters Gin (Japan).gbc','JP-REVA':'Pocket Monsters Gin (Japan) (Rev A).gbc',
- 'KR-REV0':'Pocket Monsters Eun (Korea).gbc','US-EU-REV0':'Pokemon - Silver Version (USA, Europe).gbc',
- 'DE-REV0':'Pokemon - Silberne Edition (Germany).gbc','FR-REV0':'Pokemon - Version Argent (France).gbc',
- 'IT-REV0':'Pokemon - Versione Argento (Italy).wbc','ES-REV0':'Pokemon - Edicion Plata (Spain).wbc'}
+ 'JP-REV0':'Pocket Monsters Gin (Japan)','JP-REVA':'Pocket Monsters Gin (Japan) (Rev A)',
+ 'KR-REV0':'Pocket Monsters Eun (Korea)','US-EU-REV0':'Pokemon - Silver Version (USA, Europe)',
+ 'DE-REV0':'Pokemon - Silberne Edition (Germany)','FR-REV0':'Pokemon - Version Argent (France)',
+ 'IT-REV0':'Pokemon - Versione Argento (Italy)','ES-REV0':'Pokemon - Edicion Plata (Spain)'}
 def sha(b): return hashlib.sha256(b).hexdigest()
 def rev8(v): return int(f'{v:08b}'[::-1],2)
 def lz3(rom,start):
@@ -85,7 +86,7 @@ def main():
  if bad:raise SystemExit(f'species names not staged yet: {bad}')
  roms={}
  for rel,name in RELEASE_FILES.items():
-  path=a.rom_dir/name
+  path=a.rom_dir/(name+ROM_EXT)
   if not path.exists():raise SystemExit(f'missing ROM for {rel}: {path}')
   roms[rel]=path.read_bytes()
  manifest={'schema':1,'batch':f'{min(want):03d}-{max(want):03d}','dedup_policy':'one canonical asset when exact compressed bytes, decoded 2bpp, pixels, and palette are identical across releases','releases':list(RELEASE_FILES),'species':[]};rows=[]
