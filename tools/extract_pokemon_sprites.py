@@ -31,6 +31,11 @@ SPECIES = {
     3: "venusaur",
     4: "charmander",
     5: "charmeleon",
+    6: "charizard",
+    7: "squirtle",
+    8: "wartortle",
+    9: "blastoise",
+    10: "caterpie",
 }
 
 RELEASE_FILES = {
@@ -225,7 +230,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("rom_dir", type=Path)
     parser.add_argument("output_dir", type=Path)
-    parser.add_argument("--species", default="1-5")
+    parser.add_argument("--species", default="1-10")
     args = parser.parse_args()
     ids = parse_range(args.species)
     unsupported = [i for i in ids if i not in SPECIES]
