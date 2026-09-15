@@ -1,4 +1,0 @@
-release,glyph,byte,rom_offset,evidence
-IT-REV0,Ì,0xC8,0x144A,"LUNEDÌ@ begins at 0x1445; glyph byte follows LUNED"
-ES-REV0,É,0xC7,0x1456,"MIÉRCOLES@ begins at 0x1454; glyph byte follows MI"
-ES-REV0,Á,0xBF,0x146E,"SÁBADO@ begins at 0x146D; glyph byte follows S"
