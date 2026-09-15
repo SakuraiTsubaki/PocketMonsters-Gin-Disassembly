@@ -1,0 +1,14 @@
+asset: spearow
+variant: silver_front_and_shared_back
+origin_baseline: japanese_silver
+source_repository: Narishma-gb/pokesilver
+source_ref: master
+files:
+  front.png:
+    source_path: gfx/pokemon/spearow/front_silver.png
+    source_blob_sha: 28d955b449f250419a7ea2495a83f0214e5c6e1e
+  back.png:
+    source_path: gfx/pokemon/spearow/back.png
+    source_blob_sha: 91fb0f2e3a8eb5d6c45a5c75e02fa8b19ea734c7
+verification: PUBLIC_SOURCE_PNG
+note: Actual PNG files are committed in this repository; no image-generation tool was used.
