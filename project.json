@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/SakuraiTsubaki/Disassembly/main/schemas/project.schema.json",
+  "schema_version": 1,
+  "id": "gin",
+  "repository": "SakuraiTsubaki/PocketMonsters-Gin-Disassembly",
+  "title": "Pocket Monsters Gin / Pokémon Silver",
+  "platform": "Game Boy / Game Boy Color compatible",
+  "cpu": "Sharp SM83",
+  "architecture": "gb-sm83",
+  "family": "generation-ii",
+  "status": "foundation",
+  "releases": []
+}
