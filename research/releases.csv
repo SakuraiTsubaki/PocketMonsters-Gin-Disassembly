@@ -1,1 +1,9 @@
 id,region,language,revision,status,size,sha1,sha256,notes
+gin-jp-rev0,Japan,Japanese,0,candidate,1048576,fa8c51059c1642faa570db56ef089f54d1d2011f,0a532063a3ff5750a464582aa7bbee2b6d42e1a92a136d9f4590e373487b615c,"Header POKEMON_SLVAAXJ; CGB 0x80; SGB 0x03; checksum 0x27; global 0x7691"
+gin-jp-rev1,Japan,Japanese,1,candidate,1048576,a11d5ddc26eb826086593f82370b15d16404d33e,99e5267fbf5a7748d4f3b75ba1990cb5d91348339468607a04bfbc6081c62d71,"Header POKEMON_SLVAAXJ; CGB 0x80; SGB 0x03; checksum 0x26; global 0x1d34"
+silver-ko-rev0,Korea,Korean,0,candidate,2097152,cb22d7e03a74dc3a563fde6be8626626b2b392e7,ebbac63c0c4309c82dbb6723e7163369784f962b4fd3e2f486075307c3008a22,"Header POKEMON_SLVAAXK; CGB 0xc0; SGB 0x00; checksum 0xe7; global 0x985b"
+silver-en-rev0,USA/Europe,English,0,candidate,2097152,49b163f7e57702bc939d642a18f591de55d92dae,72b190859a59623cbef6c49d601f8de52c1d2331b4f08a8d2acc17274fc19a8c,"Header POKEMON_SLVAAXE; CGB 0x80; SGB 0x03; checksum 0x2a; global 0x0dae"
+silver-de-rev0,Germany,German,0,candidate,2097152,8ecc58d621faaedf2a934bd2583d527220df7bb9,c3d1fd0dec1d5fa9aa7f85275e79c52aa9175d191c63cbed7b406c306d946348,"Header POKEMON_SLVAAXD; CGB 0x80; SGB 0x03; checksum 0x2b; global 0xcd6e"
+silver-es-rev0,Spain,Spanish,0,candidate,2097152,05bd978ab2cb104b0aff3f696896e30885203a18,6797010c052e8f9373ea2b9e855ec078b34fda12e5ccf742eb19bb5e8f6947c2,"Header POKEMON_SLVAAXS; CGB 0x80; SGB 0x03; checksum 0x1c; global 0x064b"
+silver-fr-rev0,France,French,0,candidate,2097152,a4a7e8079b7a53e4d9ef43382bbb1090b9d45d1a,e120c4ddb0dc3e25b95c9c71b3ffd59ff57ce689cf4d79d04913ba59140c18c2,"Header POKEMON_SLVAAXF; CGB 0x80; SGB 0x03; checksum 0x29; global 0xfb8c"
+silver-it-rev0,Italy,Italian,0,candidate,2097152,c9eca9d0a837beb9137bb7d779e469c54e9f8d77,04c442246d1ae0ed6bf5e072bb7e3d06376e584b953d6b14047b39e45fbb0cb4,"Header POKEMON_SLVAAXI; CGB 0x80; SGB 0x03; checksum 0x26; global 0x7350"
