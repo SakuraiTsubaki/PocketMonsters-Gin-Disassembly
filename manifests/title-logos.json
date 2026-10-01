@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-01",
+  "generator": "SakuraiTsubaki/Disassembly tools/extract_gb_lz_2bpp.py",
+  "origin_reference": "gin-jp-rev0",
+  "language_priority": ["ja", "ko", "en", "de", "fr", "it", "es"],
+  "source_reference": {"repository":"pret/pokegold","commit":"62388c7204e5d13aa05b4231e220b6760584d1b5","code":["engine/movie/title.asm","gfx/misc.asm"]},
+  "artifacts": [
+    {"release":"gin-jp-rev0","language":"ja","part":"combined","report":"analysis/gin-jp-rev0-title-logo.json","png":"graphics/title/title-logo-jp.png","loader_offset":"0x6469"},
+    {"release":"gin-jp-rev1","language":"ja","part":"combined","report":"analysis/gin-jp-rev1-title-logo.json","png":"graphics/title/title-logo-jp.png","loader_offset":"0x6469"},
+    {"release":"silver-ko-rev0","language":"ko","part":"combined","report":"analysis/gin-ko-title-logo.json","png":"graphics/title/title-logo-ko.png","loader_offset":"0x6355"},
+    {"release":"silver-en-rev0","language":"en","part":"bottom","report":"analysis/gin-en-title-logo-bottom.json","png":"graphics/title/title-logo-bottom-en.png","loader_offset":"0x62c1"},
+    {"release":"silver-en-rev0","language":"en","part":"top","report":"analysis/gin-en-title-logo-top.json","png":"graphics/title/title-logo-top-global.png","loader_offset":"0x62cc"},
+    {"release":"silver-de-rev0","language":"de","part":"bottom","report":"analysis/gin-de-title-logo-bottom.json","png":"graphics/title/title-logo-bottom-de.png","loader_offset":"0x62f9"},
+    {"release":"silver-de-rev0","language":"de","part":"top","report":"analysis/gin-de-title-logo-top.json","png":"graphics/title/title-logo-top-global.png","loader_offset":"0x6304"},
+    {"release":"silver-fr-rev0","language":"fr","part":"bottom","report":"analysis/gin-fr-title-logo-bottom.json","png":"graphics/title/title-logo-bottom-fr.png","loader_offset":"0x62f6"},
+    {"release":"silver-fr-rev0","language":"fr","part":"top","report":"analysis/gin-fr-title-logo-top.json","png":"graphics/title/title-logo-top-global.png","loader_offset":"0x6301"},
+    {"release":"silver-it-rev0","language":"it","part":"bottom","report":"analysis/gin-it-title-logo-bottom.json","png":"graphics/title/title-logo-bottom-it.png","loader_offset":"0x62f3"},
+    {"release":"silver-it-rev0","language":"it","part":"top","report":"analysis/gin-it-title-logo-top.json","png":"graphics/title/title-logo-top-global.png","loader_offset":"0x62fe"},
+    {"release":"silver-es-rev0","language":"es","part":"bottom","report":"analysis/gin-es-title-logo-bottom.json","png":"graphics/title/title-logo-bottom-es.png","loader_offset":"0x630b"},
+    {"release":"silver-es-rev0","language":"es","part":"top","report":"analysis/gin-es-title-logo-top.json","png":"graphics/title/title-logo-top-global.png","loader_offset":"0x6316"}
+  ]
+}
