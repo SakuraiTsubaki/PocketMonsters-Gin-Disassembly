@@ -4,19 +4,16 @@
   "end_address": 1484,
   "byte_length": 3,
   "instruction_count": 2,
-  "block_bytes": "af1802",
   "block_bytes_sha256": "89e961276f0986af0309912a3c1bcd267dda5693e415a3061274950ce0d16c2e",
   "instructions": [
     {
       "address": 1481,
-      "bytes": "af",
       "opcode": 175,
       "size": 1,
       "source": "xor a"
     },
     {
       "address": 1482,
-      "bytes": "1802",
       "opcode": 24,
       "size": 2,
       "source": "jr $05ce",

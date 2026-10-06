@@ -4,138 +4,118 @@
   "end_address": 1531,
   "byte_length": 47,
   "instruction_count": 24,
-  "block_bytes": "3e01e0e8f3afe00fe0ffe056e043e042e001e002e04be04ae047e048e049e006e007ea1fcf3e04e007f044fe9120fa",
   "block_bytes_sha256": "1526674c0fe4c6c087840788462433c95a3477415f9d39e28d801ba8f49a907a",
   "instructions": [
     {
       "address": 1484,
-      "bytes": "3e01",
       "opcode": 62,
       "size": 2,
       "source": "ld a, $01"
     },
     {
       "address": 1486,
-      "bytes": "e0e8",
       "opcode": 224,
       "size": 2,
       "source": "ldh [$ff00 + $e8], a"
     },
     {
       "address": 1488,
-      "bytes": "f3",
       "opcode": 243,
       "size": 1,
       "source": "di"
     },
     {
       "address": 1489,
-      "bytes": "af",
       "opcode": 175,
       "size": 1,
       "source": "xor a"
     },
     {
       "address": 1490,
-      "bytes": "e00f",
       "opcode": 224,
       "size": 2,
       "source": "ldh [$ff00 + $0f], a"
     },
     {
       "address": 1492,
-      "bytes": "e0ff",
       "opcode": 224,
       "size": 2,
       "source": "ldh [$ff00 + $ff], a"
     },
     {
       "address": 1494,
-      "bytes": "e056",
       "opcode": 224,
       "size": 2,
       "source": "ldh [$ff00 + $56], a"
     },
     {
       "address": 1496,
-      "bytes": "e043",
       "opcode": 224,
       "size": 2,
       "source": "ldh [$ff00 + $43], a"
     },
     {
       "address": 1498,
-      "bytes": "e042",
       "opcode": 224,
       "size": 2,
       "source": "ldh [$ff00 + $42], a"
     },
     {
       "address": 1500,
-      "bytes": "e001",
       "opcode": 224,
       "size": 2,
       "source": "ldh [$ff00 + $01], a"
     },
     {
       "address": 1502,
-      "bytes": "e002",
       "opcode": 224,
       "size": 2,
       "source": "ldh [$ff00 + $02], a"
     },
     {
       "address": 1504,
-      "bytes": "e04b",
       "opcode": 224,
       "size": 2,
       "source": "ldh [$ff00 + $4b], a"
     },
     {
       "address": 1506,
-      "bytes": "e04a",
       "opcode": 224,
       "size": 2,
       "source": "ldh [$ff00 + $4a], a"
     },
     {
       "address": 1508,
-      "bytes": "e047",
       "opcode": 224,
       "size": 2,
       "source": "ldh [$ff00 + $47], a"
     },
     {
       "address": 1510,
-      "bytes": "e048",
       "opcode": 224,
       "size": 2,
       "source": "ldh [$ff00 + $48], a"
     },
     {
       "address": 1512,
-      "bytes": "e049",
       "opcode": 224,
       "size": 2,
       "source": "ldh [$ff00 + $49], a"
     },
     {
       "address": 1514,
-      "bytes": "e006",
       "opcode": 224,
       "size": 2,
       "source": "ldh [$ff00 + $06], a"
     },
     {
       "address": 1516,
-      "bytes": "e007",
       "opcode": 224,
       "size": 2,
       "source": "ldh [$ff00 + $07], a"
     },
     {
       "address": 1518,
-      "bytes": "ea1fcf",
       "opcode": 234,
       "size": 3,
       "source": "ld [$cf1f], a",
@@ -143,35 +123,30 @@
     },
     {
       "address": 1521,
-      "bytes": "3e04",
       "opcode": 62,
       "size": 2,
       "source": "ld a, $04"
     },
     {
       "address": 1523,
-      "bytes": "e007",
       "opcode": 224,
       "size": 2,
       "source": "ldh [$ff00 + $07], a"
     },
     {
       "address": 1525,
-      "bytes": "f044",
       "opcode": 240,
       "size": 2,
       "source": "ldh a, [$ff00 + $44]"
     },
     {
       "address": 1527,
-      "bytes": "fe91",
       "opcode": 254,
       "size": 2,
       "source": "cp $91"
     },
     {
       "address": 1529,
-      "bytes": "20fa",
       "opcode": 32,
       "size": 2,
       "source": "jr nz $05f5",
