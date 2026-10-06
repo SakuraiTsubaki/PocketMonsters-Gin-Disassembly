@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "start_address": 1481,
+  "end_address": 1484,
+  "byte_length": 3,
+  "instruction_count": 2,
+  "block_bytes": "af1802",
+  "block_bytes_sha256": "89e961276f0986af0309912a3c1bcd267dda5693e415a3061274950ce0d16c2e",
+  "instructions": [
+    {
+      "address": 1481,
+      "bytes": "af",
+      "opcode": 175,
+      "size": 1,
+      "source": "xor a"
+    },
+    {
+      "address": 1482,
+      "bytes": "1802",
+      "opcode": 24,
+      "size": 2,
+      "source": "jr $05ce",
+      "target_address": 1486
+    }
+  ],
+  "terminator": "jr $05ce",
+  "source_size": 1048576,
+  "source_sha256": "0a532063a3ff5750a464582aa7bbee2b6d42e1a92a136d9f4590e373487b615c"
+}
