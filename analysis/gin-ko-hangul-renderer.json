@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-07",
+  "game": "Pocket Monsters Gin",
+  "release": "silver-ko-rev0",
+  "language": "ko",
+  "rom_sha1": "cb22d7e03a74dc3a563fde6be8626626b2b392e7",
+  "rom_sha256": "ebbac63c0c4309c82dbb6723e7163369784f962b4fd3e2f486075307c3008a22",
+  "source": "src/hangul_renderer_ko.asm",
+  "source_asm_sha256": "c3c585f3a2061ccdd0d9b36ff1841e59e6ad5609625d50a1e74236e728f02c66",
+  "reference": {
+    "repository": "SakuraiTsubaki/pokegold-kr",
+    "commit": "801b8bf5dc38d1aac121a68ce61bc707afe08e0c",
+    "path": "engine/dumps/bank7f.asm",
+    "symbols_repository": "Narishma-gb/pokegold-kr",
+    "symbols_commit": "77b4875b2d9ef95eb0db51f577b7754ee873c0a6"
+  },
+  "verification": {
+    "method": "symbol boundaries mapped to banked ROM offsets; each range independently SHA-256 hashed",
+    "gold_silver_ranges_identical": true,
+    "raw_bytes_embedded": false
+  },
+  "ranges": [
+    {
+      "name": "PlaceDoubleByteChar",
+      "bank": "0x7f",
+      "cpu_start": "0x4119",
+      "cpu_end_exclusive": "0x414e",
+      "file_offset": "0x1fc119",
+      "length": 53,
+      "range_sha256": "d4aeefbdabd228a764cb78baa1f404ab2de76906f0a7084ca2138a582d4cec05"
+    },
+    {
+      "name": "TrimUnusedHangulChars",
+      "bank": "0x7f",
+      "cpu_start": "0x4180",
+      "cpu_end_exclusive": "0x41cb",
+      "file_offset": "0x1fc180",
+      "length": 75,
+      "range_sha256": "0198ffb7d61e15f7b97e761eb6142151405543eabbda0facb2984436f476688f"
+    },
+    {
+      "name": "FindNextEmptyHangulSlot",
+      "bank": "0x7f",
+      "cpu_start": "0x41cb",
+      "cpu_end_exclusive": "0x41f2",
+      "file_offset": "0x1fc1cb",
+      "length": 39,
+      "range_sha256": "783aa4dbed127fcedff57614640fb295d556d84520d632308a38093a49d111b1"
+    },
+    {
+      "name": "IsHangulCharDrawn",
+      "bank": "0x7f",
+      "cpu_start": "0x41f2",
+      "cpu_end_exclusive": "0x4225",
+      "file_offset": "0x1fc1f2",
+      "length": 51,
+      "range_sha256": "85b9f17d22f471ce910d06f9e55c489c2aa59134c96aa291cf212700f3047a75"
+    },
+    {
+      "name": "DrawHangulChar",
+      "bank": "0x7f",
+      "cpu_start": "0x4225",
+      "cpu_end_exclusive": "0x42d1",
+      "file_offset": "0x1fc225",
+      "length": 172,
+      "range_sha256": "42e976907abebc05e7e93092378ef7d3d5a2ab9eb471f20ba58b2fe89157e5da"
+    }
+  ]
+}

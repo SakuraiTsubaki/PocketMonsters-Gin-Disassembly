@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-07",
+  "release": "silver-ko-rev0",
+  "language": "ko",
+  "origin_reference": "gin-jp-rev0",
+  "implementation": "src/hangul_renderer_ko.asm",
+  "analysis": "analysis/gin-ko-hangul-renderer.json",
+  "research": "research/korean-hangul-renderer.md",
+  "font_manifest": "manifests/korean-hangul-font.json",
+  "routines": ["PlaceDoubleByteChar", "TrimUnusedHangulChars", "FindNextEmptyHangulSlot", "IsHangulCharDrawn", "DrawHangulChar"]
+}
