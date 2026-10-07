@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-07",
+  "generator": "SakuraiTsubaki/Disassembly tools/extract_gb_1bpp.py",
+  "release": "silver-ko-rev0",
+  "language": "ko",
+  "rom_sha1": "cb22d7e03a74dc3a563fde6be8626626b2b392e7",
+  "rom_sha256": "ebbac63c0c4309c82dbb6723e7163369784f962b4fd3e2f486075307c3008a22",
+  "reference": {
+    "repository": "Narishma-gb/pokegold-kr",
+    "commit": "c90f31dadef17f033a8f1bdada701b26cef18241",
+    "symbols_commit": "77b4875b2d9ef95eb0db51f577b7754ee873c0a6",
+    "paths": ["gfx/hangul.asm", "engine/dumps/bank7f.asm", "pokesilver.map"],
+    "usage": "layout and symbol reference only; every published PNG is regenerated from the locally verified retail ROM"
+  },
+  "layout": {
+    "format": "game-boy-1bpp-8x8-tiles",
+    "bytes_per_table": 4096,
+    "tiles_per_table": 512,
+    "tiles_per_row": 16,
+    "logical_size": [128, 256],
+    "png_scale": 4,
+    "banks": ["0x78", "0x79", "0x7a"],
+    "duplicate_table_0": {"offset": "0x1eb000", "sha256": "bcd73e84d252c624ad8167b6cee2c8bec4910f809b2c447d8763a2cdba670daf"}
+  },
+  "artifacts": [
+    {"table":"0","offset":"0x1e0000","png":"graphics/font/hangul/table-0.png","report":"analysis/gin-ko-hangul-table-0.json"},
+    {"table":"1","offset":"0x1e1000","png":"graphics/font/hangul/table-1.png","report":"analysis/gin-ko-hangul-table-1.json"},
+    {"table":"2","offset":"0x1e2000","png":"graphics/font/hangul/table-2.png","report":"analysis/gin-ko-hangul-table-2.json"},
+    {"table":"3","offset":"0x1e3000","png":"graphics/font/hangul/table-3.png","report":"analysis/gin-ko-hangul-table-3.json"},
+    {"table":"4","offset":"0x1e4000","png":"graphics/font/hangul/table-4.png","report":"analysis/gin-ko-hangul-table-4.json"},
+    {"table":"5","offset":"0x1e5000","png":"graphics/font/hangul/table-5.png","report":"analysis/gin-ko-hangul-table-5.json"},
+    {"table":"6","offset":"0x1e6000","png":"graphics/font/hangul/table-6.png","report":"analysis/gin-ko-hangul-table-6.json"},
+    {"table":"7","offset":"0x1e7000","png":"graphics/font/hangul/table-7.png","report":"analysis/gin-ko-hangul-table-7.json"},
+    {"table":"8","offset":"0x1e8000","png":"graphics/font/hangul/table-8.png","report":"analysis/gin-ko-hangul-table-8.json"},
+    {"table":"9","offset":"0x1e9000","png":"graphics/font/hangul/table-9.png","report":"analysis/gin-ko-hangul-table-9.json"},
+    {"table":"a","offset":"0x1ea000","png":"graphics/font/hangul/table-a.png","report":"analysis/gin-ko-hangul-table-a.json"}
+  ]
+}
