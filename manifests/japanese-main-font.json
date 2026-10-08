@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-08",
+  "asset": "japanese-main-font",
+  "source_offset": 1016562,
+  "source_length": 1024,
+  "reference": {"repository": "pret/pokegold", "source_commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8", "symbols_commit": "5bb78aa382e2b1b9eff48a0d7eb8c09a4fe81ddc", "paths": ["engine/gfx/load_font.asm", "gfx/font.asm", "pokesilver.sym"], "font_symbol": "3e:42f2", "loader_offset": 1015808},
+  "generator": {"repository": "SakuraiTsubaki/Disassembly", "commit": "1f9c7696f5071a5c546085afe50e1a23f49f645e", "tool": "tools/extract_gb_1bpp.py", "arguments": ["--offset", "0xf82f2", "--tile-count", "128", "--tiles-per-row", "16"]},
+  "releases": [
+    {"id": "gin-jp-rev0", "sha1": "fa8c51059c1642faa570db56ef089f54d1d2011f", "sha256": "0a532063a3ff5750a464582aa7bbee2b6d42e1a92a136d9f4590e373487b615c", "range_sha256": "0902d141b40af70008d3176cf4cc13f5d5a10812ffaf08ecee5752fa7e31b8ca"},
+    {"id": "gin-jp-rev1", "sha1": "a11d5ddc26eb826086593f82370b15d16404d33e", "sha256": "99e5267fbf5a7748d4f3b75ba1990cb5d91348339468607a04bfbc6081c62d71", "range_sha256": "0902d141b40af70008d3176cf4cc13f5d5a10812ffaf08ecee5752fa7e31b8ca"}
+  ],
+  "outputs": [
+    {"path": "analysis/gin-jp-main-font.json", "sha256": "13e028b6b1459e86199d2cd4550bd6ba038cc485274a4b35e736e18b25e426d5"},
+    {"path": "graphics/font/main-font-jp.png", "sha256": "924a7bb2dd14aab6560d1376e99dae070368dcd7a05375c9c782f2217c86200f"},
+    {"path": "research/japanese-main-font.md", "sha256": "4a90598380bc335393a21b9fe751f4ce6afe0091fb1fad01767fed66382e838a"}
+  ],
+  "raw_rom_bytes_included": false
+}
