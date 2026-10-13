@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-13",
+  "asset": "european-main-fonts",
+  "source_offset": 1016562,
+  "source_length": 1024,
+  "reference": {"repository": "pret/pokegold", "source_commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8", "symbols_commit": "5bb78aa382e2b1b9eff48a0d7eb8c09a4fe81ddc", "paths": ["engine/gfx/load_font.asm", "gfx/font.asm", "gfx/font/font.png", "pokesilver.sym"], "font_symbol": "3e:42f2"},
+  "generator": {"repository": "SakuraiTsubaki/Disassembly", "commit": "1f9c7696f5071a5c546085afe50e1a23f49f645e", "tool": "tools/extract_gb_1bpp.py"},
+  "releases": {
+    "de": {"id": "silver-de-rev0", "sha1": "8ecc58d621faaedf2a934bd2583d527220df7bb9", "sha256": "c3d1fd0dec1d5fa9aa7f85275e79c52aa9175d191c63cbed7b406c306d946348", "range_sha256": "90aeb16144678c87d77cc5cfdda8feb2336501d1f241232c44ae75f15c3eee37"},
+    "fr": {"id": "silver-fr-rev0", "sha1": "a4a7e8079b7a53e4d9ef43382bbb1090b9d45d1a", "sha256": "e120c4ddb0dc3e25b95c9c71b3ffd59ff57ce689cf4d79d04913ba59140c18c2", "range_sha256": "90aeb16144678c87d77cc5cfdda8feb2336501d1f241232c44ae75f15c3eee37"},
+    "es": {"id": "silver-es-rev0", "sha1": "05bd978ab2cb104b0aff3f696896e30885203a18", "sha256": "6797010c052e8f9373ea2b9e855ec078b34fda12e5ccf742eb19bb5e8f6947c2", "range_sha256": "34dd768b3736dadb0fb79c035849a32cdf193fb4ecd24b7cdd58df002ffc9980"},
+    "it": {"id": "silver-it-rev0", "sha1": "c9eca9d0a837beb9137bb7d779e469c54e9f8d77", "sha256": "04c442246d1ae0ed6bf5e072bb7e3d06376e584b953d6b14047b39e45fbb0cb4", "range_sha256": "34dd768b3736dadb0fb79c035849a32cdf193fb4ecd24b7cdd58df002ffc9980"}
+  },
+  "outputs": [
+    {"path": "analysis/gin-de-main-font.json", "sha256": "1ea368dc45b2998f9c613c809b86a9f127ee22cc4694e82d3586f91b6fc6808e"},
+    {"path": "analysis/gin-fr-main-font.json", "sha256": "7c537291f9e0371bc2ec135df93d098e1474a45aaea85e763c93bc839f1afc31"},
+    {"path": "analysis/gin-es-main-font.json", "sha256": "1761137738d3a7e744d64119b5df19c706f9b042d3c505ab4c4d4fe90332eb3f"},
+    {"path": "analysis/gin-it-main-font.json", "sha256": "53cbc6f0b1a8ba2518b0dcf20521fd394774cd3ee3ef8a23bb996acf9885c683"},
+    {"path": "graphics/font/main-font-de.png", "sha256": "9d2ddb8b661d41b70ec42ccb495ec1858ecd7a7cdf12039c5c9abe764fdb097f"},
+    {"path": "graphics/font/main-font-fr.png", "sha256": "9d2ddb8b661d41b70ec42ccb495ec1858ecd7a7cdf12039c5c9abe764fdb097f"},
+    {"path": "graphics/font/main-font-es.png", "sha256": "7edc3aa24a0685985677a26e04349d293bf9c8587e1d3a098005a9ef01e08d77"},
+    {"path": "graphics/font/main-font-it.png", "sha256": "7edc3aa24a0685985677a26e04349d293bf9c8587e1d3a098005a9ef01e08d77"},
+    {"path": "research/european-main-fonts.md", "sha256": "6469714b08c3bb030231a149379e3d0305551ee6393826ad4ef9abbf33d1c6ca"}
+  ],
+  "raw_rom_bytes_included": false
+}
