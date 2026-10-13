@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-08",
+  "asset": "english-main-font",
+  "source_offset": 1016562,
+  "source_length": 1024,
+  "reference": {"repository": "pret/pokegold", "source_commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8", "symbols_commit": "5bb78aa382e2b1b9eff48a0d7eb8c09a4fe81ddc", "paths": ["engine/gfx/load_font.asm", "gfx/font.asm", "gfx/font/font.png", "pokesilver.sym"], "font_symbol": "3e:42f2"},
+  "generator": {"repository": "SakuraiTsubaki/Disassembly", "commit": "1f9c7696f5071a5c546085afe50e1a23f49f645e", "tool": "tools/extract_gb_1bpp.py"},
+  "releases": [{"id": "silver-en-rev0", "sha1": "49b163f7e57702bc939d642a18f591de55d92dae", "sha256": "72b190859a59623cbef6c49d601f8de52c1d2331b4f08a8d2acc17274fc19a8c", "range_sha256": "6e2437dd65c8f64b0a97c982ff1f8315a60d43cf88be0ca9cee81508692172d7"}],
+  "outputs": [
+    {"path": "analysis/gin-en-main-font.json", "sha256": "a624e11e773feafebe9ce2aee0cb55a30fed595703e3b53b2022a19702c86238"},
+    {"path": "graphics/font/main-font-en.png", "sha256": "f62d30328111d9c0bbb273bf917df27b019bd9d6b9f85c3b496b6a1fa7fcceac"},
+    {"path": "research/english-main-font.md", "sha256": "419a7794b29211edd539c90275f999a9565b40de5575e09183ab1d8f8430d658"}
+  ],
+  "raw_rom_bytes_included": false
+}
