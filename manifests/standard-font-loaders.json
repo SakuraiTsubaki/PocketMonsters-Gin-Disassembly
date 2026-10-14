@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "release_ids": [
+    "gin-jp-rev0",
+    "gin-jp-rev1",
+    "silver-ko-rev0",
+    "silver-en-rev0",
+    "silver-de-rev0",
+    "silver-es-rev0",
+    "silver-fr-rev0",
+    "silver-it-rev0"
+  ],
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/locate_gen2_standard_font_loader.py",
+    "tool_sha256": "12b490588916e04d512041c64cc1100b9469ef77235d9fd37619d2d89bd1db77"
+  },
+  "outputs": [
+    {
+      "path": "src/load_standard_font.asm",
+      "sha256": "82585705aa0ef7da728059ddab662ede8a69ab41cdad1c24fe21a2ef78a22dd7"
+    },
+    {
+      "path": "research/standard-font-loader.md",
+      "sha256": "630ce5a5323fe3514b41d318db4b4e800f0a6f18dd9f4067ace661a912f8b7a3"
+    },
+    {
+      "path": "tests/test_standard_font_loader.py",
+      "sha256": "97e9f9320a9f8f084cfb85b7104c1462d20f5d69e21e76466aea3408673f64e8"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-standard-font-loader.json",
+      "sha256": "3ccfc8fd2f42ca7dcc44307a4dbb18513c9230441f194cbbba860946de9636bc"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-standard-font-loader.json",
+      "sha256": "46b7bfd39940abe7aaa00f2da62988808df46dc611fa9f10ba9535abb4021345"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-standard-font-loader.json",
+      "sha256": "6aa62957053bab02eb91e8bdbe629c137b8cc0dfe822ed651bb1b61f97b2818f"
+    },
+    {
+      "path": "analysis/silver-en-rev0-standard-font-loader.json",
+      "sha256": "b58f85843f8ba9b59caef27be4749dcb3b40d80554e870fb2395c2c32866ef95"
+    },
+    {
+      "path": "analysis/silver-de-rev0-standard-font-loader.json",
+      "sha256": "8acf97f48c41d6804c541fed341bcdb22447252b03270cfb6cd893a737d47e79"
+    },
+    {
+      "path": "analysis/silver-es-rev0-standard-font-loader.json",
+      "sha256": "88ac60043e9cb3e352ac4e40fb992b36894d6495fa2d0bba09785715eda59c60"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-standard-font-loader.json",
+      "sha256": "0e96b75e58f19a1fac2346a4869d780ceedd1bac0d0472db587337578d414f69"
+    },
+    {
+      "path": "analysis/silver-it-rev0-standard-font-loader.json",
+      "sha256": "74d51985a252afb2ce076492af9050ab088798df2c6e2eaabe9ca49843a7741f"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "source_size": 2097152,
+  "source_sha256": "ebbac63c0c4309c82dbb6723e7163369784f962b4fd3e2f486075307c3008a22",
+  "family": "gold-silver",
+  "loader_offset": 1015808,
+  "range_end_exclusive": 1015824,
+  "code_length": 16,
+  "code_sha256": "9791c7ff3d889ccb4ed26cb8b0eba1768b37ac83dc03919abf3b870099d9e8b6",
+  "font": {
+    "bank": 62,
+    "address": 17141,
+    "source_offset": 1016565,
+    "destination": 34816,
+    "tile_count": 128,
+    "format": "game-boy-1bpp-8x8-tiles"
+  },
+  "transfer": {
+    "kind": "tail-jump",
+    "target": 3743
+  },
+  "initializer_call": {
+    "address": 1015808,
+    "target": 5232
+  },
+  "raw_bytes_published": false
+}
