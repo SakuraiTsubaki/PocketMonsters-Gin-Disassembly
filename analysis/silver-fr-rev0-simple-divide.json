@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-fr-rev0",
+    "sha256": "e120c4ddb0dc3e25b95c9c71b3ffd59ff57ce689cf4d79d04913ba59140c18c2"
+  },
+  "function": {
+    "name": "SimpleDivide",
+    "rom_offset": 12743,
+    "bank": 0,
+    "address": 12743,
+    "range_end_exclusive": 12752,
+    "length": 9,
+    "code_sha256": "076069c0b328a081fe3c9743adb8359b5739d024cbe928ee03b1e57e97cf357a",
+    "input": {
+      "dividend": "A",
+      "divisor": "C"
+    },
+    "output": {
+      "quotient": "B",
+      "remainder": "A"
+    },
+    "control_flow": {
+      "subtract_loop": {
+        "from_offset": 4,
+        "to_offset": 2
+      }
+    }
+  },
+  "semantics": {
+    "operation": "unsigned A / C by repeated subtraction",
+    "precondition": "C is nonzero",
+    "quotient_register": "B",
+    "remainder_register": "A"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+    "path": "home/math.asm",
+    "raw_rom_bytes_published": false
+  },
+  "raw_rom_bytes_included": false
+}
