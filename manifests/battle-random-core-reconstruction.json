@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "function": "_BattleRandom",
+  "releases": [
+    "gin-jp-rev0",
+    "gin-jp-rev1",
+    "silver-ko-rev0",
+    "silver-en-rev0",
+    "silver-de-rev0",
+    "silver-es-rev0",
+    "silver-fr-rev0",
+    "silver-it-rev0"
+  ],
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/inspect_gen2_battle_random_core.py",
+    "tool_sha256": "14298eb856a69f991eae05fbe0c808f4efa3843f45e8f309a45a7d1b031d4bfa"
+  },
+  "outputs": [
+    {
+      "path": "src/battle_random_core.asm",
+      "sha256": "286ca8ca34943b658b2fd16a3b932e32a65913c0f59bb6bd67ddfe5b7c295e94"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-battle-random-core.json",
+      "sha256": "d7a63a47a0908ef3bf9eeff717911171e95e62971962b5dff5bacb586eb78bcd"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-battle-random-core.json",
+      "sha256": "24b41a0f9fb20abfc10ac17515ec5cd7e6f484a6c0a074a0bf15506be7109166"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-battle-random-core.json",
+      "sha256": "34b966d4fc04d17badb39b83a637ba06c913560bc26d5e7166966b7b4f15f220"
+    },
+    {
+      "path": "analysis/silver-en-rev0-battle-random-core.json",
+      "sha256": "e8758715fa55338a6bdb23bf15fb6c2c60cf65378b4a6d4680ccccdd17b1e0d8"
+    },
+    {
+      "path": "analysis/silver-de-rev0-battle-random-core.json",
+      "sha256": "2f26f9d3d6355f837c938c430ed00143811d306b51f790b19a0d794b391c3174"
+    },
+    {
+      "path": "analysis/silver-es-rev0-battle-random-core.json",
+      "sha256": "286805f88df16b24f43605e9e9e418f36bf5192a42a107fe75d15ba1fefbefb7"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-battle-random-core.json",
+      "sha256": "bd97036b6c0e90c5a4463e6955567b08d4015079135dc98b24cd2d9d31cf86be"
+    },
+    {
+      "path": "analysis/silver-it-rev0-battle-random-core.json",
+      "sha256": "5c259c5801e11ae973bbc53ccfa6805ddaf19dbe9770ec06d777f071a2744c63"
+    },
+    {
+      "path": "research/battle-random-core-reconstruction.md",
+      "sha256": "eb125a142874f22252d50937d313cb2382341cf22801e5887efb3642495e8b71"
+    },
+    {
+      "path": "tests/test_battle_random_core_reconstruction.py",
+      "sha256": "b18908dc90da18e3effb97b3a6c848a841dabe6ba8a4e76d3a8aa7c0e9e6a5f4"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}

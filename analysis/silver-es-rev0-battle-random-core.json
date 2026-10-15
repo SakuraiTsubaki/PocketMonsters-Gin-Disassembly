@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-es-rev0",
+    "sha256": "6797010c052e8f9373ea2b9e855ec078b34fda12e5ccf742eb19bb5e8f6947c2"
+  },
+  "function": {
+    "name": "_BattleRandom",
+    "rom_offset": 257041,
+    "bank": 15,
+    "address": 27665,
+    "range_end_exclusive": 257096,
+    "length": 55,
+    "code_sha256": "ab469e6e9a339e21a54a0762f11e404880c255c401a68f137a7a8fc423ea867f",
+    "state": {
+      "wLinkMode": 53314,
+      "wLinkBattleRNCount": 52163,
+      "wLinkBattleRNs": 53475,
+      "stream_length": 10
+    },
+    "control_flow": {
+      "non_link_jump": {
+        "bank": 0,
+        "address": 12486
+      },
+      "early_return_offset": 28,
+      "refresh_loop_offset": 41,
+      "refresh_loop_back_edge": {
+        "from_offset": 49,
+        "to_offset": 41
+      }
+    },
+    "prng": {
+      "formula": "seed = (seed * 5 + 1) mod 256",
+      "seed_count": 10
+    }
+  },
+  "semantics": {
+    "non_link": "tail-jump to Random",
+    "link": "consume a shared 10-byte stream and refresh every seed with a 5x+1 LCG",
+    "synchronization": "shared link state avoids peer RNG desynchronization",
+    "return_register": "A"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+    "path": "engine/battle/core.asm",
+    "raw_rom_bytes_published": false
+  },
+  "raw_rom_bytes_included": false
+}
