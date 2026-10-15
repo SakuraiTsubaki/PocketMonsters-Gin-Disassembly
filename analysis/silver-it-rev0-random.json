@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-it-rev0",
+    "sha256": "04c442246d1ae0ed6bf5e072bb7e3d06376e584b953d6b14047b39e45fbb0cb4"
+  },
+  "function": {
+    "name": "Random",
+    "rom_offset": 12487,
+    "bank": 0,
+    "address": 12487,
+    "range_end_exclusive": 12506,
+    "length": 19,
+    "code_sha256": "cfef65875878a56aca6d9293d9d5ec497a7486be8c613263d53fd25a63942def",
+    "globals": {
+      "hRandomAdd": 65507,
+      "hRandomSub": 65508
+    }
+  },
+  "semantics": {
+    "entropy_source": "DIV register (0xFF04)",
+    "add_state": "hRandomAdd = hRandomAdd + DIV + carry",
+    "subtract_state": "hRandomSub = DIV - hRandomSub - carry",
+    "return_register": "A (updated hRandomSub)"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+    "path": "home/random.asm",
+    "raw_rom_bytes_published": false
+  },
+  "raw_rom_bytes_included": false
+}

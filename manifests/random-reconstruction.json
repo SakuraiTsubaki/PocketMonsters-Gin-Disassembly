@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "function": "Random",
+  "releases": [
+    "gin-jp-rev0",
+    "gin-jp-rev1",
+    "silver-ko-rev0",
+    "silver-en-rev0",
+    "silver-de-rev0",
+    "silver-es-rev0",
+    "silver-fr-rev0",
+    "silver-it-rev0"
+  ],
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/locate_gen2_random.py",
+    "tool_sha256": "47f99416d33b806e74504a8efe4f4818af822693c757dbc09af5a8fc33a49287"
+  },
+  "outputs": [
+    {
+      "path": "src/random.asm",
+      "sha256": "0b798db28b502a668bb20d3249b0ba57f6e4f43a428c16d7ef277480251db4a1"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-random.json",
+      "sha256": "0ce36fe30d7a2655d3c584e68bd996604bfe5e3ae418ebb01998ba8f94582f8e"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-random.json",
+      "sha256": "2f018ac06648355b2169d88985f75b31ec20d8128928ab9a86de2dda71d8d173"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-random.json",
+      "sha256": "1bcb40adbd7f037335a59d3f29a82c9adb601057141d8e4aa25498724d395941"
+    },
+    {
+      "path": "analysis/silver-en-rev0-random.json",
+      "sha256": "00128283120019ca80808f17b04305d5b693833ae1429b3a30d87107267b4437"
+    },
+    {
+      "path": "analysis/silver-de-rev0-random.json",
+      "sha256": "f08846da46f2f7fc2a4186e1d3677c42a5bc730281c208000371545092ce3c1a"
+    },
+    {
+      "path": "analysis/silver-es-rev0-random.json",
+      "sha256": "dc5585ec817a76ebd6fd6a991bc15a892616aab3954294b2c7c7deefc89d9292"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-random.json",
+      "sha256": "832d92be3a30f33fe095f379a6d712ad2bfc38320c7f778d053a552d3e0a8462"
+    },
+    {
+      "path": "analysis/silver-it-rev0-random.json",
+      "sha256": "a48a080bd230138419c3e30bbfda8419794baa6980580a8e346565659b9395f8"
+    },
+    {
+      "path": "research/random-reconstruction.md",
+      "sha256": "34467ca37aabfb8f01481bc5b5987e01c47907909bc75135773674faacc9b78d"
+    },
+    {
+      "path": "tests/test_random_reconstruction.py",
+      "sha256": "6793766db5526fbdaf3709dae7f3803214eb4899d08930930f808cd40f55ca87"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}
