@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-fr-rev0",
+    "sha256": "e120c4ddb0dc3e25b95c9c71b3ffd59ff57ce689cf4d79d04913ba59140c18c2"
+  },
+  "function": {
+    "name": "BattleRandom",
+    "rom_offset": 12487,
+    "bank": 0,
+    "address": 12487,
+    "range_end_exclusive": 12505,
+    "length": 18,
+    "code_sha256": "b6cb28147e677589e74d5dde2475df36ae120e40d866393670ffec1d46245de3",
+    "hROMBank": 65439,
+    "bank_switch": {
+      "opcode": "RST $10",
+      "vector": 16
+    },
+    "target": {
+      "bank": 15,
+      "address": 27667,
+      "rom_offset": 257043
+    },
+    "temporary_wram": 53213
+  },
+  "semantics": {
+    "operation": "bank-switch call to _BattleRandom with A preserved through WRAM",
+    "return_register": "A",
+    "placement": "immediately follows the verified Random routine"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+    "path": "home/random.asm",
+    "raw_rom_bytes_published": false
+  },
+  "raw_rom_bytes_included": false
+}
