@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-ko-rev0",
+    "sha256": "ebbac63c0c4309c82dbb6723e7163369784f962b4fd3e2f486075307c3008a22"
+  },
+  "function": {
+    "name": "RandomRange",
+    "rom_offset": 12640,
+    "bank": 0,
+    "address": 12640,
+    "range_end_exclusive": 12666,
+    "length": 26,
+    "code_sha256": "8605cc6d0ec14b0d8e140ac5c6277555630419bdfc8e143dc53a8021dd494132",
+    "dependencies": {
+      "Random": {
+        "bank": 0,
+        "address": 12603
+      },
+      "hRandomAdd": 65507,
+      "SimpleDivide": {
+        "bank": 0,
+        "address": 12883
+      }
+    },
+    "control_flow": {
+      "modulo_loop": {
+        "from_offset": 5,
+        "to_offset": 4
+      },
+      "rejection_loop": {
+        "from_offset": 17,
+        "to_offset": 10
+      }
+    },
+    "input": "A (exclusive upper bound)",
+    "output": "A (uniform value below input for nonzero input)"
+  },
+  "semantics": {
+    "method": "rejection sampling followed by SimpleDivide",
+    "bias_control": "reject values in the incomplete high tail",
+    "valid_input": "1..255",
+    "return_register": "A"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+    "path": "home/random.asm",
+    "raw_rom_bytes_published": false
+  },
+  "raw_rom_bytes_included": false
+}
