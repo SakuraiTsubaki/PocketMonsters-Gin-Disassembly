@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-en-rev0",
+    "sha256": "72b190859a59623cbef6c49d601f8de52c1d2331b4f08a8d2acc17274fc19a8c"
+  },
+  "function": {
+    "name": "_Divide",
+    "rom_offset": 26595,
+    "bank": 1,
+    "address": 26595,
+    "range_end_exclusive": 26726,
+    "length": 131,
+    "code_sha256": "7874fe9005f762f369a472d108e8b970ba0818d593bd0e30260432caf2beba39",
+    "algorithm": "restoring long division",
+    "maximum_dividend_bytes": 4,
+    "hram_layout": {
+      "dividend": [
+        65461,
+        65462,
+        65463,
+        65464
+      ],
+      "divisor": 65465,
+      "math_buffer_0_to_4": [
+        65466,
+        65467,
+        65468,
+        65469,
+        65470
+      ],
+      "remainder": 65465,
+      "quotient": [
+        65461,
+        65462,
+        65463,
+        65464
+      ]
+    }
+  },
+  "semantics": {
+    "operation": "restoring long division of up to four big-endian dividend bytes",
+    "input": "hDividend, byte length in B, and hDivisor",
+    "output": "four-byte hQuotient and hRemainder",
+    "endianness": "big-endian"
+  },
+  "boundary_evidence": {
+    "start": "Divide homecall target",
+    "end": "verified terminal RET after the quotient stores"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+    "path": "engine/math/math.asm",
+    "raw_rom_bytes_published": false
+  },
+  "raw_rom_bytes_included": false
+}
