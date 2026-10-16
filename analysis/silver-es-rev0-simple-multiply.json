@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-es-rev0",
+    "sha256": "6797010c052e8f9373ea2b9e855ec078b34fda12e5ccf742eb19bb5e8f6947c2"
+  },
+  "function": {
+    "name": "SimpleMultiply",
+    "rom_offset": 12750,
+    "bank": 0,
+    "address": 12750,
+    "range_end_exclusive": 12761,
+    "length": 11,
+    "code_sha256": "119373c2eb1f2a4adf118de2232d5e86acb90e3f45cbc31bcd01c0e5fcaa6b2c",
+    "loop": {
+      "body_offset": 12755,
+      "conditional_branch_offset": 12757,
+      "target_offset": 12755
+    },
+    "zero_shortcut": true,
+    "preserved_registers": [
+      "BC"
+    ]
+  },
+  "semantics": {
+    "operation": "unsigned repeated-add multiplication",
+    "input": "A and C",
+    "output": "A = A * C modulo 256",
+    "zero_case": "A = 0 returns immediately",
+    "register_preservation": "BC is restored"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+    "path": "home/math.asm",
+    "raw_rom_bytes_published": false
+  },
+  "raw_rom_bytes_included": false
+}
