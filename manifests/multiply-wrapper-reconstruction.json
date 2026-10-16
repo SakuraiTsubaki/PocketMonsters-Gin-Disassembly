@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "function": "Multiply",
+  "releases": [
+    "gin-jp-rev0",
+    "gin-jp-rev1",
+    "silver-ko-rev0",
+    "silver-en-rev0",
+    "silver-de-rev0",
+    "silver-es-rev0",
+    "silver-fr-rev0",
+    "silver-it-rev0"
+  ],
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/inspect_gen2_multiply_wrapper.py",
+    "tool_sha256": "ae7146ce43c877c585c795fc2c3e670d8bb29f858d3b669bdbca9aa672a7b0dd"
+  },
+  "outputs": [
+    {
+      "path": "src/multiply_wrapper.asm",
+      "sha256": "21ff259f9fe625e0f1352e00d78a420dd8393853e9de1b79729d2e86d0a97014"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-multiply-wrapper.json",
+      "sha256": "10dee1d3ab8c3f58e9344d6be492dc79bf96077b6e2ae4d07d1ddceb16eb5ff5"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-multiply-wrapper.json",
+      "sha256": "32206ce78a89f7b2dbb2b629249fc754ae2c286e53fdae69b1ac3aca49dc1add"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-multiply-wrapper.json",
+      "sha256": "68c1838532f93602fceb1e7db32247378bbbd717466b53b5760de3469c8bc308"
+    },
+    {
+      "path": "analysis/silver-en-rev0-multiply-wrapper.json",
+      "sha256": "53a454403fdb62b216e0fba741394df42c44bbab9a0070f09e4cdb36df4f1fa3"
+    },
+    {
+      "path": "analysis/silver-de-rev0-multiply-wrapper.json",
+      "sha256": "4bd393296e673e92d5bfade4e2e85eb678f9e8e1ae61dd724e86766cd5ec49ae"
+    },
+    {
+      "path": "analysis/silver-es-rev0-multiply-wrapper.json",
+      "sha256": "9d5899beda0fa93262e146e8863f192e28f3101180653c984162807bb718acf6"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-multiply-wrapper.json",
+      "sha256": "0ea6a2884e57a78fe771fe0372cdd960f779f1d43770d5e7ec1747f478a9088f"
+    },
+    {
+      "path": "analysis/silver-it-rev0-multiply-wrapper.json",
+      "sha256": "3c914cd82f538e1cf23f9812afd3a988c37ebe249931738f019335c7a31a3901"
+    },
+    {
+      "path": "research/multiply-wrapper-reconstruction.md",
+      "sha256": "e0dea842543b2a88e07ff133db3bb3e3e35f18456b676cff76cd534a6e6d6559"
+    },
+    {
+      "path": "tests/test_multiply_wrapper_reconstruction.py",
+      "sha256": "7837d4aa32906b0bb74bc13a9bb972ad8fa6429782166766e450eb583933e660"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}
