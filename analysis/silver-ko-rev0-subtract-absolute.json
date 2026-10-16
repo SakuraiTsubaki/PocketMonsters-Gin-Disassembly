@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-ko-rev0",
+    "sha256": "ebbac63c0c4309c82dbb6723e7163369784f962b4fd3e2f486075307c3008a22"
+  },
+  "function": {
+    "name": "SubtractAbsolute",
+    "rom_offset": 12921,
+    "bank": 0,
+    "address": 12921,
+    "range_end_exclusive": 12928,
+    "length": 7,
+    "code_sha256": "502ad61bdad33ed4aa24d44acb7ccd327b46811e2f21e8b98d9ccb5b34dad3ba",
+    "nonnegative_return_offset": 12922,
+    "negative_path_offset": 12923,
+    "preserved_registers": [
+      "BC",
+      "DE",
+      "HL"
+    ]
+  },
+  "semantics": {
+    "operation": "absolute unsigned difference",
+    "input": "A and B",
+    "output": "A = |A - B|",
+    "carry": "set exactly when the original A was less than B",
+    "reference_status": "unreferenced in the reference source"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+    "path": "home/math.asm",
+    "raw_rom_bytes_published": false
+  },
+  "raw_rom_bytes_included": false
+}
