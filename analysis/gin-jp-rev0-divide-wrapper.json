@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "gin-jp-rev0",
+    "sha256": "0a532063a3ff5750a464582aa7bbee2b6d42e1a92a136d9f4590e373487b615c"
+  },
+  "function": {
+    "name": "Divide",
+    "rom_offset": 12677,
+    "bank": 0,
+    "address": 12677,
+    "range_end_exclusive": 12695,
+    "length": 18,
+    "code_sha256": "3599ee3673c6f848771117c86d36506217814b31a4a6c420bac32b339a54fb83",
+    "home_call": {
+      "saved_rom_bank_hram_address": 65439,
+      "bankswitch": {
+        "rst_opcode": "RST $10",
+        "vector": 16
+      },
+      "target": {
+        "bank": 1,
+        "address": 27349,
+        "rom_offset": 27349
+      }
+    },
+    "preserved_registers": [
+      "AF",
+      "BC",
+      "DE",
+      "HL"
+    ]
+  },
+  "semantics": {
+    "operation": "preserve registers, switch to the _Divide bank, call it, and restore the prior ROM bank",
+    "input": "hDividend (up to 4 bytes), length in B, and hDivisor",
+    "output": "hQuotient and hRemainder",
+    "register_preservation": "AF, BC, DE, and HL are restored by the wrapper"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+    "path": "home/math.asm",
+    "macro_path": "macros/farcall.asm",
+    "raw_rom_bytes_published": false
+  },
+  "raw_rom_bytes_included": false
+}
