@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "function": "_Multiply",
+  "releases": [
+    "gin-jp-rev0",
+    "gin-jp-rev1",
+    "silver-ko-rev0",
+    "silver-en-rev0",
+    "silver-de-rev0",
+    "silver-es-rev0",
+    "silver-fr-rev0",
+    "silver-it-rev0"
+  ],
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/inspect_gen2_multiply_core.py",
+    "tool_sha256": "7651e97306ecbc35017522dee8e7c76ff16502ed490401ce83e7d8d51e64679d"
+  },
+  "outputs": [
+    {
+      "path": "src/multiply_core.asm",
+      "sha256": "2a6fe5b390449c8d275e4f673f789508c02b2a5b07b46b5b547d82a6be895bfb"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-multiply-core.json",
+      "sha256": "bc68f9959fe33bafcf7089c0697af4879273665b6a7edca8bcc584efd02b4473"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-multiply-core.json",
+      "sha256": "e4a46120ef61524d9b953cbcf39dae23dd7e8df9f1237fb43a40823d0890b851"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-multiply-core.json",
+      "sha256": "a533b62b4e22ac0f1cef1e6113326514b9f50f670aa84312a3785fbd07195740"
+    },
+    {
+      "path": "analysis/silver-en-rev0-multiply-core.json",
+      "sha256": "70eb2598963e92e85bdbaa3f87a0a5c1cb57ddad5d6fb3e73273797f74373234"
+    },
+    {
+      "path": "analysis/silver-de-rev0-multiply-core.json",
+      "sha256": "d2cc1582f2e9c970bfe9278d8cb0a228d8733d918bfc5a5083b7427e6e8c2fa2"
+    },
+    {
+      "path": "analysis/silver-es-rev0-multiply-core.json",
+      "sha256": "d1b61610c334512849b20dee222bc3c2e97e35639ee9ed57500f12f130b6d64e"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-multiply-core.json",
+      "sha256": "bd5ef4879fb65bc3c538db466bc4f875cb37d1d1481f657acc90c26243b386ab"
+    },
+    {
+      "path": "analysis/silver-it-rev0-multiply-core.json",
+      "sha256": "c595befbcc9caf8b86a6a74fafbab9464471e0b9a36765e3258757deeb94fc4c"
+    },
+    {
+      "path": "research/multiply-core-reconstruction.md",
+      "sha256": "8d9bcd22ca8b70b80d3485600adc15feab46e25a290b7c98af9ca4901149fbbc"
+    },
+    {
+      "path": "tests/test_multiply_core_reconstruction.py",
+      "sha256": "9c2996b59d9728d2df2b302d98d73132692bfc49fd96b19f2eb536bfb5cee53f"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-es-rev0",
+    "sha256": "6797010c052e8f9373ea2b9e855ec078b34fda12e5ccf742eb19bb5e8f6947c2"
+  },
+  "function": {
+    "name": "_Multiply",
+    "rom_offset": 26573,
+    "bank": 1,
+    "address": 26573,
+    "range_end_exclusive": 26669,
+    "length": 96,
+    "code_sha256": "cfceda1a48a109a1b1e7df95eab6391c73dae4338c637ddf0f411779c60a75d4",
+    "iterations": 8,
+    "algorithm": "shift-add",
+    "hram_layout": {
+      "multiplicand_minus_1": 65461,
+      "multiplicand": [
+        65462,
+        65463,
+        65464
+      ],
+      "multiplier": 65465,
+      "math_buffer_1_to_4": [
+        65467,
+        65468,
+        65469,
+        65470
+      ],
+      "product": [
+        65461,
+        65462,
+        65463,
+        65464
+      ]
+    }
+  },
+  "semantics": {
+    "operation": "three-byte multiplicand times one-byte multiplier using eight shift-add iterations",
+    "input": "hMultiplicand and hMultiplier",
+    "output": "four-byte hProduct",
+    "endianness": "big-endian"
+  },
+  "boundary_evidence": {
+    "start": "Multiply far-call target",
+    "end": "Divide homecall target"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+    "path": "engine/math/math.asm",
+    "raw_rom_bytes_published": false
+  },
+  "raw_rom_bytes_included": false
+}
