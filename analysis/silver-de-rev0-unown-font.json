@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-de-rev0",
+    "sha256": "c3d1fd0dec1d5fa9aa7f85275e79c52aa9175d191c63cbed7b406c306d946348"
+  },
+  "asset": {
+    "name": "UnownFont",
+    "source_offset": 1028878,
+    "source_length": 432,
+    "source_sha256": "904db613490cdb3c87791e951dfb149da0ef497365be0037005bb8a1171b20c1",
+    "format": "game-boy-2bpp-8x8-tiles",
+    "tile_count": 27,
+    "tiles_per_row": 3,
+    "monochrome_planes_identical": true
+  },
+  "output": {
+    "path": "graphics/font/unown-font.png",
+    "sha256": "5491e2f08b803a18aa1bc4816e2f94b623a9b6989a4f05165eac6bbc1f8c8b0d",
+    "width": 48,
+    "height": 144,
+    "scale": 2
+  },
+  "origin_reference": false,
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+    "path": "gfx/font.asm",
+    "asset_path": "gfx/font/unown_font.png",
+    "raw_rom_bytes_published": false
+  },
+  "raw_rom_bytes_included": false
+}

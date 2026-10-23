@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "game": "Pokemon Silver",
+  "asset": "UnownFont",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/extract_gen2_unown_font.py",
+    "tool_sha256": "8df9ba498c0740503c02de225deeb6b8665eafa8acc4dbf60364d4bd0a1a9c76"
+  },
+  "outputs": [
+    {
+      "path": "graphics/font/unown-font.png",
+      "sha256": "5491e2f08b803a18aa1bc4816e2f94b623a9b6989a4f05165eac6bbc1f8c8b0d"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-unown-font.json",
+      "sha256": "0bcb6ff09e6cc7783b9762abdf0b61e43e081faaa8b43c93dc30197146e88370"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-unown-font.json",
+      "sha256": "fd938a5f820ec6ff35a0bd6a8bb83b032ad5e17474e6f248ea903ffbf383acd3"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-unown-font.json",
+      "sha256": "8bb7f5394df30cb7f85a8af7ead0478d2f5890a73b464161cbf71f6dd4291461"
+    },
+    {
+      "path": "analysis/silver-en-rev0-unown-font.json",
+      "sha256": "9359259cc49997d7cba989ed8b0ddc083cb71c565a15a00d42066e743d1f27f7"
+    },
+    {
+      "path": "analysis/silver-de-rev0-unown-font.json",
+      "sha256": "4fbf5e05eec915e52575deeb1461aedb948c36b72d5803cee9faf3a7911a79de"
+    },
+    {
+      "path": "analysis/silver-es-rev0-unown-font.json",
+      "sha256": "8ca21db1bb48f63d79ce7a201b323e64ac06c18f3a6d4d3dd77fe838ffacb9d5"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-unown-font.json",
+      "sha256": "74a1ce0e19498b6d47f40d63d3ada3f41be9ba706eced99d48ba67c03161b1a3"
+    },
+    {
+      "path": "analysis/silver-it-rev0-unown-font.json",
+      "sha256": "f901c2557c1509d27f4648fb025f8d5cdab8bb558786b4aa97fed983e278aeb5"
+    },
+    {
+      "path": "analysis/unown-font-summary.json",
+      "sha256": "d7660f68a22eefaf4766e490441fd3e25d8fe799b752b23585e8b18e26429982"
+    },
+    {
+      "path": "research/unown-font.md",
+      "sha256": "3ad118149705a9e23327ebdf3d01c89a692ba554682c2d0fd078e25443f4f9ee"
+    },
+    {
+      "path": "tests/test_unown_font.py",
+      "sha256": "0f434b5edbbb86c3aaaad8d5495d226a7580d37498a28e90fdd364984ee85196"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}
