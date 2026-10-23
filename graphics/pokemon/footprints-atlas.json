@@ -1,0 +1,4108 @@
+{
+  "schema_version": 1,
+  "layout": "8 footprints per row; top tile row followed by bottom tile row",
+  "slot_count": 256,
+  "official_species_slots": 251,
+  "unused_slots": 5,
+  "logical_width": 128,
+  "logical_height": 512,
+  "png_scale": 2,
+  "slots": [
+    {
+      "slot": 1,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 2,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 0,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 3,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 0,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 4,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 0,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 5,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 0,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 6,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 0,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 7,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 0,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 8,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 0,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 9,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 32,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 10,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 32,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 11,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 32,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 12,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 32,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 13,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 32,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 14,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 32,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 15,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 32,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 16,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 32,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 17,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 64,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 18,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 64,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 19,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 64,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 20,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 64,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 21,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 64,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 22,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 64,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 23,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 64,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 24,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 32,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 64,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 25,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 48,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 96,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 26,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 48,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 96,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 27,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 48,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 96,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 28,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 48,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 96,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 29,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 48,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 96,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 30,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 48,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 96,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 31,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 48,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 96,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 32,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 48,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 96,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 33,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 128,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 34,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 128,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 35,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 128,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 36,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 128,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 37,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 128,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 38,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 128,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 39,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 128,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 40,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 64,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 128,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 41,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 160,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 42,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 160,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 43,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 160,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 44,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 160,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 45,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 160,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 46,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 160,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 47,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 160,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 48,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 80,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 160,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 49,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 96,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 192,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 50,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 96,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 192,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 51,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 96,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 192,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 52,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 96,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 192,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 53,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 96,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 192,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 54,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 96,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 192,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 55,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 96,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 192,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 56,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 96,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 192,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 57,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 224,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 58,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 224,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 59,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 224,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 60,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 224,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 61,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 224,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 62,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 224,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 63,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 224,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 64,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 112,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 224,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 65,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 128,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 256,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 66,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 128,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 256,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 67,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 128,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 256,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 68,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 128,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 256,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 69,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 128,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 256,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 70,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 128,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 256,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 71,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 128,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 256,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 72,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 128,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 256,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 73,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 288,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 74,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 288,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 75,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 288,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 76,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 288,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 77,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 288,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 78,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 288,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 79,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 288,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 80,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 144,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 288,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 81,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 160,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 320,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 82,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 160,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 320,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 83,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 160,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 320,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 84,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 160,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 320,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 85,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 160,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 320,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 86,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 160,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 320,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 87,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 160,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 320,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 88,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 160,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 320,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 89,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 352,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 90,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 352,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 91,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 352,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 92,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 352,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 93,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 352,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 94,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 352,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 95,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 352,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 96,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 176,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 352,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 97,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 192,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 384,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 98,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 192,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 384,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 99,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 192,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 384,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 100,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 192,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 384,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 101,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 192,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 384,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 102,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 192,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 384,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 103,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 192,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 384,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 104,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 192,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 384,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 105,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 208,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 416,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 106,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 208,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 416,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 107,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 208,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 416,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 108,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 208,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 416,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 109,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 208,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 416,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 110,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 208,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 416,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 111,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 208,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 416,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 112,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 208,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 416,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 113,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 224,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 448,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 114,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 224,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 448,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 115,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 224,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 448,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 116,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 224,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 448,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 117,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 224,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 448,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 118,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 224,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 448,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 119,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 224,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 448,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 120,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 224,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 448,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 121,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 240,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 480,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 122,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 240,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 480,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 123,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 240,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 480,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 124,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 240,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 480,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 125,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 240,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 480,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 126,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 240,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 480,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 127,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 240,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 480,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 128,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 240,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 480,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 129,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 256,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 512,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 130,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 256,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 512,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 131,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 256,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 512,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 132,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 256,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 512,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 133,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 256,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 512,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 134,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 256,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 512,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 135,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 256,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 512,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 136,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 256,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 512,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 137,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 272,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 544,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 138,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 272,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 544,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 139,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 272,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 544,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 140,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 272,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 544,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 141,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 272,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 544,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 142,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 272,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 544,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 143,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 272,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 544,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 144,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 272,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 544,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 145,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 288,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 576,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 146,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 288,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 576,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 147,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 288,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 576,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 148,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 288,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 576,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 149,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 288,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 576,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 150,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 288,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 576,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 151,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 288,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 576,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 152,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 288,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 576,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 153,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 304,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 608,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 154,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 304,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 608,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 155,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 304,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 608,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 156,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 304,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 608,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 157,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 304,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 608,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 158,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 304,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 608,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 159,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 304,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 608,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 160,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 304,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 608,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 161,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 320,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 640,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 162,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 320,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 640,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 163,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 320,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 640,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 164,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 320,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 640,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 165,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 320,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 640,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 166,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 320,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 640,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 167,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 320,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 640,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 168,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 320,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 640,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 169,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 336,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 672,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 170,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 336,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 672,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 171,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 336,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 672,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 172,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 336,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 672,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 173,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 336,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 672,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 174,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 336,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 672,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 175,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 336,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 672,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 176,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 336,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 672,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 177,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 352,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 704,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 178,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 352,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 704,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 179,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 352,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 704,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 180,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 352,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 704,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 181,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 352,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 704,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 182,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 352,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 704,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 183,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 352,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 704,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 184,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 352,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 704,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 185,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 368,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 736,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 186,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 368,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 736,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 187,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 368,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 736,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 188,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 368,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 736,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 189,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 368,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 736,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 190,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 368,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 736,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 191,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 368,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 736,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 192,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 368,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 736,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 193,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 384,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 768,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 194,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 384,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 768,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 195,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 384,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 768,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 196,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 384,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 768,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 197,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 384,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 768,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 198,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 384,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 768,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 199,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 384,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 768,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 200,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 384,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 768,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 201,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 400,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 800,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 202,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 400,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 800,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 203,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 400,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 800,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 204,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 400,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 800,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 205,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 400,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 800,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 206,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 400,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 800,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 207,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 400,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 800,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 208,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 400,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 800,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 209,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 416,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 832,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 210,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 416,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 832,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 211,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 416,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 832,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 212,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 416,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 832,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 213,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 416,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 832,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 214,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 416,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 832,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 215,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 416,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 832,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 216,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 416,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 832,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 217,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 432,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 864,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 218,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 432,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 864,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 219,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 432,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 864,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 220,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 432,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 864,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 221,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 432,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 864,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 222,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 432,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 864,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 223,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 432,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 864,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 224,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 432,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 864,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 225,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 448,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 896,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 226,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 448,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 896,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 227,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 448,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 896,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 228,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 448,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 896,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 229,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 448,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 896,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 230,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 448,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 896,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 231,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 448,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 896,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 232,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 448,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 896,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 233,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 464,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 928,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 234,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 464,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 928,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 235,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 464,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 928,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 236,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 464,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 928,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 237,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 464,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 928,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 238,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 464,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 928,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 239,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 464,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 928,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 240,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 464,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 928,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 241,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 480,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 960,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 242,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 480,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 960,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 243,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 480,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 960,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 244,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 48,
+        "y": 480,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 960,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 245,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 64,
+        "y": 480,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 960,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 246,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 80,
+        "y": 480,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 960,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 247,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 96,
+        "y": 480,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 960,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 248,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 112,
+        "y": 480,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 960,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 249,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 0,
+        "y": 496,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 992,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 250,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 16,
+        "y": 496,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 992,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 251,
+      "kind": "pokemon",
+      "logical_rect": {
+        "x": 32,
+        "y": 496,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 992,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 252,
+      "kind": "unused",
+      "logical_rect": {
+        "x": 48,
+        "y": 496,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 992,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 253,
+      "kind": "unused",
+      "logical_rect": {
+        "x": 64,
+        "y": 496,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 992,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 254,
+      "kind": "unused",
+      "logical_rect": {
+        "x": 80,
+        "y": 496,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 992,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 255,
+      "kind": "unused",
+      "logical_rect": {
+        "x": 96,
+        "y": 496,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 992,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "slot": 256,
+      "kind": "unused",
+      "logical_rect": {
+        "x": 112,
+        "y": 496,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 992,
+        "width": 32,
+        "height": 32
+      }
+    }
+  ]
+}

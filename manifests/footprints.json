@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "game": "Pokemon Silver",
+  "asset": "Footprints",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/extract_gen2_footprints.py",
+    "tool_sha256": "6775a402ea413c62eb4e19db7c63f0fd3faa309eb1f119cb4732fcd68a41a31b"
+  },
+  "outputs": [
+    {
+      "path": "graphics/pokemon/footprints-atlas.png",
+      "sha256": "137ad03c5f4befa6ed97e100dd095823d5e0d85892f1397f7dd48752b4492cfc"
+    },
+    {
+      "path": "graphics/pokemon/footprints-atlas.json",
+      "sha256": "a5a5d8304af975dadb52bedb3535783d7a1a7cc66c706c5c380ed6e93aafae9b"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-footprints.json",
+      "sha256": "0a5c5ea008a0e073412aa341bb2eebee487cc5d87053d19d237808a3ce4ab818"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-footprints.json",
+      "sha256": "c1619a346156041c05c50543d86b1f2bd9955f6b35023df1851fa10932050b55"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-footprints.json",
+      "sha256": "bee59cfb5c55e4337c0365f75660e3ae21471a227ae148489740e27c6127e032"
+    },
+    {
+      "path": "analysis/silver-en-rev0-footprints.json",
+      "sha256": "1d61734cc278bb729e0af2ac8d727ff78371455c28e4de4b87bdcf1efcc8c2f8"
+    },
+    {
+      "path": "analysis/silver-de-rev0-footprints.json",
+      "sha256": "135435095fca2c0f72ef43de03904383f09aefd95840a1a55e36ade751f2c7f7"
+    },
+    {
+      "path": "analysis/silver-es-rev0-footprints.json",
+      "sha256": "bd3d80fdb887e7930b5157f483dbfb89abd6d42ad86562a58345d0e18cf78c1b"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-footprints.json",
+      "sha256": "2c28e30430d38b32af8de5f3d302cd64e2c1560f6f0be0953ef8854e876ee57a"
+    },
+    {
+      "path": "analysis/silver-it-rev0-footprints.json",
+      "sha256": "f1b99febccae8f3a88c44ccc40bbb12102c8a99c2ca5abc91e80f43f139f1225"
+    },
+    {
+      "path": "analysis/footprints-summary.json",
+      "sha256": "8ab406a643dc4300535ce497a59a7e43e63885ba129a0143dc924c2cf86ed5db"
+    },
+    {
+      "path": "research/footprints.md",
+      "sha256": "f6bd23b006ad497d43f7f284f94213c241a48c10a694cb1db0a6984dd2f5f8cb"
+    },
+    {
+      "path": "tests/test_footprints.py",
+      "sha256": "9e6d5b46fa91c388e6f0cad12f2fab66db3ce05a86403b3be35fdd2ed3397741"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}
