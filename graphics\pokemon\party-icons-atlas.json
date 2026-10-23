@@ -1,0 +1,619 @@
+{
+  "schema_version": 1,
+  "layout": "8 icons per row; each icon is a 2x4 Game Boy tile block",
+  "icon_count": 38,
+  "icons_per_row": 8,
+  "logical_width": 128,
+  "logical_height": 160,
+  "png_scale": 2,
+  "icons": [
+    {
+      "index": 0,
+      "name": "poliwag",
+      "logical_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 1,
+      "name": "jigglypuff",
+      "logical_rect": {
+        "x": 16,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 0,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 2,
+      "name": "diglett",
+      "logical_rect": {
+        "x": 32,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 0,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 3,
+      "name": "pikachu",
+      "logical_rect": {
+        "x": 48,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 0,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 4,
+      "name": "staryu",
+      "logical_rect": {
+        "x": 64,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 0,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 5,
+      "name": "fish",
+      "logical_rect": {
+        "x": 80,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 0,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 6,
+      "name": "bird",
+      "logical_rect": {
+        "x": 96,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 0,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 7,
+      "name": "monster",
+      "logical_rect": {
+        "x": 112,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 0,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 8,
+      "name": "clefairy",
+      "logical_rect": {
+        "x": 0,
+        "y": 32,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 64,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 9,
+      "name": "oddish",
+      "logical_rect": {
+        "x": 16,
+        "y": 32,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 64,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 10,
+      "name": "bug",
+      "logical_rect": {
+        "x": 32,
+        "y": 32,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 64,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 11,
+      "name": "ghost",
+      "logical_rect": {
+        "x": 48,
+        "y": 32,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 64,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 12,
+      "name": "lapras",
+      "logical_rect": {
+        "x": 64,
+        "y": 32,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 64,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 13,
+      "name": "humanshape",
+      "logical_rect": {
+        "x": 80,
+        "y": 32,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 64,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 14,
+      "name": "fox",
+      "logical_rect": {
+        "x": 96,
+        "y": 32,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 64,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 15,
+      "name": "equine",
+      "logical_rect": {
+        "x": 112,
+        "y": 32,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 64,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 16,
+      "name": "shell",
+      "logical_rect": {
+        "x": 0,
+        "y": 64,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 128,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 17,
+      "name": "blob",
+      "logical_rect": {
+        "x": 16,
+        "y": 64,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 128,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 18,
+      "name": "serpent",
+      "logical_rect": {
+        "x": 32,
+        "y": 64,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 128,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 19,
+      "name": "voltorb",
+      "logical_rect": {
+        "x": 48,
+        "y": 64,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 128,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 20,
+      "name": "squirtle",
+      "logical_rect": {
+        "x": 64,
+        "y": 64,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 128,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 21,
+      "name": "bulbasaur",
+      "logical_rect": {
+        "x": 80,
+        "y": 64,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 128,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 22,
+      "name": "charmander",
+      "logical_rect": {
+        "x": 96,
+        "y": 64,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 128,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 23,
+      "name": "caterpillar",
+      "logical_rect": {
+        "x": 112,
+        "y": 64,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 128,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 24,
+      "name": "unown",
+      "logical_rect": {
+        "x": 0,
+        "y": 96,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 192,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 25,
+      "name": "geodude",
+      "logical_rect": {
+        "x": 16,
+        "y": 96,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 192,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 26,
+      "name": "fighter",
+      "logical_rect": {
+        "x": 32,
+        "y": 96,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 192,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 27,
+      "name": "egg",
+      "logical_rect": {
+        "x": 48,
+        "y": 96,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 192,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 28,
+      "name": "jellyfish",
+      "logical_rect": {
+        "x": 64,
+        "y": 96,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 192,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 29,
+      "name": "moth",
+      "logical_rect": {
+        "x": 80,
+        "y": 96,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 192,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 30,
+      "name": "bat",
+      "logical_rect": {
+        "x": 96,
+        "y": 96,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 192,
+        "y": 192,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 31,
+      "name": "snorlax",
+      "logical_rect": {
+        "x": 112,
+        "y": 96,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 224,
+        "y": 192,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 32,
+      "name": "ho_oh",
+      "logical_rect": {
+        "x": 0,
+        "y": 128,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 256,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 33,
+      "name": "lugia",
+      "logical_rect": {
+        "x": 16,
+        "y": 128,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 256,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 34,
+      "name": "gyarados",
+      "logical_rect": {
+        "x": 32,
+        "y": 128,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 256,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 35,
+      "name": "slowpoke",
+      "logical_rect": {
+        "x": 48,
+        "y": 128,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 256,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 36,
+      "name": "sudowoodo",
+      "logical_rect": {
+        "x": 64,
+        "y": 128,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 128,
+        "y": 256,
+        "width": 32,
+        "height": 64
+      }
+    },
+    {
+      "index": 37,
+      "name": "bigmon",
+      "logical_rect": {
+        "x": 80,
+        "y": 128,
+        "width": 16,
+        "height": 32
+      },
+      "png_rect": {
+        "x": 160,
+        "y": 256,
+        "width": 32,
+        "height": 64
+      }
+    }
+  ]
+}

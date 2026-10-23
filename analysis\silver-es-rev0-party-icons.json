@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-es-rev0",
+    "sha256": "6797010c052e8f9373ea2b9e855ec078b34fda12e5ccf742eb19bb5e8f6947c2"
+  },
+  "asset": {
+    "name": "PartyIcons",
+    "source_offset": 584354,
+    "source_length": 4864,
+    "source_sha256": "c06b31c95d7bd0c80b17ca9d1a7e7d55c1cb0f2f4f0eb302e5c1d7547f755c77",
+    "format": "game-boy-2bpp-8x8-tiles",
+    "icon_count": 38,
+    "icon_width": 16,
+    "icon_height": 32,
+    "tiles_per_icon": 8
+  },
+  "outputs": [
+    {
+      "path": "graphics/pokemon/party-icons-atlas.png",
+      "sha256": "74ada4f53da9ecc3fc328285840e8f3262d7a60033b973cc8e2213fa72ca8819",
+      "width": 256,
+      "height": 320,
+      "scale": 2
+    },
+    {
+      "path": "graphics/pokemon/party-icons-atlas.json",
+      "sha256": "255575a4ed718d4b31f21fcbd7f1d1f31fa7350bc0a775784bb45b1e8686a597"
+    }
+  ],
+  "origin_reference": false,
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "fc702b6d922aecce274782d68bba8639936a1182",
+    "path": "gfx/icons.asm",
+    "asset_directory": "gfx/icons",
+    "raw_rom_bytes_published": false
+  },
+  "raw_rom_bytes_included": false
+}

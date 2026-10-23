@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "game": "Pokemon Silver",
+  "asset": "PartyIcons",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/extract_gen2_party_icons.py",
+    "tool_sha256": "47f38c40647f214036825c23c10c2800ebd10018ab114b2213d8b440a97a4238"
+  },
+  "outputs": [
+    {
+      "path": "graphics/pokemon/party-icons-atlas.png",
+      "sha256": "74ada4f53da9ecc3fc328285840e8f3262d7a60033b973cc8e2213fa72ca8819"
+    },
+    {
+      "path": "graphics/pokemon/party-icons-atlas.json",
+      "sha256": "255575a4ed718d4b31f21fcbd7f1d1f31fa7350bc0a775784bb45b1e8686a597"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-party-icons.json",
+      "sha256": "bafd6ec2577d8faec5478e21048941a133db8bab57897a5c2dfec9ee94017c14"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-party-icons.json",
+      "sha256": "f0bd994a986b6f72e20e9f3f602baa177aee80c7b3535471300c5f0643588472"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-party-icons.json",
+      "sha256": "1d32d3587b74e01e26ac847349070d69b133a09dfcbfbc08c6be7031de4a3465"
+    },
+    {
+      "path": "analysis/silver-en-rev0-party-icons.json",
+      "sha256": "ac27764832ac56562ddcd913ff5c35bd61d1e63faf0f6763c7683c6d79cf4a44"
+    },
+    {
+      "path": "analysis/silver-de-rev0-party-icons.json",
+      "sha256": "b0610c80d1329839e5ae2f5b74437f0db5b0a65ad6cf1f41afe5402ac713e563"
+    },
+    {
+      "path": "analysis/silver-es-rev0-party-icons.json",
+      "sha256": "4666924669de455d3742a4ffaa1961bee326c9406cabb1d76d5cf495ce8ebf42"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-party-icons.json",
+      "sha256": "67b0466fd01c366d575b87e082877b92ff94ed0a8ff2a5019731af556a41b6a7"
+    },
+    {
+      "path": "analysis/silver-it-rev0-party-icons.json",
+      "sha256": "d09d728a744158b5759f8abb1b7702c02e1012e24a6642652c12ca832e80aa6a"
+    },
+    {
+      "path": "analysis/party-icons-summary.json",
+      "sha256": "bf4d470d437d10eb91d257971ff1c4c58b693aecdf352c8138c1c262aeed16a1"
+    },
+    {
+      "path": "research/party-icons.md",
+      "sha256": "5e17d8a72b8ae8ace415fe4bcff33dd0cf2bff9706c41cf103110ac8118847c9"
+    },
+    {
+      "path": "tests/test_party_icons.py",
+      "sha256": "76befc6cc71edfbfdc3386b69cc1bcd367746ee1fb30e67007d21de1b98d2a6c"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}
