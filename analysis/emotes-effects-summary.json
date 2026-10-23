@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "game": "Pokemon Silver",
+  "asset": "OverworldEmotesAndEffects",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "source_sha256": "24108a3d88e346484161dc651c67df97f0ff2e0eaacdc1d3d53e7bc815e32b6d",
+  "emote_count": 8,
+  "field_effect_count": 4,
+  "emotes_png": "graphics/overworld/emotes-atlas.png",
+  "effects_png": "graphics/overworld/effects-atlas.png",
+  "layout": "graphics/overworld/emotes-effects-atlas.json",
+  "releases": [
+    {
+      "id": "gin-jp-rev0",
+      "language": "Japanese",
+      "revision": 0,
+      "sha256": "0a532063a3ff5750a464582aa7bbee2b6d42e1a92a136d9f4590e373487b615c",
+      "origin_reference": true,
+      "evidence": "analysis/gin-jp-rev0-emotes-effects.json",
+      "source_offset": 82907
+    },
+    {
+      "id": "gin-jp-rev1",
+      "language": "Japanese",
+      "revision": 1,
+      "sha256": "99e5267fbf5a7748d4f3b75ba1990cb5d91348339468607a04bfbc6081c62d71",
+      "origin_reference": false,
+      "evidence": "analysis/gin-jp-rev1-emotes-effects.json",
+      "source_offset": 82907
+    },
+    {
+      "id": "silver-ko-rev0",
+      "language": "Korean",
+      "revision": 0,
+      "sha256": "ebbac63c0c4309c82dbb6723e7163369784f962b4fd3e2f486075307c3008a22",
+      "origin_reference": false,
+      "evidence": "analysis/silver-ko-rev0-emotes-effects.json",
+      "source_offset": 82953
+    },
+    {
+      "id": "silver-en-rev0",
+      "language": "English",
+      "revision": 0,
+      "sha256": "72b190859a59623cbef6c49d601f8de52c1d2331b4f08a8d2acc17274fc19a8c",
+      "origin_reference": false,
+      "evidence": "analysis/silver-en-rev0-emotes-effects.json",
+      "source_offset": 82953
+    },
+    {
+      "id": "silver-de-rev0",
+      "language": "German",
+      "revision": 0,
+      "sha256": "c3d1fd0dec1d5fa9aa7f85275e79c52aa9175d191c63cbed7b406c306d946348",
+      "origin_reference": false,
+      "evidence": "analysis/silver-de-rev0-emotes-effects.json",
+      "source_offset": 82953
+    },
+    {
+      "id": "silver-es-rev0",
+      "language": "Spanish",
+      "revision": 0,
+      "sha256": "6797010c052e8f9373ea2b9e855ec078b34fda12e5ccf742eb19bb5e8f6947c2",
+      "origin_reference": false,
+      "evidence": "analysis/silver-es-rev0-emotes-effects.json",
+      "source_offset": 82953
+    },
+    {
+      "id": "silver-fr-rev0",
+      "language": "French",
+      "revision": 0,
+      "sha256": "e120c4ddb0dc3e25b95c9c71b3ffd59ff57ce689cf4d79d04913ba59140c18c2",
+      "origin_reference": false,
+      "evidence": "analysis/silver-fr-rev0-emotes-effects.json",
+      "source_offset": 82953
+    },
+    {
+      "id": "silver-it-rev0",
+      "language": "Italian",
+      "revision": 0,
+      "sha256": "04c442246d1ae0ed6bf5e072bb7e3d06376e584b953d6b14047b39e45fbb0cb4",
+      "origin_reference": false,
+      "evidence": "analysis/silver-it-rev0-emotes-effects.json",
+      "source_offset": 82953
+    }
+  ],
+  "raw_rom_bytes_included": false
+}

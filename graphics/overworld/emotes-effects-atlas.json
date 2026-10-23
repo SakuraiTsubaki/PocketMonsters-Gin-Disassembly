@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "source_length": 608,
+  "emotes": {
+    "path": "graphics/overworld/emotes-atlas.png",
+    "count": 8,
+    "logical_width": 64,
+    "logical_height": 32,
+    "png_scale": 2
+  },
+  "field_effects": {
+    "path": "graphics/overworld/effects-atlas.png",
+    "count": 4,
+    "logical_width": 32,
+    "logical_height": 16,
+    "png_scale": 2
+  },
+  "assets": [
+    {
+      "name": "shock",
+      "category": "emote",
+      "source_offset": 0,
+      "source_length": 64,
+      "logical_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "name": "question",
+      "category": "emote",
+      "source_offset": 64,
+      "source_length": 64,
+      "logical_rect": {
+        "x": 16,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 0,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "name": "happy",
+      "category": "emote",
+      "source_offset": 128,
+      "source_length": 64,
+      "logical_rect": {
+        "x": 32,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 0,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "name": "sad",
+      "category": "emote",
+      "source_offset": 192,
+      "source_length": 64,
+      "logical_rect": {
+        "x": 48,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 0,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "name": "heart",
+      "category": "emote",
+      "source_offset": 256,
+      "source_length": 64,
+      "logical_rect": {
+        "x": 0,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 32,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "name": "bolt",
+      "category": "emote",
+      "source_offset": 320,
+      "source_length": 64,
+      "logical_rect": {
+        "x": 16,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 32,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "name": "sleep",
+      "category": "emote",
+      "source_offset": 384,
+      "source_length": 64,
+      "logical_rect": {
+        "x": 32,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 64,
+        "y": 32,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "name": "fish",
+      "category": "emote",
+      "source_offset": 448,
+      "source_length": 64,
+      "logical_rect": {
+        "x": 48,
+        "y": 16,
+        "width": 16,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 96,
+        "y": 32,
+        "width": 32,
+        "height": 32
+      }
+    },
+    {
+      "name": "shadow",
+      "category": "field_effect",
+      "source_offset": 512,
+      "source_length": 16,
+      "logical_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 8,
+        "height": 8
+      },
+      "png_rect": {
+        "x": 0,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      }
+    },
+    {
+      "name": "fishing_rod",
+      "category": "field_effect",
+      "source_offset": 528,
+      "source_length": 32,
+      "logical_rect": {
+        "x": 8,
+        "y": 0,
+        "width": 8,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 16,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      }
+    },
+    {
+      "name": "boulder_dust",
+      "category": "field_effect",
+      "source_offset": 560,
+      "source_length": 32,
+      "logical_rect": {
+        "x": 16,
+        "y": 0,
+        "width": 8,
+        "height": 16
+      },
+      "png_rect": {
+        "x": 32,
+        "y": 0,
+        "width": 16,
+        "height": 32
+      }
+    },
+    {
+      "name": "grass_rustle",
+      "category": "field_effect",
+      "source_offset": 592,
+      "source_length": 16,
+      "logical_rect": {
+        "x": 24,
+        "y": 0,
+        "width": 8,
+        "height": 8
+      },
+      "png_rect": {
+        "x": 48,
+        "y": 0,
+        "width": 16,
+        "height": 16
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "game": "Pokemon Silver",
+  "asset": "OverworldEmotesAndEffects",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/extract_gen2_emotes.py",
+    "tool_sha256": "5a11795486ae274c8f27a3f638b72bd84ca12cf0997cca62e6f852e93e981a4b"
+  },
+  "outputs": [
+    {
+      "path": "graphics/overworld/emotes-atlas.png",
+      "sha256": "1791e3549e249f6d78f14ab5a9985518fc09c1e9e1b8382f2b49942a5afa7b2d"
+    },
+    {
+      "path": "graphics/overworld/effects-atlas.png",
+      "sha256": "8a009e1575e696e7c029cf841ddee3932c08ec3d227b9781bb22d5fe677249b2"
+    },
+    {
+      "path": "graphics/overworld/emotes-effects-atlas.json",
+      "sha256": "da009cdc83cc6ec2ba44235ae4ffe18fa46d43753411e3938dc6a6724a9bbbd7"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-emotes-effects.json",
+      "sha256": "2f11c293e56c0c52fe1d035b849bd5267a218877aea1dc289138545025efd017"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-emotes-effects.json",
+      "sha256": "23a819b7e4b957774eed7701947b4043cede5cd763be0d27581b6bdd0595313b"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-emotes-effects.json",
+      "sha256": "6cf40345197338932ebe33f5e59e1994d198aa3ff13c55f5b0061f9bfbe0560f"
+    },
+    {
+      "path": "analysis/silver-en-rev0-emotes-effects.json",
+      "sha256": "ce1d519f82a3e73b8f2e831dcc4ba150ebea3e1b936f704d13e50e95047ac979"
+    },
+    {
+      "path": "analysis/silver-de-rev0-emotes-effects.json",
+      "sha256": "faa794e5d60cdef2a1b039ba3e36acd7b189a1bf54209a81371383135092aaf8"
+    },
+    {
+      "path": "analysis/silver-es-rev0-emotes-effects.json",
+      "sha256": "08f3b81258f7e5c68c6dddd64698a486a9a0eeaaea3c7f31ba260a6fab95e87e"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-emotes-effects.json",
+      "sha256": "e3182c103b74f1dd958a063c11f870fe6f818333ec692ca4854f32f849776099"
+    },
+    {
+      "path": "analysis/silver-it-rev0-emotes-effects.json",
+      "sha256": "84204c5cdc953126f059785d0e45cbd9f8a6d289d76c3528f5f526c851df80db"
+    },
+    {
+      "path": "analysis/emotes-effects-summary.json",
+      "sha256": "a116ca3c95d2f85d0f283331e2c4781556a8dcc51948381315fdc50655b3b838"
+    },
+    {
+      "path": "research/emotes-effects.md",
+      "sha256": "feef3ea477944509e214c521c4b65f9a8e73a48d36b2c2e38bc7a4a2e7667205"
+    },
+    {
+      "path": "tests/test_emotes_effects.py",
+      "sha256": "39b2cadb8de2158fe34089d31cc2351c5b16dd1853777d21595d7b734da09565"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}

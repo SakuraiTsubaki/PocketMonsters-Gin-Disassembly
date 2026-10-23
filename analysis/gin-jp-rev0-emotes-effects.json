@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "gin-jp-rev0",
+    "sha256": "0a532063a3ff5750a464582aa7bbee2b6d42e1a92a136d9f4590e373487b615c"
+  },
+  "asset": {
+    "name": "OverworldEmotesAndEffects",
+    "source_offset": 82907,
+    "source_length": 608,
+    "source_sha256": "24108a3d88e346484161dc651c67df97f0ff2e0eaacdc1d3d53e7bc815e32b6d",
+    "format": "game-boy-2bpp-8x8-tiles",
+    "emote_count": 8,
+    "field_effect_count": 4
+  },
+  "outputs": [
+    {
+      "path": "graphics/overworld/emotes-atlas.png",
+      "sha256": "1791e3549e249f6d78f14ab5a9985518fc09c1e9e1b8382f2b49942a5afa7b2d",
+      "width": 128,
+      "height": 64,
+      "scale": 2
+    },
+    {
+      "path": "graphics/overworld/effects-atlas.png",
+      "sha256": "8a009e1575e696e7c029cf841ddee3932c08ec3d227b9781bb22d5fe677249b2",
+      "width": 64,
+      "height": 32,
+      "scale": 2
+    },
+    {
+      "path": "graphics/overworld/emotes-effects-atlas.json",
+      "sha256": "da009cdc83cc6ec2ba44235ae4ffe18fa46d43753411e3938dc6a6724a9bbbd7"
+    }
+  ],
+  "origin_reference": true,
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "fc702b6d922aecce274782d68bba8639936a1182",
+    "path": "gfx/emotes.asm",
+    "raw_rom_bytes_published": false
+  },
+  "raw_rom_bytes_included": false
+}
