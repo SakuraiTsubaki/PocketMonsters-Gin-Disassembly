@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "game": "Pokemon Silver",
+  "asset_count": 40,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/catalog_public_graphics.py",
+    "tool_sha256": "b5bafdc488101945e9256675e9508a812fb77c57cbc1644465f2daf50e5acdbf"
+  },
+  "inputs": [
+    {
+      "path": "graphics/font/main-font-jp.png",
+      "sha256": "924a7bb2dd14aab6560d1376e99dae070368dcd7a05375c9c782f2217c86200f"
+    },
+    {
+      "path": "graphics/font/main-font-en.png",
+      "sha256": "f62d30328111d9c0bbb273bf917df27b019bd9d6b9f85c3b496b6a1fa7fcceac"
+    },
+    {
+      "path": "graphics/font/main-font-de.png",
+      "sha256": "9d2ddb8b661d41b70ec42ccb495ec1858ecd7a7cdf12039c5c9abe764fdb097f"
+    },
+    {
+      "path": "graphics/font/main-font-fr.png",
+      "sha256": "9d2ddb8b661d41b70ec42ccb495ec1858ecd7a7cdf12039c5c9abe764fdb097f"
+    },
+    {
+      "path": "graphics/font/main-font-it.png",
+      "sha256": "7edc3aa24a0685985677a26e04349d293bf9c8587e1d3a098005a9ef01e08d77"
+    },
+    {
+      "path": "graphics/font/main-font-es.png",
+      "sha256": "7edc3aa24a0685985677a26e04349d293bf9c8587e1d3a098005a9ef01e08d77"
+    },
+    {
+      "path": "graphics/font/hangul/table-0.png",
+      "sha256": "016c9e6fee49d6483d78e670a35e75e3e33d451553fad421b39b31f33c52ff52"
+    },
+    {
+      "path": "graphics/font/hangul/table-1.png",
+      "sha256": "1bf5d7772b3ea93d7ffd39b450a762a394a9ea09a5229601f140751ab9d7523d"
+    },
+    {
+      "path": "graphics/font/hangul/table-2.png",
+      "sha256": "941d97811a474fe96993af748f1ca93fd2fd0372d8105c1e50978323b2a67949"
+    },
+    {
+      "path": "graphics/font/hangul/table-3.png",
+      "sha256": "79fa31c822708e3224ac6120a74eaa84cb129b2a3cb63f8afcd2fd07d87e0df2"
+    },
+    {
+      "path": "graphics/font/hangul/table-4.png",
+      "sha256": "9567075b9c36172493fe9897e7a8477f218cb48990c5c759cbaa103a1cd52329"
+    },
+    {
+      "path": "graphics/font/hangul/table-5.png",
+      "sha256": "0290325b2ffb3c1d3da18392925c63e26a6131e57303f90c6b84821e30837f74"
+    },
+    {
+      "path": "graphics/font/hangul/table-6.png",
+      "sha256": "61a84480f4b3219f482deafc308167970d62f7bf177e9a3e53caf672d9ed6950"
+    },
+    {
+      "path": "graphics/font/hangul/table-7.png",
+      "sha256": "74eca84b5fd736d730e0d28384e18b17ee41e99e87fb0950e7f0783db0e17e15"
+    },
+    {
+      "path": "graphics/font/hangul/table-8.png",
+      "sha256": "fe30cb27b1b04dae7785cc8b49a2889e589058de6a9dcd8c47d63afc64ad6e5b"
+    },
+    {
+      "path": "graphics/font/hangul/table-9.png",
+      "sha256": "428441dbe1f7614fdbc24ff46bab140e6357af9bc95197ac0727b8d0cf561f48"
+    },
+    {
+      "path": "graphics/font/hangul/table-a.png",
+      "sha256": "90aaf1ba5d62f278bbbea5e2734a3f3ff0dfab2e0845c0ce19cdce0c22aa36cf"
+    },
+    {
+      "path": "graphics/font/unown-font.png",
+      "sha256": "5491e2f08b803a18aa1bc4816e2f94b623a9b6989a4f05165eac6bbc1f8c8b0d"
+    },
+    {
+      "path": "graphics/header/nintendo-logo-ko.png",
+      "sha256": "10e9a7189dad4bcced861a2ba409813b0cb6e78c5c87229bb5fd93343e397faa"
+    },
+    {
+      "path": "graphics/header/nintendo-logo-en.png",
+      "sha256": "10e9a7189dad4bcced861a2ba409813b0cb6e78c5c87229bb5fd93343e397faa"
+    },
+    {
+      "path": "graphics/header/nintendo-logo-de.png",
+      "sha256": "10e9a7189dad4bcced861a2ba409813b0cb6e78c5c87229bb5fd93343e397faa"
+    },
+    {
+      "path": "graphics/header/nintendo-logo-fr.png",
+      "sha256": "10e9a7189dad4bcced861a2ba409813b0cb6e78c5c87229bb5fd93343e397faa"
+    },
+    {
+      "path": "graphics/header/nintendo-logo-it.png",
+      "sha256": "10e9a7189dad4bcced861a2ba409813b0cb6e78c5c87229bb5fd93343e397faa"
+    },
+    {
+      "path": "graphics/header/nintendo-logo-es.png",
+      "sha256": "10e9a7189dad4bcced861a2ba409813b0cb6e78c5c87229bb5fd93343e397faa"
+    },
+    {
+      "path": "graphics/header/nintendo-logo.png",
+      "sha256": "10e9a7189dad4bcced861a2ba409813b0cb6e78c5c87229bb5fd93343e397faa"
+    },
+    {
+      "path": "graphics/overworld/effects-atlas.png",
+      "sha256": "8a009e1575e696e7c029cf841ddee3932c08ec3d227b9781bb22d5fe677249b2"
+    },
+    {
+      "path": "graphics/overworld/emotes-atlas.png",
+      "sha256": "1791e3549e249f6d78f14ab5a9985518fc09c1e9e1b8382f2b49942a5afa7b2d"
+    },
+    {
+      "path": "graphics/overworld/emotes-effects-atlas.json",
+      "sha256": "da009cdc83cc6ec2ba44235ae4ffe18fa46d43753411e3938dc6a6724a9bbbd7"
+    },
+    {
+      "path": "graphics/pokemon/footprints-atlas.json",
+      "sha256": "a5a5d8304af975dadb52bedb3535783d7a1a7cc66c706c5c380ed6e93aafae9b"
+    },
+    {
+      "path": "graphics/pokemon/footprints-atlas.png",
+      "sha256": "137ad03c5f4befa6ed97e100dd095823d5e0d85892f1397f7dd48752b4492cfc"
+    },
+    {
+      "path": "graphics/pokemon/party-icons-atlas.json",
+      "sha256": "255575a4ed718d4b31f21fcbd7f1d1f31fa7350bc0a775784bb45b1e8686a597"
+    },
+    {
+      "path": "graphics/pokemon/party-icons-atlas.png",
+      "sha256": "74ada4f53da9ecc3fc328285840e8f3262d7a60033b973cc8e2213fa72ca8819"
+    },
+    {
+      "path": "graphics/title/title-logo-jp.png",
+      "sha256": "244d750f41b8e398a856aa4289cbfb99c157192c5879d8b4852b524c5b230a1d"
+    },
+    {
+      "path": "graphics/title/title-logo-ko.png",
+      "sha256": "5d34ae712bf7d81258bfaaf73ebbbbc52e50314051045c311b819c5cb9a4720d"
+    },
+    {
+      "path": "graphics/title/title-logo-bottom-en.png",
+      "sha256": "26d2185fa2d4a850a3223dac94e0f608ba16957dbd15705fbcea9e39bac2b1a8"
+    },
+    {
+      "path": "graphics/title/title-logo-top-global.png",
+      "sha256": "eba68d5af222c2453afb53ee39a07790315cf67e16d65e21ee7693c516bbd739"
+    },
+    {
+      "path": "graphics/title/title-logo-bottom-de.png",
+      "sha256": "c28d76d789262ae72313ce00cb8ac5ed449c3dfb028acbde3b7b8f6bbfbfd607"
+    },
+    {
+      "path": "graphics/title/title-logo-bottom-fr.png",
+      "sha256": "e9188ca1389d8b6ea7ea0c595d5ff9de0b217fdb1ed55e392f7835256a3eacb8"
+    },
+    {
+      "path": "graphics/title/title-logo-bottom-it.png",
+      "sha256": "c5075ad5dda609bf125cda428cc6bb7a0585d2d81686b46947036868cc074814"
+    },
+    {
+      "path": "graphics/title/title-logo-bottom-es.png",
+      "sha256": "b190cf7c300c052b8bea98cd4ca041374d3c8398a2861df0671aa40433f64272"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "analysis/public-graphics-catalog.json",
+      "sha256": "303b7e9b0e8ee5d53ce73fb3091dbc04af5971835933a83ee6ff32fac8f67033"
+    },
+    {
+      "path": "ASSETS.md",
+      "sha256": "82f68de38449dc8fba995992b49210f795d884841ca4fd5db068b191dd78a3b4"
+    },
+    {
+      "path": "research/public-graphics-catalog.md",
+      "sha256": "dc3a6105a8928d4caafc7cdddcadfc3d819fa80c32f17baadcb4c8b98b054f0b"
+    },
+    {
+      "path": "tests/test_public_graphics_catalog.py",
+      "sha256": "fecf5365b5e17138650cf232588df762f6a5d2819f74dd23e7a7676baba0f496"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}
