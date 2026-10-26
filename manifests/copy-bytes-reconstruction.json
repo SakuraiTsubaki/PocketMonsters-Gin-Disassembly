@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "function": "CopyBytes",
+  "releases": [
+    "gin-jp-rev0",
+    "gin-jp-rev1",
+    "silver-ko-rev0",
+    "silver-en-rev0",
+    "silver-de-rev0",
+    "silver-es-rev0",
+    "silver-fr-rev0",
+    "silver-it-rev0"
+  ],
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/locate_gen2_copy_bytes.py",
+    "tool_sha256": "0284696013f16099ef9e72eeb16424b03d21823584c994db2f8a0fdbcf374d54"
+  },
+  "outputs": [
+    {
+      "path": "src/copy_bytes.asm",
+      "sha256": "5bcd5ba39795e6fd6a9c2147ab4f7583fbfa030e902b8b949b64bf12ae92b127"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-copy-bytes.json",
+      "sha256": "f16261264c36ae9ba711fe589e8c75610207c9172206a2f67829528ba24ec029"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-copy-bytes.json",
+      "sha256": "5d1398914232ac38d74ba7b23f2f723ca7da5ca63b792c6aac0d5cdde651eb3d"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-copy-bytes.json",
+      "sha256": "068ba758538d7989e20fc8161c25801d3266c9bb60f7f74e3e4c197c603e5038"
+    },
+    {
+      "path": "analysis/silver-en-rev0-copy-bytes.json",
+      "sha256": "ea26b6b6f63528c9a6cb1c6da9dea250f5ecbba425874e217b31a9a3f01f6bf1"
+    },
+    {
+      "path": "analysis/silver-de-rev0-copy-bytes.json",
+      "sha256": "47580fca285946fc4011af147189e1575839ad5e9fbd9f318ce18ea972d615fd"
+    },
+    {
+      "path": "analysis/silver-es-rev0-copy-bytes.json",
+      "sha256": "6045302d22955eff493d76f0c767c0f76886aaf26ac6648a6e12f9caa1dd99a0"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-copy-bytes.json",
+      "sha256": "e7ef75c35f48dff9d7318b111005b10d5ca045414aba3cc391fe4723ce0e763c"
+    },
+    {
+      "path": "analysis/silver-it-rev0-copy-bytes.json",
+      "sha256": "acdf14809b589d6be83fab2470398652f5c7e770101d2511c0e939f86f43984f"
+    },
+    {
+      "path": "research/copy-bytes-reconstruction.md",
+      "sha256": "bafbacd5f23020b4786649d558d6ee47fbcba1f2e9fa1d75327e44c856445706"
+    },
+    {
+      "path": "tests/test_copy_bytes_reconstruction.py",
+      "sha256": "c25b4fcb7f0d33c1e0849c86124bd62d703894a4ad1bea58a540b0edff47c61c"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}

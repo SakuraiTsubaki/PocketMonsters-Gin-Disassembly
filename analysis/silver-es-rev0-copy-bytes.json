@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-es-rev0",
+    "sha256": "6797010c052e8f9373ea2b9e855ec078b34fda12e5ccf742eb19bb5e8f6947c2"
+  },
+  "function": {
+    "name": "CopyBytes",
+    "rom_offset": 12606,
+    "bank": 0,
+    "address": 12606,
+    "range_end_exclusive": 12620,
+    "length": 14,
+    "code_sha256": "9364deaa0f942c15dcd1ab29a953a4c5a14c0916e877a9e67cee53dc09e3e028"
+  },
+  "semantics": {
+    "source": "HL",
+    "destination": "DE",
+    "length": "BC",
+    "operation": "copy BC bytes while incrementing HL and DE",
+    "zero_length_supported": true,
+    "return_registers": "HL and DE point one byte past their ranges; BC is zero",
+    "loop_strategy": "increment B and C before split 8-bit countdowns to include final runs"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+    "path": "home/copy.asm",
+    "raw_rom_bytes_published": false
+  },
+  "raw_rom_bytes_included": false
+}
