@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-es-rev0",
+    "sha256": "6797010c052e8f9373ea2b9e855ec078b34fda12e5ccf742eb19bb5e8f6947c2",
+    "status": "candidate"
+  },
+  "origin_reference": false,
+  "source": "src/byte_fill.asm",
+  "source_sha256": "e03d54723fcfaaa48dcc7b5379cfd3eea57b88017ebb17ab07aef952ff04dd42",
+  "function": {
+    "name": "ByteFill",
+    "rom_offset": 12656,
+    "bank": 0,
+    "address": 12656,
+    "range_end_exclusive": 12668,
+    "length": 12,
+    "code_sha256": "8b30e69680ae0d6c751fe4fcb983184da9435775c25ad57fbdefd4ebe29753d3",
+    "raw_bytes_published": false
+  },
+  "semantics": {
+    "destination": "HL",
+    "length": "BC",
+    "fill_value": "A",
+    "operation": "write A while incrementing HL until BC bytes are filled",
+    "zero_length_supported": true,
+    "return_registers": "HL points one byte past the range; BC is zero",
+    "loop_strategy": "increment B and C before split 8-bit countdowns"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+    "path": "home/copy.asm"
+  },
+  "raw_rom_bytes_included": false
+}

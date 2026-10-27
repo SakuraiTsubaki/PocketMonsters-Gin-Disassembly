@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "game": "Gin",
+  "function": "ByteFill",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/catalog_gen2_byte_fill.py",
+    "tool_sha256": "811c0fe35464c18ad3e72a11d3b2a5c9110bfa0c6acd176040c7b5a72a6829e8"
+  },
+  "outputs": [
+    {
+      "path": "research/releases.csv",
+      "sha256": "ade2e3cd5d8eb878d279ba0f1ed40be5b25befa93b77f2c8ddc96f7181d0d0c0"
+    },
+    {
+      "path": "src/byte_fill.asm",
+      "sha256": "e03d54723fcfaaa48dcc7b5379cfd3eea57b88017ebb17ab07aef952ff04dd42"
+    },
+    {
+      "path": "analysis/byte-fill-summary.json",
+      "sha256": "d8002736110be878011ce35aae0b52df5676056e2aed7ffd6f6f588dc25b4265"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-byte-fill.json",
+      "sha256": "9e2174cb92b79805ff46814afeb08b2cea0b161568ab74bda2d95a121a5a4823"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-byte-fill.json",
+      "sha256": "9f0bbc8bff2dd91df0996a42ce5ccc0348363400d1c97aa835acf105e6b419e3"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-byte-fill.json",
+      "sha256": "10b0eceb4fc1aa7ff194f761d851885042a5d814873c4cda595ca3f9dbcef769"
+    },
+    {
+      "path": "analysis/silver-en-rev0-byte-fill.json",
+      "sha256": "cd95e69691dee36e3cc163e1adafa4ca151eadfd5ccb6d1e63d6cdfdb5be408f"
+    },
+    {
+      "path": "analysis/silver-de-rev0-byte-fill.json",
+      "sha256": "cb3b69410715308da383ef5d770f8ec8c6937d782af83d3f7a3d5d37d44b6d44"
+    },
+    {
+      "path": "analysis/silver-es-rev0-byte-fill.json",
+      "sha256": "45a40fb714671be5abff50a9c88e2c2f7920cd7d66f376822c9358f9d2388bdc"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-byte-fill.json",
+      "sha256": "72887a01eba17429166a04c7ed8096691d91339d0b3061cfbc6a1d14efea3a4a"
+    },
+    {
+      "path": "analysis/silver-it-rev0-byte-fill.json",
+      "sha256": "229f873dfb5e631ee03123fdd4fe9156f0b6390c0ab4216d7ad76665a6cfa4e1"
+    },
+    {
+      "path": "research/byte-fill-reconstruction.md",
+      "sha256": "377898427ef66f4cd79e67d2cdeec01c0930063e7fcb1632bb5c43b696b8aa26"
+    },
+    {
+      "path": "tests/test_byte_fill_reconstruction.py",
+      "sha256": "e333759d8e42599da7c037efbc008ca140ea119b9b71b959fe060d612a1d7731"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}
