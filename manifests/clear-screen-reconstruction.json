@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "game": "Gin",
+  "axis": "Disassembly",
+  "functions": [
+    "ClearTilemap",
+    "ClearScreen"
+  ],
+  "profile": "gold-silver",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/catalog_gen2_clear_screen.py",
+    "tool_sha256": "6cfe179e9500b351bbf7d019f5de924f97831267b7f38cadb29fa2ebee5c36b7"
+  },
+  "outputs": [
+    {
+      "path": "research/releases.csv",
+      "sha256": "ade2e3cd5d8eb878d279ba0f1ed40be5b25befa93b77f2c8ddc96f7181d0d0c0"
+    },
+    {
+      "path": "src/clear_screen.asm",
+      "sha256": "29cbc6ab62cb85af4edd68bfd3002dfe97b519267240f374cacd392cc82dad9b"
+    },
+    {
+      "path": "analysis/clear-screen-summary.json",
+      "sha256": "3765e0ad5eab0e281fa9cedd997662d88434e738202b7fa06aa78aff6beb7d1b"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-clear-screen.json",
+      "sha256": "fd0a8dab6c303be2af7ca2e476a44132bc9c4d6201e58cd81c4fc3db07bd8845"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-clear-screen.json",
+      "sha256": "be59dedaf1e6897fb6633edc7de19de6088496027c0788988566432b218dd117"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-clear-screen.json",
+      "sha256": "3d99958f0e769f99423150e8d592c63910a5f7821c28dd74d3aa27cceb9fabd7"
+    },
+    {
+      "path": "analysis/silver-en-rev0-clear-screen.json",
+      "sha256": "017bc7deb72a41f6de7e350b8fb3059b1878cd50e143e8e42de1f5177a394637"
+    },
+    {
+      "path": "analysis/silver-de-rev0-clear-screen.json",
+      "sha256": "5724b90fa4772dea1720d30db553339fed6230f780c3cfb7517cc1f110348b87"
+    },
+    {
+      "path": "analysis/silver-es-rev0-clear-screen.json",
+      "sha256": "d730315cbde667c4338f936249d6baf54e18274f7580745412f937ec8e89226e"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-clear-screen.json",
+      "sha256": "e39215ad8c33e9d4615e60de48e367f63e6c634764f9aa2a227d07a297df8428"
+    },
+    {
+      "path": "analysis/silver-it-rev0-clear-screen.json",
+      "sha256": "0648d82bf464fc63407444f81bf29410e57ac8d42d023a7eaba4ae9aed9fd4ee"
+    },
+    {
+      "path": "research/clear-screen-reconstruction.md",
+      "sha256": "5a8470152bdc0293c91d10bd10f53fe1078f0fa945797cfd57147206796abf72"
+    },
+    {
+      "path": "tests/test_clear_screen_reconstruction.py",
+      "sha256": "e7c80ed69bc57b37eb71b2e5e4f035db0b2dc9e3a5a3ba7736dad2e65d756581"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}

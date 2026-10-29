@@ -1,0 +1,3 @@
+# Gin ClearTilemap and ClearScreen disassembly
+
+`gin-jp-rev0` is the Japanese origin reference. All 8 cataloged releases (Japanese, Korean, English, German, Spanish, French, Italian) contain exactly one ROM0 pair that calls the independently mapped ByteFill routine. ClearScreen clears the 20x18 attribute map and transfers to ClearTilemap; ClearTilemap clears the tilemap. Global builds keep the conditional WaitBGMap tail in ClearTilemap, while the Korean Gold/Silver builds return the LCD state and perform that wait in ClearScreen. Maps publish operands, control-flow targets and hashes, never ROM bytes. Candidate status is retained.
