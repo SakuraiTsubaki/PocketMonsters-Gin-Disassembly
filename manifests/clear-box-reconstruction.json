@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "axis": "Disassembly",
+  "game": "Pocket Monsters Gin",
+  "function": "ClearBox",
+  "profile": "gold-silver",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/catalog_gen2_clear_box.py",
+    "tool_sha256": "119dcf3166a1579f128fdd97b427cddb2137cd188887b910e6cf0a18b69b7176"
+  },
+  "outputs": [
+    {
+      "path": "research/releases.csv",
+      "sha256": "ade2e3cd5d8eb878d279ba0f1ed40be5b25befa93b77f2c8ddc96f7181d0d0c0"
+    },
+    {
+      "path": "src/clear_box.asm",
+      "sha256": "c227fe43293370c45dc06e82d3cc3418ff99ec4ff2da5b1a0e6127e36206d8d5"
+    },
+    {
+      "path": "analysis/clear-box-summary.json",
+      "sha256": "24776347235c6859220a5dcdd6d7b3880525b1589e36a571f32a879a2e64d8b7"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-clear-box.json",
+      "sha256": "884d1ff65c88bd383682f009bfd5edf0855ebd7b9d9d8013102566df3473c705"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-clear-box.json",
+      "sha256": "78b12ebb15e6c9c19c152f3f7ae39aafd07585266f7130b529869b6cd3ed6e0a"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-clear-box.json",
+      "sha256": "cdfc0c912c6801d70382e55a6f360340caf634c1c48d47652e135041bd8dac80"
+    },
+    {
+      "path": "analysis/silver-en-rev0-clear-box.json",
+      "sha256": "7e5d6b8bb723e905b125a3a304c1f92684f74fbe14fa02417df3b29a859398b6"
+    },
+    {
+      "path": "analysis/silver-de-rev0-clear-box.json",
+      "sha256": "bdcf35435b6000e0a63063471f0da2fadcd9e2bddf591c64e7fd7855eb5af7c2"
+    },
+    {
+      "path": "analysis/silver-es-rev0-clear-box.json",
+      "sha256": "85d1e20e6cf593d61f910ca342b368469b86b80c96910b89782ba0adc7170034"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-clear-box.json",
+      "sha256": "e316808f9ef525809519020b99537e3a6cff3bc2a4a7996b022a88fe0ebd551e"
+    },
+    {
+      "path": "analysis/silver-it-rev0-clear-box.json",
+      "sha256": "be2b865f4762c01cf91c4e2bab303d15783507298c53772087f147ea68133796"
+    },
+    {
+      "path": "research/clear-box-reconstruction.md",
+      "sha256": "24f9d2af13d53c06a8e92f7b0828a629f0ec1bff960299ae48bee268ea5f401e"
+    },
+    {
+      "path": "tests/test_clear_box_reconstruction.py",
+      "sha256": "4450e8726119be78195faed804c2987ba114eb55d2dd3785fb3d2654375e567a"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "axis": "Disassembly",
+  "profile": "gold-silver",
+  "target": {
+    "release": "silver-it-rev0",
+    "sha256": "04c442246d1ae0ed6bf5e072bb7e3d06376e584b953d6b14047b39e45fbb0cb4",
+    "status": "candidate"
+  },
+  "origin_reference": false,
+  "source": "src/clear_box.asm",
+  "source_sha256": "c227fe43293370c45dc06e82d3cc3418ff99ec4ff2da5b1a0e6127e36206d8d5",
+  "function": {
+    "name": "ClearBox",
+    "rom_offset": 3773,
+    "bank": 0,
+    "address": 3773,
+    "range_end_exclusive": 3791,
+    "length": 18,
+    "code_sha256": "46400b6a016d0cbf21a7005fe91b9e063f664adf0bca1ba38446c1624a3fa3ab",
+    "raw_bytes_published": false
+  },
+  "related_functions": {},
+  "verified_behavior": {
+    "variant": "gold-silver-inline",
+    "blank_tile_value": 127,
+    "row_stride": 20,
+    "width_input_register": "C",
+    "height_input_register": "B",
+    "tilemap_pointer_register": "HL",
+    "preserves_row_start_and_dimensions": true
+  },
+  "cross_reference": {
+    "clear_screen_map": "analysis/silver-it-rev0-clear-screen.json",
+    "clear_screen_map_sha256": "0648d82bf464fc63407444f81bf29410e57ac8d42d023a7eaba4ae9aed9fd4ee"
+  },
+  "naming_basis": {
+    "primary": {
+      "repository": "pret/pokegold",
+      "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+      "path": "home/text.asm"
+    },
+    "korean_history": null
+  },
+  "raw_rom_bytes_included": false
+}

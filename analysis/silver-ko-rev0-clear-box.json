@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "axis": "Disassembly",
+  "profile": "gold-silver",
+  "target": {
+    "release": "silver-ko-rev0",
+    "sha256": "ebbac63c0c4309c82dbb6723e7163369784f962b4fd3e2f486075307c3008a22",
+    "status": "candidate"
+  },
+  "origin_reference": false,
+  "source": "src/clear_box.asm",
+  "source_sha256": "c227fe43293370c45dc06e82d3cc3418ff99ec4ff2da5b1a0e6127e36206d8d5",
+  "function": {
+    "name": "ClearBox",
+    "rom_offset": 3791,
+    "bank": 0,
+    "address": 3791,
+    "range_end_exclusive": 3814,
+    "length": 23,
+    "code_sha256": "ec3752d42766fef2434ce1361440cca0acbd8347927ae396db048de47dde7a65",
+    "raw_bytes_published": false,
+    "farcall": {
+      "helper_address": 11891,
+      "target_bank": 127,
+      "target_address": 16525,
+      "target_rom_offset": 2080909
+    }
+  },
+  "related_functions": {
+    "KoreanClearBox": {
+      "rom_offset": 2080909,
+      "bank": 127,
+      "address": 16525,
+      "range_end_exclusive": 2080952,
+      "length": 43,
+      "code_sha256": "1c2e05a237b24ca17d28300df5d3ff70f449761bfdbe9b359ce9a7bcba68ed04",
+      "tile_fill_offset": 2080934,
+      "raw_bytes_published": false
+    }
+  },
+  "verified_behavior": {
+    "variant": "korean-farcall-wrapper",
+    "blank_tile_value": 127,
+    "row_stride": 20,
+    "width_input_register": "C",
+    "height_input_register": "B",
+    "tilemap_pointer_register": "HL",
+    "preserves_row_start_and_dimensions": true,
+    "attribute_plane_delta": 2368,
+    "attribute_bit_cleared": 3,
+    "attribute_rectangle_matches_tile_rectangle": true
+  },
+  "cross_reference": {
+    "clear_screen_map": "analysis/silver-ko-rev0-clear-screen.json",
+    "clear_screen_map_sha256": "3d99958f0e769f99423150e8d592c63910a5f7821c28dd74d3aa27cceb9fabd7"
+  },
+  "naming_basis": {
+    "primary": {
+      "repository": "pret/pokegold",
+      "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+      "path": "home/text.asm"
+    },
+    "korean_history": {
+      "repository": "SakuraiTsubaki/pokegold-kr",
+      "commit": "ad83f6ad664f9bc7fcfc8bab63b0f015be9ca0e9",
+      "path": "home/text.asm",
+      "symbol": "ClearBox",
+      "target_symbol": "Function1fc08d"
+    }
+  },
+  "raw_rom_bytes_included": false
+}
