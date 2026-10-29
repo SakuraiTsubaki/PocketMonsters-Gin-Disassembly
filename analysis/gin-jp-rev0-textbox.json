@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "axis": "Disassembly",
+  "profile": "gold-silver",
+  "target": {
+    "release": "gin-jp-rev0",
+    "sha256": "0a532063a3ff5750a464582aa7bbee2b6d42e1a92a136d9f4590e373487b615c",
+    "status": "candidate"
+  },
+  "origin_reference": true,
+  "source": "src/textbox.asm",
+  "source_sha256": "0c8b93cb5d29d8e5d031df647dd111ead7c0e2d7f92e5b5209cff439666bfed4",
+  "variant": "inline-border-and-palette",
+  "functions": {
+    "Textbox": {
+      "rom_offset": 3777,
+      "bank": 0,
+      "address": 3777,
+      "length": 9,
+      "code_sha256": "6759d764e19fff30d9dab6d931664e6e73b8ce3a8cb42a2497eb98763447990c"
+    },
+    "TextboxBorder": {
+      "rom_offset": 3786,
+      "length": 45,
+      "code_sha256": "3e78ec417822700ab9921df1842bc6188922afd029dc46c78eeb1722c9b1a0dd"
+    },
+    "PlaceChars": {
+      "rom_offset": 3831,
+      "length": 6,
+      "code_sha256": "8cc8c4ab5c5d67fd75ff38810ad84fffc2da0b1aeeb8b2fa82dbcc86003e9cf5"
+    },
+    "TextboxPalette": {
+      "rom_offset": 3837,
+      "length": 26,
+      "code_sha256": "fa70875beeca54306ed8af858be33e0d27f4f11e4bfbfd428d90149c41d6fe1d"
+    }
+  },
+  "verified_behavior": {
+    "border_tiles": {
+      "top_left": 121,
+      "horizontal": 122,
+      "top_right": 123,
+      "vertical": 124,
+      "blank": 127,
+      "bottom_left": 125,
+      "bottom_right": 126
+    },
+    "attribute_plane_delta": 2349,
+    "palette_value": 7,
+    "palette_width_expansion": 2,
+    "palette_height_expansion": 2,
+    "row_stride": 20,
+    "width_input_register": "C",
+    "height_input_register": "B",
+    "tilemap_pointer_register": "HL"
+  },
+  "cross_reference": {
+    "clear_box_map": "analysis/gin-jp-rev0-clear-box.json",
+    "clear_box_map_sha256": "884d1ff65c88bd383682f009bfd5edf0855ebd7b9d9d8013102566df3473c705"
+  },
+  "naming_basis": {
+    "primary": {
+      "repository": "pret/pokegold",
+      "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+      "path": "home/text.asm"
+    },
+    "korean_history": null
+  },
+  "raw_rom_bytes_included": false
+}

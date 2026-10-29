@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "axis": "Disassembly",
+  "profile": "gold-silver",
+  "target": {
+    "release": "silver-ko-rev0",
+    "sha256": "ebbac63c0c4309c82dbb6723e7163369784f962b4fd3e2f486075307c3008a22",
+    "status": "candidate"
+  },
+  "origin_reference": false,
+  "source": "src/textbox.asm",
+  "source_sha256": "0c8b93cb5d29d8e5d031df647dd111ead7c0e2d7f92e5b5209cff439666bfed4",
+  "variant": "korean-farcall-suite",
+  "functions": {
+    "Textbox": {
+      "rom_offset": 3858,
+      "bank": 0,
+      "address": 3858,
+      "length": 23,
+      "code_sha256": "937edb64baf10914097556fcbb5ceb8fe9eb6d33cd08b1b643dea827bf0530b9",
+      "farcall": {
+        "offset": 3858,
+        "length": 23,
+        "target_bank": 127,
+        "target_address": 16568,
+        "target_offset": 2080952,
+        "farcall_helper_address": 11891
+      }
+    },
+    "TextboxBorder": {
+      "rom_offset": 2080972,
+      "length": 45,
+      "code_sha256": "0ff9caf2c0e0ac381bc2b44c6bf2fa8d54da44ab6527085555dc20be94ec6b12"
+    },
+    "PlaceChars": {
+      "rom_offset": 2081017,
+      "length": 6,
+      "code_sha256": "8cc8c4ab5c5d67fd75ff38810ad84fffc2da0b1aeeb8b2fa82dbcc86003e9cf5"
+    },
+    "TextboxPalette": {
+      "rom_offset": 2081023,
+      "length": 26,
+      "code_sha256": "b109e7cc5337b5e793e40ead1b69ba35cc560dd5a7731b098aaa8ac9395b383d"
+    },
+    "KoreanTextbox": {
+      "rom_offset": 2080952,
+      "bank": 127,
+      "address": 16568,
+      "length": 20,
+      "code_sha256": "b250e186db2ee7d5cf601f1db099e7950dac7cebf1f93d7bf382041529bfcc9b",
+      "state_hram_address": 65494
+    }
+  },
+  "verified_behavior": {
+    "border_tiles": {
+      "top_left": 121,
+      "horizontal": 122,
+      "top_right": 123,
+      "vertical": 124,
+      "blank": 127,
+      "bottom_left": 125,
+      "bottom_right": 126
+    },
+    "attribute_plane_delta": 2368,
+    "palette_value": 7,
+    "palette_width_expansion": 2,
+    "palette_height_expansion": 2,
+    "row_stride": 20,
+    "width_input_register": "C",
+    "height_input_register": "B",
+    "tilemap_pointer_register": "HL"
+  },
+  "cross_reference": {
+    "clear_box_map": "analysis/silver-ko-rev0-clear-box.json",
+    "clear_box_map_sha256": "cdfc0c912c6801d70382e55a6f360340caf634c1c48d47652e135041bd8dac80"
+  },
+  "naming_basis": {
+    "primary": {
+      "repository": "pret/pokegold",
+      "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+      "path": "home/text.asm"
+    },
+    "korean_history": {
+      "repository": "SakuraiTsubaki/pokegold-kr",
+      "commit": "ad83f6ad664f9bc7fcfc8bab63b0f015be9ca0e9",
+      "path": "home/text.asm",
+      "symbol": "Textbox",
+      "target_symbol": "Function1fc0b8"
+    }
+  },
+  "raw_rom_bytes_included": false
+}
