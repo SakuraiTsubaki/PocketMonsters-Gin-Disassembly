@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "axis": "Disassembly",
+  "game": "Pocket Monsters Gin",
+  "function": "SpeechTextbox",
+  "profile": "gold-silver",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/catalog_gen2_speech_textbox.py",
+    "tool_sha256": "a3c325bc9305c273aaec96463cb1487f1a27459c2129a8b7f354e44b30391085"
+  },
+  "outputs": [
+    {
+      "path": "research/releases.csv",
+      "sha256": "ade2e3cd5d8eb878d279ba0f1ed40be5b25befa93b77f2c8ddc96f7181d0d0c0"
+    },
+    {
+      "path": "src/speech_textbox.asm",
+      "sha256": "e6cf188bd52c2c31ae72603320f0a28a726cced32285148a930cb56f6d130633"
+    },
+    {
+      "path": "analysis/speech-textbox-summary.json",
+      "sha256": "b1bc5ded7d6f01311f7080e036299d30fb3d3be92db09c131712e88f61399aa4"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-speech-textbox.json",
+      "sha256": "f4cbf071bdc4e2fd454947007ee8f4d65a81fb897570bbe02abd9f60cdbc873f"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-speech-textbox.json",
+      "sha256": "d6a6640df459992280e46f5d625fa928b5b2c74f1484fa5283f4f7e6c5b8e33f"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-speech-textbox.json",
+      "sha256": "1af9fca2d2d6d48aeff4a0b25dd02d6c53bb8bb1c30f7439e466e4fee70aee0e"
+    },
+    {
+      "path": "analysis/silver-en-rev0-speech-textbox.json",
+      "sha256": "1d16870e736654bc85e1556d600fe10b19816671dfc58e0313b70ce8dfe3f3a6"
+    },
+    {
+      "path": "analysis/silver-de-rev0-speech-textbox.json",
+      "sha256": "264d63f278800ee97e6a694c2f806a27ebbe05ef457b2d6a4462cf304573af0b"
+    },
+    {
+      "path": "analysis/silver-es-rev0-speech-textbox.json",
+      "sha256": "e4c776db693554fd17cb35ea04280f59de9138e253156ad34dc1c48dcd94349b"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-speech-textbox.json",
+      "sha256": "8aec6038d9e74876226f626401e3b587fa84f0a367f52bedb1fbf4f897e70acf"
+    },
+    {
+      "path": "analysis/silver-it-rev0-speech-textbox.json",
+      "sha256": "385b594d4a3142baa380742ecbeeeb9c25ac2abb2298824783f1009154d6e1c9"
+    },
+    {
+      "path": "research/speech-textbox-reconstruction.md",
+      "sha256": "bb5aa25fd41030401023a3393a59c571bec77f8370eeb52f9fe530e55f65801e"
+    },
+    {
+      "path": "tests/test_speech_textbox_reconstruction.py",
+      "sha256": "9084df9588a7b1c67e233b1f1db6f43b06cdcbbf0e2569878b84f13162e21c19"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}

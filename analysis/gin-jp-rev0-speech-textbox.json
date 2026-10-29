@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "axis": "Disassembly",
+  "profile": "gold-silver",
+  "target": {
+    "release": "gin-jp-rev0",
+    "sha256": "0a532063a3ff5750a464582aa7bbee2b6d42e1a92a136d9f4590e373487b615c",
+    "status": "candidate"
+  },
+  "origin_reference": true,
+  "source": "src/speech_textbox.asm",
+  "source_sha256": "e6cf188bd52c2c31ae72603320f0a28a726cced32285148a930cb56f6d130633",
+  "function": {
+    "name": "SpeechTextbox",
+    "rom_offset": 3863,
+    "bank": 0,
+    "address": 3863,
+    "range_end_exclusive": 3873,
+    "length": 10,
+    "code_sha256": "5644e5cda947d0a9b7772090c821742e43fdf15b6b24879becfad1d4e1e2aee4",
+    "raw_bytes_published": false
+  },
+  "verified_behavior": {
+    "tilemap_pointer": 50320,
+    "inner_height": 4,
+    "inner_width": 18,
+    "height_register": "B",
+    "width_register": "C",
+    "textbox_transfer": {
+      "kind": "tail-jump",
+      "address": 3777
+    }
+  },
+  "cross_reference": {
+    "textbox_map": "analysis/gin-jp-rev0-textbox.json",
+    "textbox_map_sha256": "f54a36fea6f174823e7ec2b017c23f73e89a3976ac7f6197fd2b7b1f2278fe0e"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+    "path": "home/text.asm"
+  },
+  "raw_rom_bytes_included": false
+}
