@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-it-rev0",
+    "sha256": "04c442246d1ae0ed6bf5e072bb7e3d06376e584b953d6b14047b39e45fbb0cb4",
+    "status": "candidate"
+  },
+  "origin_reference": false,
+  "profile": "gs",
+  "functions": {
+    "GetFarByte": {
+      "rom_offset": 12621,
+      "bank": 0,
+      "address": 12621,
+      "range_end_exclusive": 12641,
+      "code_sha256": "9834a40726130dd1f7ebfb3a13ab28c7ec2669f9c7b59dfacae54b94188cfc19",
+      "length": 20,
+      "temporary_bank_storage": "0xD156",
+      "rom_bank_shadow": "0xFF9F",
+      "far_byte_storage": "0xD156"
+    },
+    "GetFarWord": {
+      "rom_offset": 12641,
+      "bank": 0,
+      "address": 12641,
+      "range_end_exclusive": 12657,
+      "code_sha256": "465ff3409ed1edb08f7482c164e282d6c49d7b034ab8ebece0500e848fc90336",
+      "length": 16,
+      "temporary_bank_storage": "0xD156",
+      "rom_bank_shadow": "0xFF9F"
+    }
+  },
+  "semantics": {
+    "GetFarByte": "switch to bank A, read [HL], restore the previous ROM bank, return byte in A",
+    "GetFarWord": "switch to bank A, read little-endian [HL:HL+1], restore the previous ROM bank, return word in HL"
+  },
+  "cross_reference": {
+    "copy_bytes": "analysis/silver-it-rev0-copy-bytes.json",
+    "sha256": "acdf14809b589d6be83fab2470398652f5c7e770101d2511c0e939f86f43984f",
+    "get_far_byte_offset_from_copy_bytes_end": 0
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "ef0201d8daf47e8b3ea1518eacf890f37d4cd5e8",
+    "path": "home/copy.asm"
+  },
+  "raw_rom_bytes_included": false
+}
