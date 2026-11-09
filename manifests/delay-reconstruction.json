@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "game": "Gin",
+  "functions": [
+    "DelayFrame",
+    "DelayFrames"
+  ],
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/catalog_gen2_delay.py",
+    "tool_sha256": "3f66cee0b910a9afff90ccc4a73388a9f260a9716f84efe42a6e9d1d7af357f3"
+  },
+  "outputs": [
+    {
+      "path": "research/releases.csv",
+      "sha256": "ade2e3cd5d8eb878d279ba0f1ed40be5b25befa93b77f2c8ddc96f7181d0d0c0"
+    },
+    {
+      "path": "src/delay.asm",
+      "sha256": "28ce834398aa82e2fe7b73af2165c293fd127c0531ce64c7e239299ed4df4977"
+    },
+    {
+      "path": "analysis/delay-summary.json",
+      "sha256": "7b4a8530118b45cd6f8d757ffcd3f06cccd6c5f5091aae02a5eaa87953655cb6"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-delay.json",
+      "sha256": "f6b0e71446f48e11414fa7b694324f7f644b9be5e9ddbcef2622752d77c68b6c"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-delay.json",
+      "sha256": "1bda6cb8bacbe46960251cd114f3cd4fdbd1bd09d9cd1e45d6c6defed878f3b9"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-delay.json",
+      "sha256": "82d966dc7c4dfce6185e7596927e8d5683e3e56f9ad1d89345df0ad04dd0d9a7"
+    },
+    {
+      "path": "analysis/silver-en-rev0-delay.json",
+      "sha256": "defc2182baccd7499aad082a1f46ef4752428543de5c8faf6a58e61e703f3507"
+    },
+    {
+      "path": "analysis/silver-de-rev0-delay.json",
+      "sha256": "d6ed4cf03c899273b03b5b968fa181cf1191c247d1a921e077fb3834856e29e9"
+    },
+    {
+      "path": "analysis/silver-es-rev0-delay.json",
+      "sha256": "3ad8fbae154f4a0dbcdc2f6a7d028569c48f5c2576c17f6dfca5f9aa02b14e7f"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-delay.json",
+      "sha256": "1339514f25060e582247038eee77b184f137b2be4a332d2a30632a4e13f55449"
+    },
+    {
+      "path": "analysis/silver-it-rev0-delay.json",
+      "sha256": "4a8baa73256cea8e0864c96234f441385b0782e71b81161fd756d556e05fab54"
+    },
+    {
+      "path": "research/delay-reconstruction.md",
+      "sha256": "14154e2f0dfc3959bbabf730eb6a1cdfee288c17717a99c664ae1d59e373fba1"
+    },
+    {
+      "path": "tests/test_delay_reconstruction.py",
+      "sha256": "218a884906ecc5aa6e2ae0dbc2e78a79caf97e3c8f4effbaadaeab4df799acd8"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}

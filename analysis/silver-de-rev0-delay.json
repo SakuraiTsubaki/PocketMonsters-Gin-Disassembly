@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-de-rev0",
+    "sha256": "c3d1fd0dec1d5fa9aa7f85275e79c52aa9175d191c63cbed7b406c306d946348",
+    "status": "candidate"
+  },
+  "origin_reference": false,
+  "source": "src/delay.asm",
+  "source_sha256": "28ce834398aa82e2fe7b73af2165c293fd127c0531ce64c7e239299ed4df4977",
+  "functions": {
+    "DelayFrame": {
+      "bank": 0,
+      "address": 814,
+      "length": 14,
+      "wait_flag_address": 52970
+    },
+    "DelayFrames": {
+      "bank": 0,
+      "address": 828,
+      "length": 7,
+      "frame_count_register": "C"
+    },
+    "combined": {
+      "rom_offset": 814,
+      "bank": 0,
+      "delay_frame_address": 814,
+      "delay_frames_address": 828,
+      "w_vblank_occurred_address": 52970,
+      "range_end_exclusive": 835,
+      "length": 21,
+      "code_sha256": "0a5fb4d34c844d860ddbd7ca09e7c9fdacb497a26f5e65d474ec08d57606cdfe"
+    }
+  },
+  "semantics": {
+    "DelayFrame": "set the VBlank completion flag, halt until the interrupt clears it, then return",
+    "DelayFrames": "call DelayFrame and decrement C until C reaches zero",
+    "zero_count_precondition": "C must be nonzero; zero wraps and waits 256 frames",
+    "halt_loop_target": "HALT instruction"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "f2cde36f49b994c143bfd18582182302fdc76492",
+    "path": "home/delay.asm"
+  },
+  "raw_rom_bytes_included": false
+}
