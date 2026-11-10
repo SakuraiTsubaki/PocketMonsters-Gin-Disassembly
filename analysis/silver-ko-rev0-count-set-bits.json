@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-ko-rev0",
+    "sha256": "ebbac63c0c4309c82dbb6723e7163369784f962b4fd3e2f486075307c3008a22",
+    "status": "candidate"
+  },
+  "origin_reference": false,
+  "source": "src/count_set_bits.asm",
+  "source_sha256": "d4018d504045314d9bcd47aa1b3f3440f034d70d2f0b129dc6b13a88a73d5a61",
+  "function": {
+    "rom_offset": 13687,
+    "bank": 0,
+    "address": 13687,
+    "range_end_exclusive": 13710,
+    "length": 23,
+    "work_ram_address": 53774,
+    "code_sha256": "ca426a2c5166e5cbd6a4ce74fb6cc5192e7d0668737e748947a8b653cf69a41b",
+    "name": "CountSetBits",
+    "raw_bytes_published": false
+  },
+  "semantics": {
+    "input": "B bytes beginning at HL; B must be between 1 and 255",
+    "operation": "count all set bits while advancing HL by B bytes",
+    "result": "A, C and wNumSetBits contain the low eight bits of the count"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "f2cde36f49b994c143bfd18582182302fdc76492",
+    "path": "home/pokedex_flags.asm"
+  },
+  "raw_rom_bytes_included": false
+}

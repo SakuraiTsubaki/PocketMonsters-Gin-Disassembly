@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "game": "Pocket Monsters Gin",
+  "function": "CountSetBits",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/catalog_gen2_count_set_bits.py",
+    "tool_sha256": "8262add786bfbb9465f0f390a4372c1e4f6a1a65a5a9dd78ca44d041e2bb8d87"
+  },
+  "outputs": [
+    {
+      "path": "research/releases.csv",
+      "sha256": "ade2e3cd5d8eb878d279ba0f1ed40be5b25befa93b77f2c8ddc96f7181d0d0c0"
+    },
+    {
+      "path": "src/count_set_bits.asm",
+      "sha256": "d4018d504045314d9bcd47aa1b3f3440f034d70d2f0b129dc6b13a88a73d5a61"
+    },
+    {
+      "path": "analysis/count-set-bits-summary.json",
+      "sha256": "bf703f99fd139274b9891131a07f0172ab5188ca380223972b7f9278654ab849"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-count-set-bits.json",
+      "sha256": "407318eae476c1fa6638847c1b3dbec1016ca57e504e55f53cd8275dd86e5445"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-count-set-bits.json",
+      "sha256": "80ef18cb1ef2b6022a6474a6c5664a74dd9e6428748af6d850d71629b5716d30"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-count-set-bits.json",
+      "sha256": "b2f6a99cc1ab862e3f87af658a68eb2c10b8bc5c179dc22206967cdbafe9685a"
+    },
+    {
+      "path": "analysis/silver-en-rev0-count-set-bits.json",
+      "sha256": "9bb1684e5ba9d8865f13e77f3aee3928b40703d503491a6b5d69af2e0e5ecfed"
+    },
+    {
+      "path": "analysis/silver-de-rev0-count-set-bits.json",
+      "sha256": "0188a8863977c8c67aad7a73b245c2423cdf63c976ff72ac8659f44dad6448d2"
+    },
+    {
+      "path": "analysis/silver-es-rev0-count-set-bits.json",
+      "sha256": "1491af8a7c7fc8089b6b0d5467764926e7ec0aa0b8cc0bd87e0b21443957e95c"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-count-set-bits.json",
+      "sha256": "41bd11f95555d69794bc43d2cd5c6218ad9c73e37d9b022a661932c4ab047202"
+    },
+    {
+      "path": "analysis/silver-it-rev0-count-set-bits.json",
+      "sha256": "38c976a58e8175f05e7a86cfe235bd6827d99677cac512a4394a77d13027feae"
+    },
+    {
+      "path": "research/count-set-bits-reconstruction.md",
+      "sha256": "62a4eabf89dd7f3c5ff689dd98bce8663002317d38e42dd6da6a869bac6b1abf"
+    },
+    {
+      "path": "tests/test_count_set_bits_reconstruction.py",
+      "sha256": "065b7ff7b379918edb6a87cf207186e2ed87c281f6d69bf47d78162a8f26eb1c"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}
