@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-en-rev0",
+    "sha256": "72b190859a59623cbef6c49d601f8de52c1d2331b4f08a8d2acc17274fc19a8c",
+    "status": "candidate"
+  },
+  "origin_reference": false,
+  "source": "src/clear_hide_sprites.asm",
+  "source_sha256": "ff56a3eb65da9ce6a098ca5f6c97bdfc24b2b929da8e8bd24366900bda2aabc2",
+  "functions": {
+    "ClearSprites": {
+      "rom_offset": 12543,
+      "bank": 0,
+      "address": 12543,
+      "range_end_exclusive": 12554,
+      "length": 11,
+      "w_shadow_oam_address": 49920,
+      "byte_count": 160,
+      "code_sha256": "a780ba0a2f85987a0c69b2e1b2e04b4d33f64015666bf7600dc33a54d862b168"
+    },
+    "HideSprites": {
+      "rom_offset": 12554,
+      "bank": 0,
+      "address": 12554,
+      "range_end_exclusive": 12570,
+      "length": 16,
+      "w_shadow_oam_y_address": 49920,
+      "object_stride": 4,
+      "object_count": 40,
+      "hidden_y": 160,
+      "code_sha256": "ab18affd9f5578afcabe0624f44e77b09717db52d3d3a64cb5339cf6b36fdfb9"
+    },
+    "combined_sha256": "08705acc4f14cb5284e0a7ab1a6c4bf32beaada4ee1671b502cf92d5943f325c"
+  },
+  "semantics": {
+    "ClearSprites": "zero all 160 bytes of shadow OAM",
+    "HideSprites": "write Y=160 to each of 40 four-byte shadow OAM entries",
+    "shared_base": "both routines begin at the same release-specific shadow OAM address"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "f2cde36f49b994c143bfd18582182302fdc76492",
+    "path": "home/clear_sprites.asm"
+  },
+  "raw_rom_bytes_included": false
+}
