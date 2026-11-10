@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "game": "Pocket Monsters Gin",
+  "function": "CompareBytes",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/catalog_gen2_compare_bytes.py",
+    "tool_sha256": "dd5a689c9e8d708e0f6242ab95e4666eba7f51a7097ee52c54ac7c7898e8af62"
+  },
+  "outputs": [
+    {
+      "path": "research/releases.csv",
+      "sha256": "ade2e3cd5d8eb878d279ba0f1ed40be5b25befa93b77f2c8ddc96f7181d0d0c0"
+    },
+    {
+      "path": "src/compare_bytes.asm",
+      "sha256": "cc6a4ee51145e38afe6778824538d46e5224b234a7ee504d42568cb3b2570193"
+    },
+    {
+      "path": "analysis/compare-bytes-summary.json",
+      "sha256": "1e53cd8b890f3691690e150f9d52a6a6f9af4a11bc4ae82014ea561735a88072"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-compare-bytes.json",
+      "sha256": "0ceaeb5f562b068d534a18645af95682237291c530e643fbf2b813013a10fede"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-compare-bytes.json",
+      "sha256": "7fd8cc2e9423576579ae66217091a6e5ddb7d55ab252b7e8191257027e423463"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-compare-bytes.json",
+      "sha256": "fe80b124c97af051e9b24a2896490736221f0093768408e73a3a11fdb24efe71"
+    },
+    {
+      "path": "analysis/silver-en-rev0-compare-bytes.json",
+      "sha256": "cfa490b333f96786b410d2aadfb49fbf6bf98538519e772ac360a4c54752f1c6"
+    },
+    {
+      "path": "analysis/silver-de-rev0-compare-bytes.json",
+      "sha256": "75624fcc9bf7e663fbcfb38329fbee72c08c32baded12fb52253423b404638f5"
+    },
+    {
+      "path": "analysis/silver-es-rev0-compare-bytes.json",
+      "sha256": "3acd3179ffb007adcab5e24081b062d9cf9011af210dca2b774cd235cc0eb5b2"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-compare-bytes.json",
+      "sha256": "79bc195f46e8097c854028ec9c271a530110faeca0a25f61a7f4000fb41d8eee"
+    },
+    {
+      "path": "analysis/silver-it-rev0-compare-bytes.json",
+      "sha256": "2e2d48159c4faeed8ff05bac6a0bfc48a5be02e2b0ec6a8de657e4c281941e9b"
+    },
+    {
+      "path": "research/compare-bytes-reconstruction.md",
+      "sha256": "368a6a9f8ca01d22f8c36fcf5fdf26880995840547c3c1a124751ecc73da07f3"
+    },
+    {
+      "path": "tests/test_compare_bytes_reconstruction.py",
+      "sha256": "c69d6e1ddbc383e6dd8298abe505555b5574c1a5fdffb55c770ce310af29bebe"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}

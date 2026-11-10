@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-es-rev0",
+    "sha256": "6797010c052e8f9373ea2b9e855ec078b34fda12e5ccf742eb19bb5e8f6947c2",
+    "status": "candidate"
+  },
+  "origin_reference": false,
+  "source": "src/compare_bytes.asm",
+  "source_sha256": "cc6a4ee51145e38afe6778824538d46e5224b234a7ee504d42568cb3b2570193",
+  "function": {
+    "name": "CompareBytes",
+    "rom_offset": 13294,
+    "bank": 0,
+    "address": 13294,
+    "range_end_exclusive": 13303,
+    "length": 9,
+    "code_sha256": "eb115fb51559a9c3dd7b3f0536c578ea3d18cfe175bc7cb03abedd55603fe1e4",
+    "raw_bytes_published": false
+  },
+  "semantics": {
+    "input": "C bytes at DE and HL; C must be between 1 and 255",
+    "operation": "compare in order and stop at the first mismatch",
+    "result": "zero flag set only when all C bytes match",
+    "pointer_progress": "DE and HL advance only after each matching byte"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "f2cde36f49b994c143bfd18582182302fdc76492",
+    "path": "home/compare.asm"
+  },
+  "raw_rom_bytes_included": false
+}
