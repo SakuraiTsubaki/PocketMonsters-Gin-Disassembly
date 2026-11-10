@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "game": "Gin",
+  "function": "GetHPPal",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/catalog_gen2_get_hp_pal.py",
+    "tool_sha256": "aec8cf92b7caa22e86894bfa396238e4cb41faf098b37edc6cd1e49fec04d85b"
+  },
+  "outputs": [
+    {
+      "path": "research/releases.csv",
+      "sha256": "ade2e3cd5d8eb878d279ba0f1ed40be5b25befa93b77f2c8ddc96f7181d0d0c0"
+    },
+    {
+      "path": "src/get_hp_pal.asm",
+      "sha256": "a7b95e81ed1a0fea7ff780becfee3fd74bcc03ddd5bd4a3c80402892e47436be"
+    },
+    {
+      "path": "analysis/get-hp-pal-summary.json",
+      "sha256": "61c52cde30b7210e5c9143ab92cd50765a9ce6080e86b0efb2634981357d335e"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-get-hp-pal.json",
+      "sha256": "4e68ce5fd5dd0d6465df1b8c7ec005186517d204ff89047ad5048034e47591de"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-get-hp-pal.json",
+      "sha256": "5ca174b3993249604499002f2cf80060831708f20a600ea7cd3b33212981056f"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-get-hp-pal.json",
+      "sha256": "103172848f55abd09d153cfb33d8732ba59e031a9b5d626c49c33e431f1c5204"
+    },
+    {
+      "path": "analysis/silver-en-rev0-get-hp-pal.json",
+      "sha256": "0aa062a964d522d6edb37dc8bec220964fe5c2ef74948dca358868bf9967694f"
+    },
+    {
+      "path": "analysis/silver-de-rev0-get-hp-pal.json",
+      "sha256": "75c0f0b1df645316f55c05be5c1af50bb41de2b95f5ae376735b02c55f5f1213"
+    },
+    {
+      "path": "analysis/silver-es-rev0-get-hp-pal.json",
+      "sha256": "1ad944731cb98dead5bf6cb93f2864aec1fc40290356d5f2fa60a0f28582369f"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-get-hp-pal.json",
+      "sha256": "ef48e1e04328dab777e30a5bcd5b9d787e3c5d37e11de7bfa5ef3f2a69114462"
+    },
+    {
+      "path": "analysis/silver-it-rev0-get-hp-pal.json",
+      "sha256": "6f4473ff58d8c0676c42de71071888b388d5d5e91ce22dce562bf372f5bddfd5"
+    },
+    {
+      "path": "research/get-hp-pal-reconstruction.md",
+      "sha256": "398a2226b808cad44b9bc8ce47c94871e0e021a907a544d4703bb554185d0bd5"
+    },
+    {
+      "path": "tests/test_get_hp_pal_reconstruction.py",
+      "sha256": "65da4423e6522747c149868aa160bb9ff909a11da8d26a73d642f6590b0f479b"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}

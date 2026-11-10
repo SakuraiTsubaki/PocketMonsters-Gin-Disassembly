@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-ko-rev0",
+    "sha256": "ebbac63c0c4309c82dbb6723e7163369784f962b4fd3e2f486075307c3008a22",
+    "status": "candidate"
+  },
+  "origin_reference": false,
+  "source": "src/get_hp_pal.asm",
+  "source_sha256": "a7b95e81ed1a0fea7ff780becfee3fd74bcc03ddd5bd4a3c80402892e47436be",
+  "function": {
+    "name": "GetHPPal",
+    "rom_offset": 13675,
+    "bank": 0,
+    "address": 13675,
+    "range_end_exclusive": 13687,
+    "length": 12,
+    "input_register": "E",
+    "output_register": "D",
+    "green_minimum": 24,
+    "yellow_minimum": 10,
+    "palette_values": {
+      "green": 0,
+      "yellow": 1,
+      "red": 2
+    },
+    "code_sha256": "29be07ecda4d380e8d7842c3c13f946fba6b57d83c2624ad1418806bb8b6eb83",
+    "raw_bytes_published": false
+  },
+  "semantics": {
+    "green": "E >= 24",
+    "yellow": "10 <= E < 24",
+    "red": "E < 10",
+    "operation": "return the HP bar palette category in D"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "f2cde36f49b994c143bfd18582182302fdc76492",
+    "path": "home/tilemap.asm"
+  },
+  "raw_rom_bytes_included": false
+}
