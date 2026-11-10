@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-es-rev0",
+    "sha256": "6797010c052e8f9373ea2b9e855ec078b34fda12e5ccf742eb19bb5e8f6947c2",
+    "status": "candidate"
+  },
+  "origin_reference": false,
+  "source": "src/compare_bytes_long.asm",
+  "source_sha256": "62482f66769c764179292b35a1e93b655287c20e847dceb2f75fea2bb0bf120a",
+  "function": {
+    "name": "CompareBytesLong",
+    "rom_offset": 13303,
+    "bank": 0,
+    "address": 13303,
+    "range_end_exclusive": 13318,
+    "length": 15,
+    "code_sha256": "439b26fce5ce82ae353c7aadb45e452ebd60b4f5cd97a3ed25e6b859eceacc88",
+    "raw_bytes_published": false
+  },
+  "semantics": {
+    "input": "BC bytes at DE and HL; BC must be between 1 and 65535",
+    "operation": "compare in order and stop at the first mismatch",
+    "result": "carry set only when all BC bytes match; carry clear on mismatch",
+    "pointer_progress": "DE and HL advance only after each matching byte"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "f2cde36f49b994c143bfd18582182302fdc76492",
+    "path": "home/compare.asm"
+  },
+  "raw_rom_bytes_included": false
+}
