@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-it-rev0",
+    "sha256": "04c442246d1ae0ed6bf5e072bb7e3d06376e584b953d6b14047b39e45fbb0cb4",
+    "status": "candidate"
+  },
+  "origin_reference": false,
+  "source": "src/enable_lcd.asm",
+  "source_sha256": "fddb550d31c590dc72a982e178ca8f766184b7151de4cab0abad41a31c0bafec",
+  "function": {
+    "name": "EnableLCD",
+    "rom_offset": 1108,
+    "bank": 0,
+    "address": 1108,
+    "range_end_exclusive": 1115,
+    "length": 7,
+    "register": "rLCDC",
+    "enabled_bit": 7,
+    "code_sha256": "ce8d3de777d857207b53611f9596b71a04f38382f0d0e10ef2a15f4f609f4825",
+    "raw_bytes_published": false
+  },
+  "semantics": {
+    "operation": "set LCDC bit 7 while preserving all other LCDC bits",
+    "hardware_register": "FF40",
+    "return_value": "A contains the updated LCDC value"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "f2cde36f49b994c143bfd18582182302fdc76492",
+    "path": "home/lcd.asm"
+  },
+  "raw_rom_bytes_included": false
+}

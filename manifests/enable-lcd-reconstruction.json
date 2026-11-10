@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "game": "Gin",
+  "function": "EnableLCD",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/catalog_gen2_enable_lcd.py",
+    "tool_sha256": "0254235b82270a05a6c79b3b75ef20c5c442e0086249fff88ec7511d5b376b13"
+  },
+  "outputs": [
+    {
+      "path": "research/releases.csv",
+      "sha256": "ade2e3cd5d8eb878d279ba0f1ed40be5b25befa93b77f2c8ddc96f7181d0d0c0"
+    },
+    {
+      "path": "src/enable_lcd.asm",
+      "sha256": "fddb550d31c590dc72a982e178ca8f766184b7151de4cab0abad41a31c0bafec"
+    },
+    {
+      "path": "analysis/enable-lcd-summary.json",
+      "sha256": "38e71871f77f6cf5b0485e2be0a6e35fda93d9653adc6cfdafa919cca319e030"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-enable-lcd.json",
+      "sha256": "39d5918f2ea7c721d36f2618eb658ae1d80741ddc186b6ff865c1afb8aa90974"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-enable-lcd.json",
+      "sha256": "549e0da8b908d2c15f67d512f73949048e7a8890c4228e0659c7fd028927eba2"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-enable-lcd.json",
+      "sha256": "f0dbe40053605db11f34006bbde814c232c78f4c967c3c8c345d2141484f6d60"
+    },
+    {
+      "path": "analysis/silver-en-rev0-enable-lcd.json",
+      "sha256": "c38951d310599e1c44bb1b3d132a76e20a82cb9849c7858a84e226e893689494"
+    },
+    {
+      "path": "analysis/silver-de-rev0-enable-lcd.json",
+      "sha256": "5f0ca819da9489a6bb89287e219c7004918e3e50eb4ea728fcad38f32f5542d6"
+    },
+    {
+      "path": "analysis/silver-es-rev0-enable-lcd.json",
+      "sha256": "2f95d8f1de452e97a4db97174c89792224e6c03b4e78aaf0098419c527c58117"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-enable-lcd.json",
+      "sha256": "77b477f1b9495e6db32e3fd5e3d29668a94c5c6ad87cd20969fabc98634bc36f"
+    },
+    {
+      "path": "analysis/silver-it-rev0-enable-lcd.json",
+      "sha256": "6515a33a8d4a58e62996565f3557c847f0c4cd931a09271cb2b5ddcbe6cc887b"
+    },
+    {
+      "path": "research/enable-lcd-reconstruction.md",
+      "sha256": "61c3233760cf783c5dfca65ee8e66ff4a764f9a9de80bf97343fa050550c13cc"
+    },
+    {
+      "path": "tests/test_enable_lcd_reconstruction.py",
+      "sha256": "78fc67286c878317b67c7a4b4e9223e22f9407f44436268c5c2825ebee86fa62"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}
