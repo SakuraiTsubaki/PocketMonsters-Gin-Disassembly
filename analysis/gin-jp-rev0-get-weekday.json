@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "gin-jp-rev0",
+    "sha256": "0a532063a3ff5750a464582aa7bbee2b6d42e1a92a136d9f4590e373487b615c",
+    "status": "candidate"
+  },
+  "origin_reference": true,
+  "source": "src/get_weekday.asm",
+  "source_sha256": "9bf4403860ba70f8d1e5deb956bdc5d926e4e35be754b58512ac7a69bebe1e13",
+  "function": {
+    "rom_offset": 13595,
+    "bank": 0,
+    "address": 13595,
+    "range_end_exclusive": 13605,
+    "length": 10,
+    "cur_day_address": 53733,
+    "code_sha256": "292485ab0de9d7873fa4833e1904253a3c8667ad2d45b472d10d4a354f08f8e3",
+    "name": "GetWeekday",
+    "raw_bytes_published": false
+  },
+  "semantics": {
+    "input": "wCurDay unsigned byte",
+    "operation": "repeatedly subtract 7, then restore the final borrow",
+    "result": "A = wCurDay modulo 7 in the range 0 through 6"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "f2cde36f49b994c143bfd18582182302fdc76492",
+    "path": "home/pokedex_flags.asm"
+  },
+  "raw_rom_bytes_included": false
+}

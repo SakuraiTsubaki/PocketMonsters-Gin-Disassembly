@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "game": "Pocket Monsters Gin",
+  "function": "GetWeekday",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/catalog_gen2_get_weekday.py",
+    "tool_sha256": "e81dde32ec14be015cd76f7d74b8b34379c174b75b180f06a0353dba0ebd022e"
+  },
+  "outputs": [
+    {
+      "path": "research/releases.csv",
+      "sha256": "ade2e3cd5d8eb878d279ba0f1ed40be5b25befa93b77f2c8ddc96f7181d0d0c0"
+    },
+    {
+      "path": "src/get_weekday.asm",
+      "sha256": "9bf4403860ba70f8d1e5deb956bdc5d926e4e35be754b58512ac7a69bebe1e13"
+    },
+    {
+      "path": "analysis/get-weekday-summary.json",
+      "sha256": "31e232ac925f5dc5377000cb6cafd313435e1cdc848f0ec05d145934ab78975b"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-get-weekday.json",
+      "sha256": "1712ad11b491470d68ba34bf1721985cfe54cb770d8fede852487631e409c62f"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-get-weekday.json",
+      "sha256": "d611b70f722ecc67f7beb37f548acef11fb0bc1e87b156f54301c8150116a2d2"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-get-weekday.json",
+      "sha256": "a6633d83531f45f8d464bc729cb29dad82527f6ff95429d65c1ec9c71eaecc96"
+    },
+    {
+      "path": "analysis/silver-en-rev0-get-weekday.json",
+      "sha256": "4eb5a3a72172dd32d303c6cca4b5e8a6875567186c1c58aa1288ba7089166023"
+    },
+    {
+      "path": "analysis/silver-de-rev0-get-weekday.json",
+      "sha256": "098a72935327a789ec6d48f0305ca1a4a94a0b3dd621d31474bbadcf222a46d1"
+    },
+    {
+      "path": "analysis/silver-es-rev0-get-weekday.json",
+      "sha256": "ebdf2970757361f250dd8a03fdd221ecd860540f2759305936cf4440ebdabb6c"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-get-weekday.json",
+      "sha256": "99d99d15ded8f63e4258b323e462ce3470a0387a5544d1d4f3c004c2ab0a47e1"
+    },
+    {
+      "path": "analysis/silver-it-rev0-get-weekday.json",
+      "sha256": "b3078323f398348910a993738bead7c8873ee7d9fb00b1677d1820705b6b973c"
+    },
+    {
+      "path": "research/get-weekday-reconstruction.md",
+      "sha256": "5ee3db07c96f167675ed3963145199d03cda645e19c3c06fc1e88b45eaa364eb"
+    },
+    {
+      "path": "tests/test_get_weekday_reconstruction.py",
+      "sha256": "4d21448c3e4515c17a46167e61e99b7d679c7938cfb95f500dd7dc9ded37bb8d"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}
