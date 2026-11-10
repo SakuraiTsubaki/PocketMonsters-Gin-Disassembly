@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "game": "Gin",
+  "function": "ClearJoypad",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/catalog_gen2_clear_joypad.py",
+    "tool_sha256": "fabcf3c7bdf145bd7d38a8353b0e781e4a3cf3b7ed6bfc267bb3f11e2464be9e"
+  },
+  "outputs": [
+    {
+      "path": "research/releases.csv",
+      "sha256": "ade2e3cd5d8eb878d279ba0f1ed40be5b25befa93b77f2c8ddc96f7181d0d0c0"
+    },
+    {
+      "path": "src/clear_joypad.asm",
+      "sha256": "fe9f1a454c5160d4b0202f0836c4a33bf7ee2754eae5cb8f66d6d659e3347f95"
+    },
+    {
+      "path": "analysis/clear-joypad-summary.json",
+      "sha256": "8aa5a9b1d3c13bd974f6e60af9cc6bf79f6d0251d5c5329671658705fa6489d4"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-clear-joypad.json",
+      "sha256": "7f753378cc0ecedd26476d7b48755fc8322d61aa546f54f08907e297e2003142"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-clear-joypad.json",
+      "sha256": "906c88479211a0fbe4e34d445a6d5eab2bbe62def986df22aad33dcdb6f0e762"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-clear-joypad.json",
+      "sha256": "c5cb329043aeefbcdbe47e6d23f9f4b2e84a1a18acbafb02123822d43f7194d0"
+    },
+    {
+      "path": "analysis/silver-en-rev0-clear-joypad.json",
+      "sha256": "609f60af8000140eee9ccf11af8d0b25e8bc9fd56c4e6a300eab577e6394e7c1"
+    },
+    {
+      "path": "analysis/silver-de-rev0-clear-joypad.json",
+      "sha256": "69aa1a25c8dee866f4995920a7399d50d4c33b2e203fb3adad68060eb5dd4e6a"
+    },
+    {
+      "path": "analysis/silver-es-rev0-clear-joypad.json",
+      "sha256": "3d56a7457131d03735fbdfe78fcdb1a9276b4601e1a02e5d8ed1c391ee9f246f"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-clear-joypad.json",
+      "sha256": "007d2da4d923a24e3d5a43dacca1c4553e586e363a94a633de3eb492ab07c7c0"
+    },
+    {
+      "path": "analysis/silver-it-rev0-clear-joypad.json",
+      "sha256": "da15dd6f244d3aca96c30d624f4bbf9f6164869b4c70cf97496cad1f71ba31b5"
+    },
+    {
+      "path": "research/clear-joypad-reconstruction.md",
+      "sha256": "eefff7322ad99004b253b9df80c2427fd9f8dff16f3f3f5deda96d689f4adef9"
+    },
+    {
+      "path": "tests/test_clear_joypad_reconstruction.py",
+      "sha256": "e77e08eedd0079269e317ac60acd39d3c813db526cc539bb8b35b1897c345d8d"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}
