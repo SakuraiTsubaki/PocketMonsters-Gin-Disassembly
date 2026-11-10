@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "game": "Pocket Monsters Gin",
+  "functions": [
+    "SkipNames",
+    "AddNTimes"
+  ],
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "source": "src/skip_names_add_n_times.asm",
+  "releases": [
+    {
+      "id": "gin-jp-rev0",
+      "language": "Japanese",
+      "revision": 0,
+      "status": "candidate",
+      "sha256": "0a532063a3ff5750a464582aa7bbee2b6d42e1a92a136d9f4590e373487b615c",
+      "origin_reference": true,
+      "skip_names_address": "0x3155",
+      "add_n_times_address": "0x315F",
+      "name_length": 6,
+      "pair_sha256": "c5f144ae1217d9a2d22393e16547b64f6572aab8c7c5dac8f52e355c309848b3",
+      "evidence": "analysis/gin-jp-rev0-skip-names-add-n-times.json"
+    },
+    {
+      "id": "gin-jp-rev1",
+      "language": "Japanese",
+      "revision": 1,
+      "status": "candidate",
+      "sha256": "99e5267fbf5a7748d4f3b75ba1990cb5d91348339468607a04bfbc6081c62d71",
+      "origin_reference": false,
+      "skip_names_address": "0x3155",
+      "add_n_times_address": "0x315F",
+      "name_length": 6,
+      "pair_sha256": "c5f144ae1217d9a2d22393e16547b64f6572aab8c7c5dac8f52e355c309848b3",
+      "evidence": "analysis/gin-jp-rev1-skip-names-add-n-times.json"
+    },
+    {
+      "id": "silver-ko-rev0",
+      "language": "Korean",
+      "revision": 0,
+      "status": "candidate",
+      "sha256": "ebbac63c0c4309c82dbb6723e7163369784f962b4fd3e2f486075307c3008a22",
+      "origin_reference": false,
+      "skip_names_address": "0x3237",
+      "add_n_times_address": "0x3241",
+      "name_length": 11,
+      "pair_sha256": "f1ef8742427013deccb564048179ef0b225163fac0ee62ec2509719d0750331b",
+      "evidence": "analysis/silver-ko-rev0-skip-names-add-n-times.json"
+    },
+    {
+      "id": "silver-en-rev0",
+      "language": "English",
+      "revision": 0,
+      "status": "candidate",
+      "sha256": "72b190859a59623cbef6c49d601f8de52c1d2331b4f08a8d2acc17274fc19a8c",
+      "origin_reference": false,
+      "skip_names_address": "0x3199",
+      "add_n_times_address": "0x31A3",
+      "name_length": 11,
+      "pair_sha256": "f1ef8742427013deccb564048179ef0b225163fac0ee62ec2509719d0750331b",
+      "evidence": "analysis/silver-en-rev0-skip-names-add-n-times.json"
+    },
+    {
+      "id": "silver-de-rev0",
+      "language": "German",
+      "revision": 0,
+      "status": "candidate",
+      "sha256": "c3d1fd0dec1d5fa9aa7f85275e79c52aa9175d191c63cbed7b406c306d946348",
+      "origin_reference": false,
+      "skip_names_address": "0x31C6",
+      "add_n_times_address": "0x31D0",
+      "name_length": 11,
+      "pair_sha256": "f1ef8742427013deccb564048179ef0b225163fac0ee62ec2509719d0750331b",
+      "evidence": "analysis/silver-de-rev0-skip-names-add-n-times.json"
+    },
+    {
+      "id": "silver-es-rev0",
+      "language": "Spanish",
+      "revision": 0,
+      "status": "candidate",
+      "sha256": "6797010c052e8f9373ea2b9e855ec078b34fda12e5ccf742eb19bb5e8f6947c2",
+      "origin_reference": false,
+      "skip_names_address": "0x31BD",
+      "add_n_times_address": "0x31C7",
+      "name_length": 11,
+      "pair_sha256": "f1ef8742427013deccb564048179ef0b225163fac0ee62ec2509719d0750331b",
+      "evidence": "analysis/silver-es-rev0-skip-names-add-n-times.json"
+    },
+    {
+      "id": "silver-fr-rev0",
+      "language": "French",
+      "revision": 0,
+      "status": "candidate",
+      "sha256": "e120c4ddb0dc3e25b95c9c71b3ffd59ff57ce689cf4d79d04913ba59140c18c2",
+      "origin_reference": false,
+      "skip_names_address": "0x31AB",
+      "add_n_times_address": "0x31B5",
+      "name_length": 11,
+      "pair_sha256": "f1ef8742427013deccb564048179ef0b225163fac0ee62ec2509719d0750331b",
+      "evidence": "analysis/silver-fr-rev0-skip-names-add-n-times.json"
+    },
+    {
+      "id": "silver-it-rev0",
+      "language": "Italian",
+      "revision": 0,
+      "status": "candidate",
+      "sha256": "04c442246d1ae0ed6bf5e072bb7e3d06376e584b953d6b14047b39e45fbb0cb4",
+      "origin_reference": false,
+      "skip_names_address": "0x31BE",
+      "add_n_times_address": "0x31C8",
+      "name_length": 11,
+      "pair_sha256": "f1ef8742427013deccb564048179ef0b225163fac0ee62ec2509719d0750331b",
+      "evidence": "analysis/silver-it-rev0-skip-names-add-n-times.json"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}

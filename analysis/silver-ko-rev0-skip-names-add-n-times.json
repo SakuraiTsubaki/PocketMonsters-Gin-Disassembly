@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-ko-rev0",
+    "sha256": "ebbac63c0c4309c82dbb6723e7163369784f962b4fd3e2f486075307c3008a22",
+    "status": "candidate"
+  },
+  "origin_reference": false,
+  "source": "src/skip_names_add_n_times.asm",
+  "source_sha256": "4e14c97121a470f02debd8717f7cf7ae0074cc8880d3dee65f501a8771d519b0",
+  "functions": {
+    "SkipNames": {
+      "rom_offset": 12855,
+      "bank": 0,
+      "address": 12855,
+      "range_end_exclusive": 12865,
+      "length": 10,
+      "name_length": 11,
+      "raw_bytes_published": false
+    },
+    "AddNTimes": {
+      "rom_offset": 12865,
+      "bank": 0,
+      "address": 12865,
+      "range_end_exclusive": 12872,
+      "length": 7,
+      "raw_bytes_published": false
+    },
+    "adjacent_pair_sha256": "f1ef8742427013deccb564048179ef0b225163fac0ee62ec2509719d0750331b"
+  },
+  "semantics": {
+    "SkipNames": "advance HL by A times the release-specific NAME_LENGTH",
+    "AddNTimes": "advance HL by A times BC",
+    "zero_count": "return without changing HL",
+    "adjacency": "SkipNames ends exactly where AddNTimes begins"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "f2cde36f49b994c143bfd18582182302fdc76492",
+    "path": "home/array.asm"
+  },
+  "raw_rom_bytes_included": false
+}

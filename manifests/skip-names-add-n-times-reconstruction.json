@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "game": "Pocket Monsters Gin",
+  "functions": [
+    "SkipNames",
+    "AddNTimes"
+  ],
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/catalog_gen2_skip_names_add_n_times.py",
+    "tool_sha256": "a56e49cd5052593c57c9529d4d307f783148c77322d52078ffece61276839af2",
+    "dependency": {
+      "tool": "tools/catalog_gen2_compare_bytes.py",
+      "sha256": "dd5a689c9e8d708e0f6242ab95e4666eba7f51a7097ee52c54ac7c7898e8af62"
+    }
+  },
+  "outputs": [
+    {
+      "path": "research/releases.csv",
+      "sha256": "ade2e3cd5d8eb878d279ba0f1ed40be5b25befa93b77f2c8ddc96f7181d0d0c0"
+    },
+    {
+      "path": "src/skip_names_add_n_times.asm",
+      "sha256": "4e14c97121a470f02debd8717f7cf7ae0074cc8880d3dee65f501a8771d519b0"
+    },
+    {
+      "path": "analysis/skip-names-add-n-times-summary.json",
+      "sha256": "7fc10e9a2624f468c6dcd19c2e0a5fd244822d5d4f9ffa124a0fd4432a7b72fb"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-skip-names-add-n-times.json",
+      "sha256": "29ab8a91b3920e8cd22c41c1bb5f1b0ca448167148b03442a9958668c05bf76d"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-skip-names-add-n-times.json",
+      "sha256": "60d3ff50787925ca197fe2c1495801fa864a265da2b7e424ff8157f6673e438e"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-skip-names-add-n-times.json",
+      "sha256": "7470c70049d75cad73396bbd5fab9de2ad118fb3129824ff605a3cad09ffd767"
+    },
+    {
+      "path": "analysis/silver-en-rev0-skip-names-add-n-times.json",
+      "sha256": "8165939c21725c0a2051b404dd18ba40c017484d1a8ee3db9ba0f29b8120f7d4"
+    },
+    {
+      "path": "analysis/silver-de-rev0-skip-names-add-n-times.json",
+      "sha256": "18876747fbba39f6f370ed85c4e125ca33bf2d95fc9cc74e77900a4b1142fad1"
+    },
+    {
+      "path": "analysis/silver-es-rev0-skip-names-add-n-times.json",
+      "sha256": "0e5d9cf29cfab9ac56529963fadabab25084d615f2958614470940340a591045"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-skip-names-add-n-times.json",
+      "sha256": "ad3b4744469738f9b707487ccc1cfd859f2fe93fefa5c0c7de5cea45a91a5924"
+    },
+    {
+      "path": "analysis/silver-it-rev0-skip-names-add-n-times.json",
+      "sha256": "4a930673163ccf819cb0219d4467db9f9e491b1ff868d0fadc5456a10517aabf"
+    },
+    {
+      "path": "research/skip-names-add-n-times-reconstruction.md",
+      "sha256": "220ad305ca2a123174eed2e9702b2335be7b5aba6b7357e872cd35a8fdc40720"
+    },
+    {
+      "path": "tests/test_skip_names_add_n_times_reconstruction.py",
+      "sha256": "eae640e9f9571c085b0bbf84860cbb126e9ce3dba8b85b1ff73b1ce4bfca27d7"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}
