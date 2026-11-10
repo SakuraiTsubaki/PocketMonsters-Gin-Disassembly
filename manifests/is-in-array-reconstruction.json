@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "game": "Pocket Monsters Gin",
+  "function": "IsInArray",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/catalog_gen2_is_in_array.py",
+    "tool_sha256": "a7c74675beaf71941d0f2b62f4e2488dc8513ee599a618672993398260212f68",
+    "dependency": {
+      "tool": "tools/catalog_gen2_compare_bytes.py",
+      "sha256": "dd5a689c9e8d708e0f6242ab95e4666eba7f51a7097ee52c54ac7c7898e8af62"
+    }
+  },
+  "outputs": [
+    {
+      "path": "research/releases.csv",
+      "sha256": "ade2e3cd5d8eb878d279ba0f1ed40be5b25befa93b77f2c8ddc96f7181d0d0c0"
+    },
+    {
+      "path": "src/is_in_array.asm",
+      "sha256": "d5e0473db63912a58eb041e3768903be24be0569a20f5f2fcad6c785f1ec3573"
+    },
+    {
+      "path": "analysis/is-in-array-summary.json",
+      "sha256": "acdcb41522b42aa9cade7e323b4afb3dcabe4f773031c0b149d2c3d145160fa5"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-is-in-array.json",
+      "sha256": "ff34f1fbdb16d76e64558d52b0b0a55e69683882c9ca992eb5b5654d0462864e"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-is-in-array.json",
+      "sha256": "5a1196d11ce23b850fdf7cd4c4148ebe2a609f1f02aff304b3fe7e6013ca9d63"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-is-in-array.json",
+      "sha256": "cd8c4ca44cf6e51189be62fd6f0412bf091f017fc9a6d80d69fcbf65a6469e10"
+    },
+    {
+      "path": "analysis/silver-en-rev0-is-in-array.json",
+      "sha256": "2cae2ad977a231a8a7ebdc6e8dae65fd8f633440affc0232f3fe6dd3154cf0b9"
+    },
+    {
+      "path": "analysis/silver-de-rev0-is-in-array.json",
+      "sha256": "a44945386e512bfe2d97cd392a365d6a38c85c4ae3d062cb1814a8edc242abf2"
+    },
+    {
+      "path": "analysis/silver-es-rev0-is-in-array.json",
+      "sha256": "4969eda5ce42f95f58431f97b44b910cf3ce6bac8a6a34ef3acc3157b030178a"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-is-in-array.json",
+      "sha256": "cb68e0b56bddd270882b3a0cdc44be938884b7b740d94c0b4da7315e3fad6cd6"
+    },
+    {
+      "path": "analysis/silver-it-rev0-is-in-array.json",
+      "sha256": "5b23f3dd52f42c9c6fc60be3d080289fe2a3007dcb092b091f403baa1d97b073"
+    },
+    {
+      "path": "research/is-in-array-reconstruction.md",
+      "sha256": "37c33b9619c420a7611be142892992c6f6418d8f8caf9715ae924cdff02bf709"
+    },
+    {
+      "path": "tests/test_is_in_array_reconstruction.py",
+      "sha256": "bc8604a2c9aa7a558ed8f77ccf12b1015d90f4a7022792a3012ea05a3237232d"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}
