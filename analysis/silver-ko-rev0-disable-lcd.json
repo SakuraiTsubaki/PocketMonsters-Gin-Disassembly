@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-ko-rev0",
+    "sha256": "ebbac63c0c4309c82dbb6723e7163369784f962b4fd3e2f486075307c3008a22",
+    "status": "candidate"
+  },
+  "origin_reference": false,
+  "source": "src/disable_lcd.asm",
+  "source_sha256": "37c3bcd8bab416b63e7f3441f904c2dadf9ef8d8b8e96fd10ba1dd79ec5ea906",
+  "function": {
+    "name": "DisableLCD",
+    "rom_offset": 1078,
+    "bank": 0,
+    "address": 1078,
+    "range_end_exclusive": 1112,
+    "length": 34,
+    "vblank_wait_ly": 145,
+    "code_sha256": "03170793a45fc81cbc70a14f01b1f34e89be514f72a226553b484afa16655e50",
+    "raw_bytes_published": false
+  },
+  "semantics": {
+    "already_disabled": "return immediately when LCDC bit 7 is clear",
+    "interrupt_sequence": "clear IF, save IE, disable VBlank IE, then restore IE",
+    "wait_condition": "wait for LY=145 before clearing LCDC bit 7",
+    "hardware_registers": [
+      "FF40",
+      "FF0F",
+      "FFFF",
+      "FF44"
+    ]
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "f2cde36f49b994c143bfd18582182302fdc76492",
+    "path": "home/lcd.asm"
+  },
+  "raw_rom_bytes_included": false
+}
