@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "gin-jp-rev1",
+    "sha256": "99e5267fbf5a7748d4f3b75ba1990cb5d91348339468607a04bfbc6081c62d71",
+    "status": "candidate"
+  },
+  "origin_reference": false,
+  "source": "src/set_hp_pal.asm",
+  "source_sha256": "f6f32964e9e5eb46af1293f904d3a93cc4b5053cbe4ad2a80fb42422d91944dc",
+  "function": {
+    "rom_offset": 13555,
+    "bank": 0,
+    "address": 13555,
+    "range_end_exclusive": 13560,
+    "length": 5,
+    "get_hp_pal_target": 13560,
+    "destination": "HL",
+    "palette_register": "D",
+    "code_sha256": "5201a9d0151ecc1151d34b753a338ba7f5965a4b5e3aec9dfada6b3501ec4ed7",
+    "name": "SetHPPal",
+    "raw_bytes_published": false
+  },
+  "semantics": {
+    "operation": "classify E through GetHPPal, write palette D to [HL], return",
+    "adjacency": "SetHPPal ends exactly where the release-specific GetHPPal begins",
+    "destination_register": "HL"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "f2cde36f49b994c143bfd18582182302fdc76492",
+    "path": "home/tilemap.asm"
+  },
+  "raw_rom_bytes_included": false
+}

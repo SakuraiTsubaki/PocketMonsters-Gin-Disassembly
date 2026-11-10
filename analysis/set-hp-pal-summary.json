@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "game": "Gin",
+  "function": "SetHPPal",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "source": "src/set_hp_pal.asm",
+  "releases": [
+    {
+      "id": "gin-jp-rev0",
+      "language": "Japanese",
+      "revision": 0,
+      "status": "candidate",
+      "sha256": "0a532063a3ff5750a464582aa7bbee2b6d42e1a92a136d9f4590e373487b615c",
+      "origin_reference": true,
+      "address": "0x34F3",
+      "get_hp_pal_target": "0x34F8",
+      "code_sha256": "5201a9d0151ecc1151d34b753a338ba7f5965a4b5e3aec9dfada6b3501ec4ed7",
+      "evidence": "analysis/gin-jp-rev0-set-hp-pal.json"
+    },
+    {
+      "id": "gin-jp-rev1",
+      "language": "Japanese",
+      "revision": 1,
+      "status": "candidate",
+      "sha256": "99e5267fbf5a7748d4f3b75ba1990cb5d91348339468607a04bfbc6081c62d71",
+      "origin_reference": false,
+      "address": "0x34F3",
+      "get_hp_pal_target": "0x34F8",
+      "code_sha256": "5201a9d0151ecc1151d34b753a338ba7f5965a4b5e3aec9dfada6b3501ec4ed7",
+      "evidence": "analysis/gin-jp-rev1-set-hp-pal.json"
+    },
+    {
+      "id": "silver-ko-rev0",
+      "language": "Korean",
+      "revision": 0,
+      "status": "candidate",
+      "sha256": "ebbac63c0c4309c82dbb6723e7163369784f962b4fd3e2f486075307c3008a22",
+      "origin_reference": false,
+      "address": "0x3566",
+      "get_hp_pal_target": "0x356B",
+      "code_sha256": "41ebed26a13688199e2bf8350581793d95418305ba5a65e9356a8f2bd6af7294",
+      "evidence": "analysis/silver-ko-rev0-set-hp-pal.json"
+    },
+    {
+      "id": "silver-en-rev0",
+      "language": "English",
+      "revision": 0,
+      "status": "candidate",
+      "sha256": "72b190859a59623cbef6c49d601f8de52c1d2331b4f08a8d2acc17274fc19a8c",
+      "origin_reference": false,
+      "address": "0x3591",
+      "get_hp_pal_target": "0x3596",
+      "code_sha256": "ec2867287ea147ba89e43d788b9d1a804bfa9dc821de100a495e06efae65c5a4",
+      "evidence": "analysis/silver-en-rev0-set-hp-pal.json"
+    },
+    {
+      "id": "silver-de-rev0",
+      "language": "German",
+      "revision": 0,
+      "status": "candidate",
+      "sha256": "c3d1fd0dec1d5fa9aa7f85275e79c52aa9175d191c63cbed7b406c306d946348",
+      "origin_reference": false,
+      "address": "0x3588",
+      "get_hp_pal_target": "0x358D",
+      "code_sha256": "d842eb0612d922ab3cb43385a71c428aca0fab15efc3b4a0034ac72d97057f7b",
+      "evidence": "analysis/silver-de-rev0-set-hp-pal.json"
+    },
+    {
+      "id": "silver-es-rev0",
+      "language": "Spanish",
+      "revision": 0,
+      "status": "candidate",
+      "sha256": "6797010c052e8f9373ea2b9e855ec078b34fda12e5ccf742eb19bb5e8f6947c2",
+      "origin_reference": false,
+      "address": "0x354E",
+      "get_hp_pal_target": "0x3553",
+      "code_sha256": "7f8e1dbb75696e6191b6d921c47b3e0b009e04948b2551e11a5e25c34a66467f",
+      "evidence": "analysis/silver-es-rev0-set-hp-pal.json"
+    },
+    {
+      "id": "silver-fr-rev0",
+      "language": "French",
+      "revision": 0,
+      "status": "candidate",
+      "sha256": "e120c4ddb0dc3e25b95c9c71b3ffd59ff57ce689cf4d79d04913ba59140c18c2",
+      "origin_reference": false,
+      "address": "0x353C",
+      "get_hp_pal_target": "0x3541",
+      "code_sha256": "a713b01121718ec71c4d7e48add092205510a29699d27464c25088bd32b422e7",
+      "evidence": "analysis/silver-fr-rev0-set-hp-pal.json"
+    },
+    {
+      "id": "silver-it-rev0",
+      "language": "Italian",
+      "revision": 0,
+      "status": "candidate",
+      "sha256": "04c442246d1ae0ed6bf5e072bb7e3d06376e584b953d6b14047b39e45fbb0cb4",
+      "origin_reference": false,
+      "address": "0x3580",
+      "get_hp_pal_target": "0x3585",
+      "code_sha256": "2b7bf7b246c47897146bbdf39c84cfa63fc2baef5682fccc43deb4f0d3ec33e0",
+      "evidence": "analysis/silver-it-rev0-set-hp-pal.json"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}

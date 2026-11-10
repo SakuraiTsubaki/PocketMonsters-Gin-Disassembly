@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "game": "Gin",
+  "function": "SetHPPal",
+  "origin_reference": "gin-jp-rev0",
+  "release_count": 8,
+  "generator": {
+    "repository": "SakuraiTsubaki/Disassembly",
+    "tool": "tools/catalog_gen2_set_hp_pal.py",
+    "tool_sha256": "9750c21e91879d3cac43b8ddacb05d2da4905216e1673b6a4729a6ade592c560",
+    "dependency": {
+      "tool": "tools/catalog_gen2_get_hp_pal.py",
+      "sha256": "aec8cf92b7caa22e86894bfa396238e4cb41faf098b37edc6cd1e49fec04d85b"
+    }
+  },
+  "outputs": [
+    {
+      "path": "research/releases.csv",
+      "sha256": "ade2e3cd5d8eb878d279ba0f1ed40be5b25befa93b77f2c8ddc96f7181d0d0c0"
+    },
+    {
+      "path": "src/set_hp_pal.asm",
+      "sha256": "f6f32964e9e5eb46af1293f904d3a93cc4b5053cbe4ad2a80fb42422d91944dc"
+    },
+    {
+      "path": "analysis/set-hp-pal-summary.json",
+      "sha256": "291356f6091a78fbefac7d917a1285a72cddc7591aa63cca35507e2251108b48"
+    },
+    {
+      "path": "analysis/gin-jp-rev0-set-hp-pal.json",
+      "sha256": "b3963ebe34865f671ea602ee031cd2bc5884abc4277364c542546d9d0b1f1894"
+    },
+    {
+      "path": "analysis/gin-jp-rev1-set-hp-pal.json",
+      "sha256": "925ffaa5760a2434d854be45560e8dfe44d9a4e7ae20b26a9e5df7cbba6bd696"
+    },
+    {
+      "path": "analysis/silver-ko-rev0-set-hp-pal.json",
+      "sha256": "d4fa0d4764eb95863ad69bf2e68e9f39d40559de33ef9343fc95f4c6e391b2db"
+    },
+    {
+      "path": "analysis/silver-en-rev0-set-hp-pal.json",
+      "sha256": "349a6b8841fb3024c1e177262cee854cfa15e594c2cd174f10490224057e43bb"
+    },
+    {
+      "path": "analysis/silver-de-rev0-set-hp-pal.json",
+      "sha256": "9a4812de55e7b5c6165c75391a6c6b21bdf020c581b01a4914e47082cd359dc9"
+    },
+    {
+      "path": "analysis/silver-es-rev0-set-hp-pal.json",
+      "sha256": "de1d5926ebc50387ea0080495d0048410df340e2629d382f7685be488bcfcd50"
+    },
+    {
+      "path": "analysis/silver-fr-rev0-set-hp-pal.json",
+      "sha256": "abb88501d374400cae29c7056cfe67fed6b7a23cc826f60475f5fd1d2fb5c110"
+    },
+    {
+      "path": "analysis/silver-it-rev0-set-hp-pal.json",
+      "sha256": "bd6dc9ae504cf6a678583157fe9f6a4bf064b8a7afb291f4398c87a18cef92bb"
+    },
+    {
+      "path": "research/set-hp-pal-reconstruction.md",
+      "sha256": "f992af7562c4f122465daed541023475f331a29fdb9b6a79112c93d97fcd7efc"
+    },
+    {
+      "path": "tests/test_set_hp_pal_reconstruction.py",
+      "sha256": "b7987f3197bc8fa82e0e80df66ae390ec83bc7c85ff03bccf79b2c94c0881663"
+    }
+  ],
+  "raw_rom_bytes_included": false
+}

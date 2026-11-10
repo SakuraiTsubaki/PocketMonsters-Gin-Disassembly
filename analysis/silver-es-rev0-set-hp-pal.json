@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "target": {
+    "release": "silver-es-rev0",
+    "sha256": "6797010c052e8f9373ea2b9e855ec078b34fda12e5ccf742eb19bb5e8f6947c2",
+    "status": "candidate"
+  },
+  "origin_reference": false,
+  "source": "src/set_hp_pal.asm",
+  "source_sha256": "f6f32964e9e5eb46af1293f904d3a93cc4b5053cbe4ad2a80fb42422d91944dc",
+  "function": {
+    "rom_offset": 13646,
+    "bank": 0,
+    "address": 13646,
+    "range_end_exclusive": 13651,
+    "length": 5,
+    "get_hp_pal_target": 13651,
+    "destination": "HL",
+    "palette_register": "D",
+    "code_sha256": "7f8e1dbb75696e6191b6d921c47b3e0b009e04948b2551e11a5e25c34a66467f",
+    "name": "SetHPPal",
+    "raw_bytes_published": false
+  },
+  "semantics": {
+    "operation": "classify E through GetHPPal, write palette D to [HL], return",
+    "adjacency": "SetHPPal ends exactly where the release-specific GetHPPal begins",
+    "destination_register": "HL"
+  },
+  "naming_basis": {
+    "repository": "pret/pokegold",
+    "commit": "f2cde36f49b994c143bfd18582182302fdc76492",
+    "path": "home/tilemap.asm"
+  },
+  "raw_rom_bytes_included": false
+}
